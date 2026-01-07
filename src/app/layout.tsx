@@ -62,7 +62,7 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeRegistry>
-            <div className='relative min-h-screen overflow-hidden p-4'>
+            <div className='relative min-h-screen overflow-hidden p-4 md:p-8 lg:p-0'>
               <AnimatedBackground />
               <main className='relative z-10 flex min-h-screen w-full flex-col items-center justify-center'>
                 {children}

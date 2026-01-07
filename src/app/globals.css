@@ -11,24 +11,30 @@
 :root {
     --background: #edf2f6;
     --foreground: #171717;
+    --surface: #f8fafc;
 
     /* Light theme gradient colors */
     --gradient-1: #c9f2ff;
     --gradient-2: #d9d3ff;
     --gradient-3: #f3c6ff;
-    --surface: #f8fafc;
+
+    /* font colors */
+    --secondary-text: #52525c;
 }
 
 /* Dark theme overrides */
 .dark {
     --background: #121419;
     --foreground: #f5f5f7;
+    --surface: #1b1d24;
 
     /* Dark theme gradient colors (deeper, muted) */
     --gradient-1: #1e2a4a;
     --gradient-2: #3b2a5a;
     --gradient-3: #5a2d5f;
-    --surface: #1b1d24;
+
+    /* font colors */
+    --secondary-text: #9f9fa9;
 }
 
 /* =========================
@@ -42,6 +48,11 @@
 
     /* Gradient animation */
     --animate-gradient: pastelShift 14s ease-in-out infinite;
+}
+
+@theme {
+    /* Aspect ratios */
+    --aspect-retro: 5 / 5;
 }
 
 /* =========================
@@ -80,4 +91,8 @@
 
 .surface {
     background-color: var(--surface);
+}
+
+.secondary-text {
+    color: var(--secondary-text);
 }
