@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import ThemeRegistry from '@/components/shared/ThemeToggle/ThemeRegistry';
 import './globals.css';
+import AnimatedBackground from '@/components/general/AnimatedBackground/AnimatedBackground';
 
 const geistSans = Geist({
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -60,7 +61,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeRegistry>{children}</ThemeRegistry>
+          <ThemeRegistry>
+            <div className='relative min-h-screen overflow-hidden p-4'>
+              <AnimatedBackground />
+              <main className='relative z-10 flex min-h-screen w-full flex-col items-center justify-center'>
+                {children}
+              </main>
+            </div>
+          </ThemeRegistry>
         </AppRouterCacheProvider>
       </body>
     </html>

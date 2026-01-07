@@ -34,7 +34,7 @@ const ThemeModeToggle = ({ theme, label, className }: Props) => {
     <div
       className={`flex items-center gap-2 text-neutral-700 capitalize dark:text-neutral-300 ${className || ''}`}
     >
-      {getThemeIcon(theme, 'h-5 w-5')}
+      {getThemeIcon(theme, 'h-6 w-6')}
       {label && (
         <span className='text-sm'>
           {label} {getThemeLabel(theme)}

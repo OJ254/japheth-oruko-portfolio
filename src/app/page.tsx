@@ -6,32 +6,84 @@ import Image from 'next/image';
 import ThemeModeToggle from '@/components/shared/ThemeToggle/ThemeModeToggle';
 import { useThemeToggle } from '@/hooks/useThemeToggle';
 import ExampleCard from '@/components/general/cards/ExampleCard';
-import { Button, Typography } from '@mui/material';
+import {
+  Button,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from '@mui/material';
+import {
+  Person as PersonIcon,
+  Description as ResumeIcon,
+  Build as ServicesIcon,
+  Work as WorksIcon,
+  Article as BlogIcon,
+  Email as ContactIcon,
+} from '@mui/icons-material';
 
 export default function Home() {
   const { theme, toggleTheme } = useThemeToggle();
 
   return (
-    <div className='flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black'>
-      <main className='flex min-h-screen w-full max-w-5xl flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black'>
-        <div className='flex w-full items-center justify-between gap-2'>
+    <div className='flex h-full w-full max-w-7xl items-center justify-center font-sans'>
+      <header>
+        <div className='surface flex flex-col items-center justify-between gap-4 rounded-sm py-6'>
           <Image
-            className='dark:invert'
-            src='/next.svg'
-            alt='Next.js logo'
-            width={100}
-            height={20}
+            className='mx-2 dark:invert'
+            src='/assets/images/logo.png'
+            alt='japheth logo'
+            width={75}
+            height={15}
             priority
-          />
-
+          />{' '}
           <button onClick={toggleTheme} className='white-text'>
-            <ThemeModeToggle
-              theme={theme}
-              label='Theme - '
-              className='white-text'
-            />
+            <ThemeModeToggle theme={theme} className='white-text' />
           </button>
         </div>
+
+        <nav className='surface mt-6 w-full rounded-sm'>
+          <List>
+            {[
+              { label: 'About', icon: <PersonIcon /> },
+              { label: 'Resume', icon: <ResumeIcon /> },
+              { label: 'Services', icon: <ServicesIcon /> },
+              { label: 'Works', icon: <WorksIcon /> },
+              { label: 'Blog', icon: <BlogIcon /> },
+              { label: 'Contact', icon: <ContactIcon /> },
+            ].map(item => (
+              <ListItem key={item.label} disablePadding className='px-4 py-1'>
+                <Button
+                  href={`#${item.label.toLowerCase()}`}
+                  fullWidth
+                  className='flex h-20 flex-col justify-center'
+                  sx={{
+                    color: 'text.primary',
+                    '&:hover': {
+                      bgcolor: 'action.hover',
+                    },
+                  }}
+                >
+                  <ListItemIcon className='mb-1 min-w-0 justify-center'>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <Typography variant='caption' className='normal-case'>
+                        {item.label}
+                      </Typography>
+                    }
+                  />
+                </Button>
+              </ListItem>
+            ))}
+          </List>
+        </nav>
+      </header>
+
+      <main className='flex w-full flex-col items-center justify-between bg-white px-16 py-8 sm:items-start'>
+        <div className='flex w-full items-center justify-between gap-2'></div>
 
         <div className='flex flex-col items-center gap-6 text-center sm:items-start sm:text-left'>
           <Typography

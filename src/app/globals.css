@@ -1,33 +1,83 @@
-
 /* Tailwind CSS */
-
 @layer theme, base, mui, components, utilities;
 @import "tailwindcss";
 
 /* Custom variants */
 @custom-variant dark (&:where(.dark, .dark-mode, .dark *));
 
+/* =========================
+   Base theme variables
+========================= */
 :root {
-    --background: #ffffff;
+    --background: #edf2f6;
     --foreground: #171717;
+
+    /* Light theme gradient colors */
+    --gradient-1: #c9f2ff;
+    --gradient-2: #d9d3ff;
+    --gradient-3: #f3c6ff;
+    --surface: #f8fafc;
 }
 
+/* Dark theme overrides */
+.dark {
+    --background: #121419;
+    --foreground: #f5f5f7;
+
+    /* Dark theme gradient colors (deeper, muted) */
+    --gradient-1: #1e2a4a;
+    --gradient-2: #3b2a5a;
+    --gradient-3: #5a2d5f;
+    --surface: #1b1d24;
+}
+
+/* =========================
+   Theme variables
+========================= */
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
+
+    /* Gradient animation */
+    --animate-gradient: pastelShift 14s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+/* =========================
+   Animated gradient
+========================= */
+.animated-gradient {
+    background: linear-gradient(
+            120deg,
+            var(--gradient-1),
+            var(--gradient-2),
+            var(--gradient-3)
+    );
+    background-size: 300% 300%;
+    animation: var(--animate-gradient);
+}
+
+/* =========================
+   Keyframes
+========================= */
+@keyframes pastelShift {
+    0% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        background-position: 100% 50%;
+        filter: hue-rotate(12deg);
+    }
+
+    100% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
     }
 }
 
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+.surface {
+    background-color: var(--surface);
 }
