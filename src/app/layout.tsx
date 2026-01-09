@@ -64,7 +64,7 @@ export default function RootLayout({
           <ThemeRegistry>
             <div className='relative min-h-screen overflow-hidden p-4 md:p-8 lg:p-0'>
               <AnimatedBackground />
-              <main className='relative z-10 flex min-h-screen w-full flex-col items-center justify-center'>
+              <main className='relative z-10 flex min-h-screen w-full flex-col lg:items-center lg:justify-center'>
                 {children}
               </main>
             </div>
