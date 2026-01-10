@@ -157,7 +157,7 @@ export default function Home() {
           </CustomCard>
         </div>
 
-        <div className='body scrollbar-custom overflow-auto rounded-r-md lg:h-[700px] lg:w-3/5'>
+        <div className='body scrollbar-custom w-full overflow-auto rounded-r-md lg:h-[700px] lg:w-3/5'>
           {activeSection === 'about' && <About />}
           {activeSection === 'services' && <Services />}
           {activeSection === 'works' && <Works />}

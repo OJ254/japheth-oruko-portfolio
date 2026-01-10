@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <Box className='flex h-full flex-col gap-4'>
-      <div>
+      <div className='mb-8'>
         <div className='p-8'>
           <Typography variant='h5' className='font-semibold tracking-wider'>
             <span className='text-primary-color'>{about.charAt(0)}</span>
@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <Divider className='w-full' />
         <div className='flex w-full flex-col md:flex-row lg:flex-col xl:flex-row'>
-          <div className='flex w-full flex-col p-8'>
+          <div className='flex w-full flex-col p-8 pb-0'>
             <Typography variant='h6'>Hello! I’m Japheth Oruko</Typography>
             <Typography variant='body1'>
               An experienced UI/UX Designer, Product Owner, and Frontend
@@ -39,7 +39,7 @@ const About = () => {
             className='hidden md:block lg:hidden xl:block'
           />
 
-          <div className='flex h-full w-full flex-col justify-between space-y-4 p-8'>
+          <div className='flex h-full w-full flex-col justify-between space-y-4 p-8 pb-0'>
             <Typography variant='body1' className='flex justify-between'>
               <span className='bg-primary-color rounded-sm px-2'>Age:</span> 35
               Years
@@ -48,7 +48,7 @@ const About = () => {
             <Typography variant='body1' className='flex justify-between'>
               <span className='bg-primary-color rounded-sm px-2'>
                 Residence:
-              </span>{' '}
+              </span>
               Nairobi, Kenya
             </Typography>
             <Divider className='w-full' />
@@ -84,7 +84,7 @@ const About = () => {
           </Typography>
         </div>
         <Divider className='w-full' />
-        <div className='w-full p-8'>
+        <div className='mb-8 w-full p-8 pb-0'>
           <Typography variant='body1'>
             My design philosophy centers on creating digital experiences that
             are both beautiful and functional. I focus on clarity,
@@ -100,7 +100,7 @@ const About = () => {
         </div>
       </div>
 
-      <div>
+      <div className='mb-8'>
         <div className='p-8'>
           <Typography variant='h5' className='font-semibold tracking-wider'>
             <span className='text-primary-color'>{skills.charAt(0)}</span>
@@ -112,16 +112,16 @@ const About = () => {
 
         <div className='flex w-full flex-col md:flex-row lg:flex-col xl:flex-row'>
           {/* Left Column */}
-          <div className='flex w-full flex-col space-y-4 p-8'>
+          <div className='flex w-full flex-col space-y-4 p-8 pb-0'>
             {[
               { name: 'Figma', level: 90 },
               { name: 'Adobe XD', level: 60 },
+              { name: 'Sketch', level: 50 },
               { name: 'UX Research', level: 85 },
               { name: 'Responsive UI Design', level: 95 },
               { name: 'Design Systems', level: 85 },
               { name: 'Prototyping', level: 90 },
               { name: 'Wireframing', level: 80 },
-              { name: 'Tailwind CSS', level: 85 },
             ].map(skill => (
               <div key={skill.name} className='space-y-1'>
                 <Typography
@@ -149,10 +149,11 @@ const About = () => {
           />
 
           {/* Right Column */}
-          <div className='flex w-full flex-col space-y-4 p-8'>
+          <div className='flex w-full flex-col space-y-4 p-8 py-4 pb-0 md:py-8 lg:py-4 xl:py-8'>
             {[
               { name: 'React / Next.js', level: 75 },
               { name: 'Material UI (MUI)', level: 80 },
+              { name: 'Tailwind CSS', level: 85 },
               { name: 'Git', level: 75 },
               { name: 'GitHub', level: 70 },
               { name: 'Bitbucket', level: 65 },
@@ -189,9 +190,9 @@ const About = () => {
 
         <Divider className='w-full' />
 
-        <div className='flex w-full flex-col md:flex-row lg:flex-col xl:flex-row'>
+        <div className='mb-8 flex w-full flex-col md:flex-row lg:flex-col xl:flex-row'>
           {/* Freelance Tier */}
-          <div className='surface m-8 flex flex-1 flex-col items-center gap-4 rounded-md p-8 shadow-md'>
+          <div className='surface m-8 mb-0 flex flex-1 flex-col items-center gap-4 rounded-md p-8 pb-0 shadow-md'>
             <div className='bg-primary-color flex h-16 w-16 items-center justify-center rounded-full'>
               <Schedule />
             </div>
@@ -216,7 +217,7 @@ const About = () => {
           />
 
           {/* Full Time Tier */}
-          <div className='surface m-8 flex flex-1 flex-col items-center gap-4 rounded-md p-8 shadow-md'>
+          <div className='surface m-8 mb-0 flex flex-1 flex-col items-center gap-4 rounded-md p-8 shadow-md'>
             <div className='bg-primary-color flex h-16 w-16 items-center justify-center rounded-full'>
               <WorkOutline />
             </div>
