@@ -51,7 +51,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'Ticet EDU Design System',
-    category: 'Product Management',
+    category: 'UI/UX Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id1/1.jpg',
     description:
@@ -70,12 +70,143 @@ const projects: Project[] = [
       'UserCentricDesign',
     ],
   },
+
   {
     id: 2,
+    title: 'Ticet EDU LXP - App',
+    category: 'Web Development',
+    tools: ['React.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    image: '/assets/images/projects/id1/1.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 3,
+    title: 'Personal Portfolio',
+    category: 'Web Development',
+    tools: ['Next.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 4,
+    title: 'Tccet EDU LXP - UI/UX',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 5,
+    title: 'Ticet EDU LMS - UI/UX',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 6,
     title: 'Ticet EDU Website',
     category: 'Web Development',
-    tools: ['Next.js', 'TypeScript', 'Material UI', 'Tailwind'],
+    tools: ['React.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 7,
+    title: 'Ticet EDU Website - UI/UX',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 8,
+    title: 'Sample Product Documentation',
+    category: 'Product Management',
+    tools: ['Jira', 'Confluence'],
     image: '/assets/images/projects/id2/1.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 8,
+    title: 'LVBICE Website - UI/UX',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 9,
+    title: 'LVBICE Website',
+    category: 'Web Development',
+    tools: ['Next.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 10,
+    title: 'Hospital Management System - UI/UX',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id2/2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+  },
+
+  {
+    id: 11,
+    title: 'Linda Insurance Website - UI/UX',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
@@ -142,7 +273,7 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
               />
             </div>
 
-            <div className='flex flex-col items-center p-6'>
+            <div className='flex flex-col items-center p-4'>
               <Typography
                 variant='h6'
                 className='text-center text-lg font-normal'

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, JSX, MouseEvent } from 'react';
+import { useState, useEffect, JSX, MouseEvent } from 'react';
 import Image from 'next/image';
 import { IconButton, Typography, Chip } from '@mui/material';
 import Link from 'next/link';
@@ -61,6 +61,19 @@ const ProjectDetails = ({
     setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
   const prev = () =>
     setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [prev, next]);
 
   const onMouseDown = (e: MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
