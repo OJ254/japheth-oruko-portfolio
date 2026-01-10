@@ -27,6 +27,7 @@ type Project = {
   image: string;
   description: string;
   link: string;
+  prototype: string;
   tags: string[];
   category: 'UI/UX Design' | 'Web Development' | 'Product Management';
 };
@@ -34,29 +35,40 @@ type Project = {
 const toolIcons: Record<string, JSX.Element> = {
   Figma: <Figma className='h-6 w-6' />,
   MaterialUI: <MaterialUI className='h-6 w-6' />,
-  Nextjs: <NextJS className='h-6 w-6 text-black dark:text-white' />,
+  'Next.js': <NextJS className='h-6 w-6 text-black dark:text-white' />,
   Tailwind: <Tailwind className='h-6 w-6' />,
   Jira: <Jira className='h-6 w-6' />,
   Confluence: <Confluence className='h-6 w-6' />,
   PostgreSQL: <PostgreSQL className='h-6 w-6' />,
   TypeScript: <TypeScript className='h-6 w-6' />,
-  React: <ReactIcon className='h-6 w-6' />,
+  'React.js': <ReactIcon className='h-6 w-6' />,
   JavaScript: <Javascript className='h-6 w-6' />,
-  Html: <Html className='h-6 w-6' />,
-  Css: <Css className='h-6 w-6' />,
+  HTML: <Html className='h-6 w-6' />,
+  CSS: <Css className='h-6 w-6' />,
 };
 
 const projects: Project[] = [
   {
     id: 1,
     title: 'Ticet EDU Design System',
-    category: 'UI/UX Design',
-    tools: ['Figma', 'React', 'JavaScript', 'Html', 'Css'],
+    category: 'Product Management',
+    tools: ['Figma'],
     image: '/assets/images/projects/id1/1.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+      'The Ticet EDU Design Kit is a comprehensive UI/UX toolkit created to support the development of Ticet EDU’s web platform. It includes a fully structured library of reusable components, responsive layouts, typography systems, color palettes, icons, and interactive elements designed for seamless user experiences. The kit emphasizes clarity, accessibility, and consistency, enabling rapid prototyping and ensuring a visually cohesive platform.\n\n' +
+      'Key highlights include a modular component system for courses, exercises, and community features, interactive states for buttons, forms, and navigation, as well as style guidelines for color, spacing, and typography. The design kit reflects a modern, clean, and engaging aesthetic while prioritizing usability and personalization, supporting Ticet EDU’s mission to provide a flexible and interactive learning environment.\n\n' +
+      'By using this kit, developers and designers can efficiently build and scale the platform while maintaining brand consistency and a premium user experience across all touchpoints.',
     link: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    prototype: 'https://ticetedu.com/',
+    tags: [
+      'TicetEDUDesignKit',
+      'UIUXForEduTech',
+      'DesignSystems',
+      'ScalableUIUX',
+      'LMS',
+      'LXP',
+      'UserCentricDesign',
+    ],
   },
   {
     id: 2,
@@ -67,6 +79,7 @@ const projects: Project[] = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
+    prototype: 'https://ticetedu.com/',
     tags: ['UI/UX Design', 'Web Development', 'Product Management'],
   },
 ];
@@ -161,7 +174,7 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
         onClose={() => setOpen(false)}
         className='flex items-center justify-center'
       >
-        <Box className='surface mx-4 mt-20 w-full max-w-7xl rounded-md outline-none'>
+        <Box className='surface mx-4 mt-20 h-screen max-h-max w-full max-w-7xl overflow-y-auto rounded-md outline-none'>
           {selectedProject && (
             <ProjectDetails
               project={{

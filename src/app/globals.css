@@ -61,6 +61,9 @@
 @theme {
     /* Aspect ratios */
     --aspect-retro: 5 / 5;
+
+    /* Spacing */
+    --spacing-192: 48rem; /* 36rem × 16px = 576px */
 }
 
 /* =========================

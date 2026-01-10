@@ -3,6 +3,7 @@
 import { useState, JSX, MouseEvent } from 'react';
 import Image from 'next/image';
 import { IconButton, Typography, Chip } from '@mui/material';
+import Link from 'next/link';
 import {
   ArrowBackIosNew,
   ArrowForwardIos,
@@ -36,6 +37,14 @@ const ProjectDetails = ({
   const images = [
     `/assets/images/projects/id${project.id}/1.jpg`,
     `/assets/images/projects/id${project.id}/2.jpg`,
+    `/assets/images/projects/id${project.id}/3.jpg`,
+    `/assets/images/projects/id${project.id}/4.jpg`,
+    `/assets/images/projects/id${project.id}/5.jpg`,
+    `/assets/images/projects/id${project.id}/6.jpg`,
+    `/assets/images/projects/id${project.id}/7.jpg`,
+    `/assets/images/projects/id${project.id}/8.jpg`,
+    `/assets/images/projects/id${project.id}/9.jpg`,
+    `/assets/images/projects/id${project.id}/10.jpg`,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -110,10 +119,10 @@ const ProjectDetails = ({
 
       {/* Image */}
       <div
-        className={`bg-primary-color relative flex w-full items-center justify-center ${
+        className={`relative flex w-full items-center justify-center ${
           fullscreen
-            ? 'h-screen'
-            : 'h-96 overflow-hidden md:h-[calc(100vh-16rem)]'
+            ? 'surface h-screen'
+            : 'bg-primary-color h-96 overflow-hidden md:h-144'
         } rounded-l-md`}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
@@ -128,7 +137,7 @@ const ProjectDetails = ({
           style={{
             transform: `scale(${zoom}) translate(${offset.x / zoom}px, ${offset.y / zoom}px)`,
           }}
-          className='object-contain transition-transform duration-100'
+          className='rounded-lg object-contain transition-transform duration-100'
         />
 
         {/* Navigation */}
@@ -149,17 +158,37 @@ const ProjectDetails = ({
 
       {/* Project info only when NOT fullscreen */}
       {!fullscreen && (
-        <div className='w-full space-y-4 p-8 md:p-12 lg:space-y-6 lg:p-16 2xl:space-y-8'>
+        <div className='w-full space-y-4 overflow-y-auto p-8 md:h-144 md:p-12 lg:space-y-6 lg:p-16 2xl:space-y-8'>
           <div className='space-y-2 lg:space-y-2.5'>
             <Typography variant='h4' className='font-semibold'>
               {project.title}
             </Typography>
-            <Typography
-              variant='body2'
-              className='font-semibold text-gray-600 uppercase dark:text-gray-400'
-            >
-              {project.category}
-            </Typography>
+
+            <div className='flex w-full items-center justify-between gap-8'>
+              {/* Category - always fully visible */}
+              <Typography
+                variant='body2'
+                className='min-w-max font-semibold text-gray-600 uppercase dark:text-gray-400'
+              >
+                {project.category}
+              </Typography>
+
+              {/* Link - truncated dynamically */}
+              <Link
+                href={project.link}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='min-w-0 flex-1 text-right'
+              >
+                <Typography
+                  variant='body2'
+                  className='text-primary-color truncate font-semibold'
+                >
+                  {project.link}
+                </Typography>
+              </Link>
+            </div>
+
             <div className='flex flex-wrap gap-4'>
               {project.tools.map(tool => (
                 <div
@@ -173,7 +202,9 @@ const ProjectDetails = ({
             </div>
           </div>
 
-          <Typography variant='body1'>{project.description}</Typography>
+          <Typography style={{ whiteSpace: 'pre-line' }} variant='body1'>
+            {project.description}
+          </Typography>
 
           <div className='flex flex-wrap gap-2'>
             {project.tags.map(tag => (
@@ -181,7 +212,7 @@ const ProjectDetails = ({
                 key={tag}
                 label={tag}
                 size='small'
-                className='bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
+                className='bg-primary-color text-gray-800 dark:text-gray-200'
               />
             ))}
           </div>
