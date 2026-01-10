@@ -109,10 +109,10 @@ export default function Home() {
                   </Typography>
                 </div>
                 <div className='flex gap-4'>
-                  <BehanceLogo />
-                  <GitHubLogo />
-                  <LinkedInLogo />
-                  <SpotifyLogo />
+                  <BehanceLogo className='h-6 w-6 cursor-pointer transition-all duration-300 hover:scale-120' />
+                  <GitHubLogo className='h-6 w-6 cursor-pointer transition-all duration-300 hover:scale-120' />
+                  <LinkedInLogo className='h-6 w-6 cursor-pointer transition-all duration-300 hover:scale-120' />
+                  <SpotifyLogo className='h-6 w-6 cursor-pointer transition-all duration-300 hover:scale-120' />
                 </div>
               </div>
 

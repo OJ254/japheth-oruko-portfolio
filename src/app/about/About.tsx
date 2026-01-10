@@ -46,6 +46,11 @@ const About = () => {
             </Typography>
             <Divider className='w-full' />
             <Typography variant='body1' className='flex justify-between'>
+              <span className='bg-primary-color rounded-sm px-2'>Gender:</span>
+              Male (He/Him)
+            </Typography>
+            <Divider className='w-full' />
+            <Typography variant='body1' className='flex justify-between'>
               <span className='bg-primary-color rounded-sm px-2'>
                 Residence:
               </span>
@@ -55,13 +60,6 @@ const About = () => {
             <Typography variant='body1' className='flex justify-between'>
               <span className='bg-primary-color rounded-sm px-2'>
                 Full Time:
-              </span>{' '}
-              Available
-            </Typography>
-            <Divider className='w-full' />
-            <Typography variant='body1' className='flex justify-between'>
-              <span className='bg-primary-color rounded-sm px-2'>
-                Contract:
               </span>{' '}
               Available
             </Typography>
@@ -118,7 +116,7 @@ const About = () => {
               { name: 'Adobe XD', level: 60 },
               { name: 'Sketch', level: 50 },
               { name: 'UX Research', level: 85 },
-              { name: 'Responsive UI Design', level: 95 },
+              { name: 'UI Design', level: 95 },
               { name: 'Design Systems', level: 85 },
               { name: 'Prototyping', level: 90 },
               { name: 'Wireframing', level: 80 },
@@ -152,7 +150,7 @@ const About = () => {
           <div className='flex w-full flex-col space-y-4 p-8 py-4 pb-0 md:py-8 lg:py-4 xl:py-8'>
             {[
               { name: 'React / Next.js', level: 75 },
-              { name: 'Material UI (MUI)', level: 80 },
+              { name: 'Material UI', level: 80 },
               { name: 'Tailwind CSS', level: 85 },
               { name: 'Git', level: 75 },
               { name: 'GitHub', level: 70 },

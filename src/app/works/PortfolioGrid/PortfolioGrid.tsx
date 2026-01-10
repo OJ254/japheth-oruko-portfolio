@@ -1,15 +1,8 @@
 'use client';
 
-import React, { useEffect, useState, JSX } from 'react';
-import { Typography, Box, CardActionArea } from '@mui/material';
+import { useEffect, useState, JSX } from 'react';
+import { Typography, Box, CardActionArea, Modal } from '@mui/material';
 import CustomCard from '@/components/general/cards/CustomCard';
-import {
-  Code,
-  Brush,
-  Storage,
-  Dashboard,
-  Architecture,
-} from '@mui/icons-material';
 import Image from 'next/image';
 
 import MaterialUI from '@/components/ui/dataDisplay/icons/logos/MaterialUI';
@@ -20,25 +13,37 @@ import Confluence from '@/components/ui/dataDisplay/icons/logos/Confluence';
 import Jira from '@/components/ui/dataDisplay/icons/logos/Jira';
 import PostgreSQL from '@/components/ui/dataDisplay/icons/logos/PostgreSQL';
 import TypeScript from '@/components/ui/dataDisplay/icons/logos/Typescript';
-import { useRouter } from 'next/navigation';
+import ReactIcon from '@/components/ui/dataDisplay/icons/logos/React';
+import Javascript from '@/components/ui/dataDisplay/icons/logos/JavaScript';
+import Html from '@/components/ui/dataDisplay/icons/logos/Html';
+import Css from '@/components/ui/dataDisplay/icons/logos/Css';
+
+import ProjectDetails from './ProjectDetails';
 
 type Project = {
   id: number;
   title: string;
   tools: string[];
   image: string;
+  description: string;
+  link: string;
+  tags: string[];
   category: 'UI/UX Design' | 'Web Development' | 'Product Management';
 };
 
 const toolIcons: Record<string, JSX.Element> = {
   Figma: <Figma className='h-6 w-6' />,
-  'Material UI': <MaterialUI className='h-6 w-6' />,
-  'Next.js': <NextJS className='h-6 w-6 text-black dark:text-white' />,
+  MaterialUI: <MaterialUI className='h-6 w-6' />,
+  Nextjs: <NextJS className='h-6 w-6 text-black dark:text-white' />,
   Tailwind: <Tailwind className='h-6 w-6' />,
   Jira: <Jira className='h-6 w-6' />,
   Confluence: <Confluence className='h-6 w-6' />,
   PostgreSQL: <PostgreSQL className='h-6 w-6' />,
   TypeScript: <TypeScript className='h-6 w-6' />,
+  React: <ReactIcon className='h-6 w-6' />,
+  JavaScript: <Javascript className='h-6 w-6' />,
+  Html: <Html className='h-6 w-6' />,
+  Css: <Css className='h-6 w-6' />,
 };
 
 const projects: Project[] = [
@@ -46,43 +51,23 @@ const projects: Project[] = [
     id: 1,
     title: 'Ticet EDU Design System',
     category: 'UI/UX Design',
-    tools: ['Figma'],
-    image: '/assets/images/projects/landscape.jpg',
+    tools: ['Figma', 'React', 'JavaScript', 'Html', 'Css'],
+    image: '/assets/images/projects/id1/1.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
   },
   {
     id: 2,
     title: 'Ticet EDU Website',
     category: 'Web Development',
     tools: ['Next.js', 'TypeScript', 'Material UI', 'Tailwind'],
-    image: '/assets/images/projects/portrait.jpg',
-  },
-  {
-    id: 3,
-    title: 'Product Roadmap',
-    category: 'Product Management',
-    tools: ['Figma'],
-    image: '/assets/images/projects/landscape.jpg',
-  },
-  {
-    id: 4,
-    title: 'Mobile App UI',
-    category: 'UI/UX Design',
-    tools: ['Figma'],
-    image: '/assets/images/projects/portrait.jpg',
-  },
-  {
-    id: 5,
-    title: 'Dashboard Build',
-    category: 'Web Development',
-    tools: ['Next.js', 'Material UI'],
-    image: '/assets/images/projects/portrait.jpg',
-  },
-  {
-    id: 6,
-    title: 'User Research Plan',
-    category: 'Product Management',
-    tools: ['Jira', 'Confluence'],
-    image: '/assets/images/projects/landscape.jpg',
+    image: '/assets/images/projects/id2/1.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    link: 'https://about.ticetedu.com/',
+    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
   },
 ];
 
@@ -98,6 +83,8 @@ const filterMap: Record<
 const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
   const [visibleProjects, setVisibleProjects] = useState<Project[]>(projects);
   const [animate, setAnimate] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
     setAnimate(true);
@@ -128,8 +115,8 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
           <CardActionArea
             className='h-full'
             onClick={() => {
-              // handle navigation or action here
-              // e.g router.push(`/projects/${project.id}`)
+              setSelectedProject(project);
+              setOpen(true);
             }}
           >
             <div className='flex max-h-72 w-full overflow-hidden'>
@@ -168,6 +155,25 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
           </CardActionArea>
         </CustomCard>
       ))}
+
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        className='flex items-center justify-center'
+      >
+        <Box className='surface mx-4 mt-20 w-full max-w-7xl rounded-md outline-none'>
+          {selectedProject && (
+            <ProjectDetails
+              project={{
+                ...selectedProject,
+                tools: selectedProject.tools,
+              }}
+              toolIcons={toolIcons}
+              onClose={() => setOpen(false)}
+            />
+          )}
+        </Box>
+      </Modal>
     </Box>
   );
 };
