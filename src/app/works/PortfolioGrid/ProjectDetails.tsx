@@ -23,7 +23,8 @@ type ProjectDetailsProps = {
     tools: string[];
     image: string;
     tags: string[];
-    link: string;
+    primaryLink: string;
+    secondaryLink: string;
   };
   toolIcons: Record<string, JSX.Element>;
   onClose?: () => void;
@@ -90,6 +91,15 @@ const ProjectDetails = ({
 
   const onMouseUp = () => setDragStart(null);
   const onMouseLeave = () => setDragStart(null);
+
+  const linkLabels: Record<'Web Development' | 'UI/UX Design', string[]> = {
+    'Web Development': ['Project Link', 'GitHub Repo'],
+    'UI/UX Design': ['Design Link', 'Prototype Link'],
+  };
+
+  // Tell TS that project.category is one of the keys
+  const [primaryLabel, secondaryLabel] =
+    linkLabels[project.category as 'Web Development' | 'UI/UX Design'];
 
   return (
     <div
@@ -177,32 +187,17 @@ const ProjectDetails = ({
               {project.title}
             </Typography>
 
-            <div className='flex w-full items-center justify-between gap-8'>
-              {/* Category - always fully visible */}
-              <Typography
-                variant='body2'
-                className='min-w-max font-semibold text-gray-600 uppercase dark:text-gray-400'
-              >
-                {project.category}
-              </Typography>
+            {/* Category - always fully visible */}
+            <Typography
+              variant='body2'
+              className='min-w-max font-semibold text-gray-600 uppercase dark:text-gray-400'
+            >
+              {project.category}
+            </Typography>
 
-              {/* Link - truncated dynamically */}
-              <Link
-                href={project.link}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='min-w-0 flex-1 text-right'
-              >
-                <Typography
-                  variant='body2'
-                  className='text-primary-color truncate font-semibold'
-                >
-                  {project.link}
-                </Typography>
-              </Link>
-            </div>
+            {/* Link - truncated dynamically */}
 
-            <div className='flex flex-wrap gap-6'>
+            <div className='flex flex-wrap gap-x-6 gap-y-4'>
               {project.tools.map(tool => (
                 <div
                   key={tool}
@@ -213,6 +208,31 @@ const ProjectDetails = ({
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className='flex min-w-0 flex-1 flex-col justify-end gap-2'>
+            {[
+              { label: primaryLabel, url: project.primaryLink },
+              { label: secondaryLabel, url: project.secondaryLink },
+            ].map(
+              (link, idx) =>
+                link.url && (
+                  <Link
+                    key={idx}
+                    href={link.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <Typography
+                      variant='body2'
+                      className='max-w-max truncate text-right font-semibold'
+                    >
+                      {link.label}:{' '}
+                      <span className='text-primary-color'>{link.url}</span>
+                    </Typography>
+                  </Link>
+                )
+            )}
           </div>
 
           <Typography style={{ whiteSpace: 'pre-line' }} variant='body1'>

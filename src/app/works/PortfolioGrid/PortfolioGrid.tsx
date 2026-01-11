@@ -18,6 +18,7 @@ import Javascript from '@/components/ui/dataDisplay/icons/logos/JavaScript';
 import Html from '@/components/ui/dataDisplay/icons/logos/Html';
 import Css from '@/components/ui/dataDisplay/icons/logos/Css';
 import VueJS from '@/components/ui/dataDisplay/icons/logos/VueJS';
+import Redux from '@/components/ui/dataDisplay/icons/logos/Redux';
 
 import ProjectDetails from './ProjectDetails';
 
@@ -27,8 +28,8 @@ type Project = {
   tools: string[];
   image: string;
   description: string;
-  link: string;
-  prototype: string;
+  primaryLink: string;
+  secondaryLink: string;
   tags: string[];
   category: 'UI/UX Design' | 'Web Development' | 'Product Management';
 };
@@ -47,6 +48,7 @@ const toolIcons: Record<string, JSX.Element> = {
   HTML: <Html className='h-6 w-6' />,
   CSS: <Css className='h-6 w-6' />,
   'Vue.js': <VueJS className='h-6 w-6' />,
+  'Redux Toolkit': <Redux className='h-6 w-6' />,
 };
 
 const projects: Project[] = [
@@ -60,8 +62,8 @@ const projects: Project[] = [
       'The Ticet EDU Design Kit is a comprehensive UI/UX toolkit created to support the development of Ticet EDU’s web platform. It includes a fully structured library of reusable components, responsive layouts, typography systems, color palettes, icons, and interactive elements designed for seamless user experiences. The kit emphasizes clarity, accessibility, and consistency, enabling rapid prototyping and ensuring a visually cohesive platform.\n\n' +
       'Key highlights include a modular component system for courses, exercises, and community features, interactive states for buttons, forms, and navigation, as well as style guidelines for color, spacing, and typography. The design kit reflects a modern, clean, and engaging aesthetic while prioritizing usability and personalization, supporting Ticet EDU’s mission to provide a flexible and interactive learning environment.\n\n' +
       'By using this kit, developers and designers can efficiently build and scale the platform while maintaining brand consistency and a premium user experience across all touchpoints.',
-    link: '',
-    prototype: '',
+    primaryLink: '',
+    secondaryLink: '',
     tags: [
       'TicetEDUDesignKit',
       'UIUXForEduTech',
@@ -75,15 +77,33 @@ const projects: Project[] = [
 
   {
     id: 2,
-    title: 'Ticet EDU LXP - App',
+    title: 'Ticet EDU LXP',
     category: 'Web Development',
-    tools: ['React.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
-    image: '/assets/images/projects/id1/1.jpg',
+    tools: [
+      'Next.js',
+      'TypeScript',
+      'Redux Toolkit',
+      'MaterialUI',
+      'Tailwind',
+      'HTML',
+      'CSS',
+    ],
+    image: '/assets/images/projects/id2/1.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+      'The front end of the web application for Ticet EDU Learning Experience Platform (LXP) is built using Next.js and TypeScript, with a strong focus on performance, scalability, and clean, maintainable code. The application integrates securely with backend APIs to fetch and manage dynamic content such as courses, users, and learning resources.\n\n' +
+      'Redux is used for state management to ensure predictable data flow and a smooth user experience across the platform. The user interface is implemented using Tailwind CSS and Material UI, enabling responsive layouts, consistent styling, and rapid development. Core HTML and CSS best practices are applied to ensure accessibility, semantic structure, and cross-browser compatibility.\n\n' +
+      'The result is a modern, responsive, and user-focused learning platform that balances strong engineering foundations with polished UI/UX execution.',
+    primaryLink: 'https://ticetedu.com/',
+    secondaryLink: '',
+    tags: [
+      'Performance Optimization',
+      'Responsive Design',
+      'Scalable Architecture',
+      'User-Centric Design',
+      'Learning Management Experience (LXP)',
+      'Performance Optimization',
+      'State Management',
+    ],
   },
 
   {
@@ -94,8 +114,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://japheth-oruko-portfolio.vercel.app/',
+    secondaryLink: 'https://github.com/OJ254/japheth-oruko-portfolio',
     tags: ['#', '#', '#'],
   },
 
@@ -107,8 +127,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 
@@ -120,8 +140,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 
@@ -133,8 +153,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 
@@ -146,8 +166,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 
@@ -159,8 +179,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/1.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 
@@ -172,8 +192,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 
@@ -182,11 +202,11 @@ const projects: Project[] = [
     title: 'LVBICE Website',
     category: 'Web Development',
     tools: ['Next.js', 'TypeScript', 'MaterialUI', 'Tailwind', 'HTML', 'CSS'],
-    image: '/assets/images/projects/id2/2.jpg',
+    image: '/assets/images/projects/id10/1.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://www.lvbice.com/',
+    secondaryLink: 'https://github.com/OJ254/lvbice-website',
     tags: ['#', '#', '#'],
   },
 
@@ -198,8 +218,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 
@@ -211,8 +231,8 @@ const projects: Project[] = [
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    link: 'https://about.ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
     tags: ['#', '#', '#'],
   },
 ];
