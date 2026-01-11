@@ -186,18 +186,16 @@ const ProjectDetails = ({
             <Typography variant='h4' className='font-semibold'>
               {project.title}
             </Typography>
-
             {/* Category - always fully visible */}
             <Typography
               variant='body2'
-              className='min-w-max font-semibold text-gray-600 uppercase dark:text-gray-400'
+              className='flex min-w-max items-center gap-4 font-semibold text-gray-600 uppercase dark:text-gray-400'
             >
-              {project.category}
+              {project.category} <span>|</span>
+              <span className='lowercase'>#id:{project.id}</span>
             </Typography>
-
             {/* Link - truncated dynamically */}
-
-            <div className='flex flex-wrap gap-x-6 gap-y-4'>
+            <div className='flex flex-wrap gap-x-6 gap-y-2.5'>
               {project.tools.map(tool => (
                 <div
                   key={tool}
@@ -210,32 +208,33 @@ const ProjectDetails = ({
             </div>
           </div>
 
-          <div className='flex min-w-0 flex-1 flex-col justify-end gap-2'>
-            {[
-              { label: primaryLabel, url: project.primaryLink },
-              { label: secondaryLabel, url: project.secondaryLink },
-            ].map(
-              (link, idx) =>
-                link.url && (
-                  <Link
-                    key={idx}
-                    href={link.url}
-                    target='_blank'
-                    rel='noopener noreferrer'
+          {project.primaryLink && project.secondaryLink && (
+            <div className='flex min-w-0 flex-1 flex-col justify-end gap-2'>
+              {[
+                { label: primaryLabel, url: project.primaryLink },
+                { label: secondaryLabel, url: project.secondaryLink },
+              ].map((link, idx) => (
+                <Link
+                  key={idx}
+                  href={link.url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <Typography
+                    variant='body2'
+                    className='max-w-max truncate text-right font-semibold'
                   >
-                    <Typography
-                      variant='body2'
-                      className='max-w-max truncate text-right font-semibold'
-                    >
-                      {link.label}:{' '}
-                      <span className='text-primary-color'>{link.url}</span>
-                    </Typography>
-                  </Link>
-                )
-            )}
-          </div>
+                    {link.label}:{' '}
+                    <span className='text-primary-color transition-all duration-100 hover:underline'>
+                      {link.url}
+                    </span>
+                  </Typography>
+                </Link>
+              ))}
+            </div>
+          )}
 
-          <Typography style={{ whiteSpace: 'pre-line' }} variant='body1'>
+          <Typography style={{ whiteSpace: 'pre-line' }} variant='body2'>
             {project.description}
           </Typography>
 

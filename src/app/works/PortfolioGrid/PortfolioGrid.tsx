@@ -19,6 +19,7 @@ import Html from '@/components/ui/dataDisplay/icons/logos/Html';
 import Css from '@/components/ui/dataDisplay/icons/logos/Css';
 import VueJS from '@/components/ui/dataDisplay/icons/logos/VueJS';
 import Redux from '@/components/ui/dataDisplay/icons/logos/Redux';
+import GitHub from '@/components/ui/dataDisplay/icons/logos/GitHub';
 
 import ProjectDetails from './ProjectDetails';
 
@@ -49,6 +50,9 @@ const toolIcons: Record<string, JSX.Element> = {
   CSS: <Css className='h-6 w-6' />,
   'Vue.js': <VueJS className='h-6 w-6' />,
   'Redux Toolkit': <Redux className='h-6 w-6' />,
+  GitHub: (
+    <GitHub className='h-7 w-7 rounded-full text-black dark:text-white' />
+  ),
 };
 
 const projects: Project[] = [
@@ -80,6 +84,7 @@ const projects: Project[] = [
     title: 'Ticet EDU LXP',
     category: 'Web Development',
     tools: [
+      'GitHub',
       'Next.js',
       'TypeScript',
       'Redux Toolkit',
@@ -110,13 +115,27 @@ const projects: Project[] = [
     id: 3,
     title: 'Personal Portfolio',
     category: 'Web Development',
-    tools: ['Next.js', 'TypeScript', 'MaterialUI', 'Tailwind', 'HTML', 'CSS'],
-    image: '/assets/images/projects/id2/2.jpg',
+    tools: [
+      'GitHub',
+      'Next.js',
+      'TypeScript',
+      'MaterialUI',
+      'Tailwind',
+      'HTML',
+      'CSS',
+    ],
+    image: '/assets/images/projects/id3/1.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+      'A personal showcase that highlights my expertise across business development, product management, UI/UX design, and frontend engineering. Designed as both a technical and creative hub, it demonstrates my ability to bridge strategy, design, and implementation through clean layouts, responsive components, and thoughtful user experience. The site not only presents my professional journey and key projects but also reflects my branding skills and attention to detail, serving as a comprehensive representation of my work and the value I bring to collaborative, impact‑driven initiatives.',
     primaryLink: 'https://japheth-oruko-portfolio.vercel.app/',
     secondaryLink: 'https://github.com/OJ254/japheth-oruko-portfolio',
-    tags: ['#', '#', '#'],
+    tags: [
+      'Portfolio',
+      'UI/UX Design',
+      'Product Management',
+      'Web Development',
+      'Work Samples',
+    ],
   },
 
   {
@@ -124,12 +143,24 @@ const projects: Project[] = [
     title: 'Tccet EDU LXP - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
-    image: '/assets/images/projects/id2/2.jpg',
+    image: '/assets/images/projects/id4/1.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    primaryLink: 'https://about.ticetedu.com/',
-    secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+      'The Ticet EDU Learning Experience Platform (LXP) is a personalized, interactive web platform designed to enhance collaborative learning. The design focuses on intuitive navigation, engagement, and accessibility, with a consistent visual language built in Figma for rapid prototyping and seamless handoff to developers.\n' +
+      '\n' +
+      'The interface incorporates responsive layouts, modular components, and interactive states, enabling learners to follow flexible learning paths and access dynamic, AI-driven content. Attention to typography, color, spacing, and motion ensures clarity and usability, while dashboards and analytics provide actionable insights for both learners and educators.\n' +
+      '\n' +
+      'The result is a modern, engaging, and scalable learning experience that balances aesthetic design with functional usability across devices.',
+    primaryLink: '',
+    secondaryLink: '',
+    tags: [
+      'LearningExperienceDesign',
+      'UXDesignForEdTech',
+      'FigmaDesignSystem',
+      'ResponsiveUI',
+      'InteractiveLearning',
+      'ScalableDesign',
+      'UserCentricDesign',
+    ],
   },
 
   {
@@ -173,7 +204,7 @@ const projects: Project[] = [
 
   {
     id: 8,
-    title: 'Sample Product Documentation',
+    title: 'Sample Documentation',
     category: 'Product Management',
     tools: ['Jira', 'Confluence'],
     image: '/assets/images/projects/id2/1.jpg',
@@ -295,7 +326,7 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
               />
             </div>
 
-            <div className='flex flex-col items-center p-4'>
+            <div className='flex flex-col items-center p-6'>
               <Typography
                 variant='h6'
                 className='text-center text-lg font-normal'
