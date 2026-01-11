@@ -103,28 +103,28 @@ const ProjectDetails = ({
       <div className='absolute top-2 right-2 z-50 m-4 flex gap-4'>
         <IconButton
           onClick={() => setZoom(prev => Math.max(0.5, prev - 0.2))}
-          className='surface text-primary-color ring-2'
+          className='surface text-primary-color ring-2 transition-all duration-100 hover:scale-105'
         >
           <ZoomOut />
         </IconButton>
 
         <IconButton
           onClick={() => setZoom(prev => Math.min(4, prev + 0.2))}
-          className='surface text-primary-color ring-2'
+          className='surface text-primary-color ring-2 transition-all duration-100 hover:scale-105'
         >
           <ZoomIn />
         </IconButton>
 
         <IconButton
           onClick={() => setFullscreen(!fullscreen)}
-          className='surface text-primary-color ring-2'
+          className='surface text-primary-color ring-2 transition-all duration-100 hover:scale-105'
         >
           {fullscreen ? <FullscreenExit /> : <Fullscreen />}
         </IconButton>
 
         <IconButton
           onClick={onClose}
-          className='surface text-primary-color ring-2'
+          className='surface text-primary-color ring-2 transition-all duration-100 hover:scale-105'
         >
           <Close />
         </IconButton>
@@ -135,7 +135,7 @@ const ProjectDetails = ({
         className={`relative flex w-full items-center justify-center ${
           fullscreen
             ? 'surface h-screen'
-            : 'bg-primary-color h-96 overflow-hidden md:h-144'
+            : 'bg-primary-color h-96 overflow-hidden md:h-192'
         } rounded-l-md`}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
@@ -156,14 +156,14 @@ const ProjectDetails = ({
         {/* Navigation */}
         <IconButton
           onClick={prev}
-          className='surface text-primary-color absolute top-1/2 left-3 z-50 -translate-y-1/2 ring-2'
+          className='surface text-primary-color absolute top-1/2 left-3 z-50 -translate-y-1/2 ring-2 transition-all duration-100 hover:scale-105'
         >
           <ArrowBackIosNew />
         </IconButton>
 
         <IconButton
           onClick={next}
-          className='surface text-primary-color absolute top-1/2 right-3 z-50 -translate-y-1/2 ring-2'
+          className='surface text-primary-color absolute top-1/2 right-3 z-50 -translate-y-1/2 ring-2 transition-all duration-100 hover:scale-105'
         >
           <ArrowForwardIos />
         </IconButton>
@@ -171,7 +171,7 @@ const ProjectDetails = ({
 
       {/* Project info only when NOT fullscreen */}
       {!fullscreen && (
-        <div className='w-full space-y-4 overflow-y-auto p-8 md:h-144 md:p-12 lg:space-y-6 lg:p-16 2xl:space-y-8'>
+        <div className='w-full space-y-4 overflow-y-auto p-8 md:h-192 md:p-12 lg:space-y-6 lg:p-16 2xl:space-y-8'>
           <div className='space-y-2 lg:space-y-2.5'>
             <Typography variant='h4' className='font-semibold'>
               {project.title}

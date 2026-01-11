@@ -58,8 +58,8 @@ const projects: Project[] = [
       'The Ticet EDU Design Kit is a comprehensive UI/UX toolkit created to support the development of Ticet EDU’s web platform. It includes a fully structured library of reusable components, responsive layouts, typography systems, color palettes, icons, and interactive elements designed for seamless user experiences. The kit emphasizes clarity, accessibility, and consistency, enabling rapid prototyping and ensuring a visually cohesive platform.\n\n' +
       'Key highlights include a modular component system for courses, exercises, and community features, interactive states for buttons, forms, and navigation, as well as style guidelines for color, spacing, and typography. The design kit reflects a modern, clean, and engaging aesthetic while prioritizing usability and personalization, supporting Ticet EDU’s mission to provide a flexible and interactive learning environment.\n\n' +
       'By using this kit, developers and designers can efficiently build and scale the platform while maintaining brand consistency and a premium user experience across all touchpoints.',
-    link: 'https://ticetedu.com/',
-    prototype: 'https://ticetedu.com/',
+    link: '',
+    prototype: '',
     tags: [
       'TicetEDUDesignKit',
       'UIUXForEduTech',
@@ -81,20 +81,20 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
     id: 3,
     title: 'Personal Portfolio',
     category: 'Web Development',
-    tools: ['Next.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    tools: ['Next.js', 'TypeScript', 'MaterialUI', 'Tailwind', 'HTML', 'CSS'],
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -107,7 +107,7 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -120,7 +120,7 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -133,7 +133,7 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -146,7 +146,7 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -159,7 +159,7 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -172,20 +172,20 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
     id: 9,
     title: 'LVBICE Website',
     category: 'Web Development',
-    tools: ['Next.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    tools: ['Next.js', 'TypeScript', 'MaterialUI', 'Tailwind', 'HTML', 'CSS'],
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -198,7 +198,7 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 
   {
@@ -211,7 +211,7 @@ const projects: Project[] = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     link: 'https://about.ticetedu.com/',
     prototype: 'https://ticetedu.com/',
-    tags: ['UI/UX Design', 'Web Development', 'Product Management'],
+    tags: ['#', '#', '#'],
   },
 ];
 
@@ -305,7 +305,7 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
         onClose={() => setOpen(false)}
         className='flex items-center justify-center'
       >
-        <Box className='surface mx-4 mt-20 h-screen max-h-max w-full max-w-7xl overflow-y-auto rounded-md outline-none'>
+        <Box className='surface mx-4 h-screen max-h-192 w-full max-w-7xl overflow-y-auto rounded-md outline-none'>
           {selectedProject && (
             <ProjectDetails
               project={{
