@@ -17,6 +17,7 @@ import ReactIcon from '@/components/ui/dataDisplay/icons/logos/React';
 import Javascript from '@/components/ui/dataDisplay/icons/logos/JavaScript';
 import Html from '@/components/ui/dataDisplay/icons/logos/Html';
 import Css from '@/components/ui/dataDisplay/icons/logos/Css';
+import VueJS from '@/components/ui/dataDisplay/icons/logos/VueJS';
 
 import ProjectDetails from './ProjectDetails';
 
@@ -45,6 +46,7 @@ const toolIcons: Record<string, JSX.Element> = {
   JavaScript: <Javascript className='h-6 w-6' />,
   HTML: <Html className='h-6 w-6' />,
   CSS: <Css className='h-6 w-6' />,
+  'Vue.js': <VueJS className='h-6 w-6' />,
 };
 
 const projects: Project[] = [
@@ -127,7 +129,7 @@ const projects: Project[] = [
     id: 6,
     title: 'Ticet EDU Website',
     category: 'Web Development',
-    tools: ['React.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    tools: ['Vue.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
     image: '/assets/images/projects/id2/2.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',

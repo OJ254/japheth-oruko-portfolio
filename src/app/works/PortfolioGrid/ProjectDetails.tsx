@@ -202,7 +202,7 @@ const ProjectDetails = ({
               </Link>
             </div>
 
-            <div className='flex flex-wrap gap-4'>
+            <div className='flex flex-wrap gap-6'>
               {project.tools.map(tool => (
                 <div
                   key={tool}
