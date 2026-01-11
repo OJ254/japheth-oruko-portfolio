@@ -17,7 +17,7 @@ import ReactIcon from '@/components/ui/dataDisplay/icons/logos/React';
 import Javascript from '@/components/ui/dataDisplay/icons/logos/JavaScript';
 import Html from '@/components/ui/dataDisplay/icons/logos/Html';
 import Css from '@/components/ui/dataDisplay/icons/logos/Css';
-import VueJS from '@/components/ui/dataDisplay/icons/logos/VueJS';
+import ViteJS from '@/components/ui/dataDisplay/icons/logos/ViteJS';
 import Redux from '@/components/ui/dataDisplay/icons/logos/Redux';
 import GitHub from '@/components/ui/dataDisplay/icons/logos/GitHub';
 
@@ -48,7 +48,7 @@ const toolIcons: Record<string, JSX.Element> = {
   JavaScript: <Javascript className='h-6 w-6' />,
   HTML: <Html className='h-6 w-6' />,
   CSS: <Css className='h-6 w-6' />,
-  'Vue.js': <VueJS className='h-6 w-6' />,
+  'Vite.js': <ViteJS className='h-6 w-6' />,
   'Redux Toolkit': <Redux className='h-6 w-6' />,
   GitHub: (
     <GitHub className='h-7 w-7 rounded-full text-black dark:text-white' />
@@ -180,12 +180,12 @@ const projects: Project[] = [
     id: 6,
     title: 'Ticet EDU Website',
     category: 'Web Development',
-    tools: ['Vue.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
-    image: '/assets/images/projects/id2/2.jpg',
+    tools: ['Vite.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    image: '/assets/images/projects/id6/1.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    primaryLink: 'https://about.ticetedu.com/',
-    secondaryLink: 'https://ticetedu.com/',
+    primaryLink: 'https://ticet-edu-website.vercel.app/',
+    secondaryLink: 'https://github.com/OJ254/ticet-edu-website',
     tags: ['#', '#', '#'],
   },
 
