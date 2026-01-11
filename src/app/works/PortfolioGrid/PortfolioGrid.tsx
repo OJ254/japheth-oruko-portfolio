@@ -305,7 +305,7 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
         onClose={() => setOpen(false)}
         className='flex items-center justify-center'
       >
-        <Box className='surface mx-4 max-h-192 w-full max-w-7xl overflow-y-auto rounded-md outline-none'>
+        <Box className='surface scrollbar-custom mx-4 max-h-192 w-full max-w-7xl overflow-y-auto rounded-md outline-none'>
           {selectedProject && (
             <ProjectDetails
               project={{

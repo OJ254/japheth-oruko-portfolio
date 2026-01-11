@@ -171,7 +171,7 @@ const ProjectDetails = ({
 
       {/* Project info only when NOT fullscreen */}
       {!fullscreen && (
-        <div className='w-full space-y-4 overflow-y-auto p-8 md:h-192 md:p-12 lg:space-y-6 lg:p-16 2xl:space-y-8'>
+        <div className='scrollbar-custom w-full space-y-4 overflow-y-auto p-8 md:h-192 md:p-12 lg:space-y-6 lg:p-16 2xl:space-y-8'>
           <div className='space-y-2 lg:space-y-2.5'>
             <Typography variant='h4' className='font-semibold'>
               {project.title}
