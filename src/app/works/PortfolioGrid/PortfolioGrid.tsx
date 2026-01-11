@@ -58,10 +58,37 @@ const toolIcons: Record<string, JSX.Element> = {
 const projects: Project[] = [
   {
     id: 1,
+    title: 'Personal Portfolio',
+    category: 'Web Development',
+    tools: [
+      'GitHub',
+      'Next.js',
+      'TypeScript',
+      'MaterialUI',
+      'Tailwind',
+      'HTML',
+      'CSS',
+    ],
+    image: '/assets/images/projects/id1/1.jpg',
+    description:
+      'A personal showcase that highlights my expertise across business development, product management, UI/UX design, and frontend engineering. Designed as both a technical and creative hub, it demonstrates my ability to bridge strategy, design, and implementation through clean layouts, responsive components, and thoughtful user experience. The site not only presents my professional journey and key projects but also reflects my branding skills and attention to detail, serving as a comprehensive representation of my work and the value I bring to collaborative, impact‑driven initiatives.',
+    primaryLink: 'https://japheth-oruko-portfolio.vercel.app/',
+    secondaryLink: 'https://github.com/OJ254/japheth-oruko-portfolio',
+    tags: [
+      'Portfolio',
+      'UI/UX Design',
+      'Product Management',
+      'Web Development',
+      'Work Samples',
+    ],
+  },
+
+  {
+    id: 2,
     title: 'Ticet EDU Design System',
     category: 'UI/UX Design',
     tools: ['Figma'],
-    image: '/assets/images/projects/id1/1.jpg',
+    image: '/assets/images/projects/id2/1.jpg',
     description:
       'The Ticet EDU Design Kit is a comprehensive UI/UX toolkit created to support the development of Ticet EDU’s web platform. It includes a fully structured library of reusable components, responsive layouts, typography systems, color palettes, icons, and interactive elements designed for seamless user experiences. The kit emphasizes clarity, accessibility, and consistency, enabling rapid prototyping and ensuring a visually cohesive platform.\n\n' +
       'Key highlights include a modular component system for courses, exercises, and community features, interactive states for buttons, forms, and navigation, as well as style guidelines for color, spacing, and typography. The design kit reflects a modern, clean, and engaging aesthetic while prioritizing usability and personalization, supporting Ticet EDU’s mission to provide a flexible and interactive learning environment.\n\n' +
@@ -80,7 +107,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'Ticet EDU LXP',
     category: 'Web Development',
     tools: [
@@ -93,7 +120,7 @@ const projects: Project[] = [
       'HTML',
       'CSS',
     ],
-    image: '/assets/images/projects/id2/1.jpg',
+    image: '/assets/images/projects/id3/1.jpg',
     description:
       'The front end of the web application for Ticet EDU Learning Experience Platform (LXP) is built using Next.js and TypeScript, with a strong focus on performance, scalability, and clean, maintainable code. The application integrates securely with backend APIs to fetch and manage dynamic content such as courses, users, and learning resources.\n\n' +
       'Redux is used for state management to ensure predictable data flow and a smooth user experience across the platform. The user interface is implemented using Tailwind CSS and Material UI, enabling responsive layouts, consistent styling, and rapid development. Core HTML and CSS best practices are applied to ensure accessibility, semantic structure, and cross-browser compatibility.\n\n' +
@@ -108,33 +135,6 @@ const projects: Project[] = [
       'Learning Management Experience (LXP)',
       'Performance Optimization',
       'State Management',
-    ],
-  },
-
-  {
-    id: 3,
-    title: 'Personal Portfolio',
-    category: 'Web Development',
-    tools: [
-      'GitHub',
-      'Next.js',
-      'TypeScript',
-      'MaterialUI',
-      'Tailwind',
-      'HTML',
-      'CSS',
-    ],
-    image: '/assets/images/projects/id3/1.jpg',
-    description:
-      'A personal showcase that highlights my expertise across business development, product management, UI/UX design, and frontend engineering. Designed as both a technical and creative hub, it demonstrates my ability to bridge strategy, design, and implementation through clean layouts, responsive components, and thoughtful user experience. The site not only presents my professional journey and key projects but also reflects my branding skills and attention to detail, serving as a comprehensive representation of my work and the value I bring to collaborative, impact‑driven initiatives.',
-    primaryLink: 'https://japheth-oruko-portfolio.vercel.app/',
-    secondaryLink: 'https://github.com/OJ254/japheth-oruko-portfolio',
-    tags: [
-      'Portfolio',
-      'UI/UX Design',
-      'Product Management',
-      'Web Development',
-      'Work Samples',
     ],
   },
 
