@@ -165,23 +165,10 @@ const projects: Project[] = [
 
   {
     id: 5,
-    title: 'Ticet EDU LMS - UI/UX',
-    category: 'UI/UX Design',
-    tools: ['Figma'],
-    image: '/assets/images/projects/id5/1.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    primaryLink: 'https://about.ticetedu.com/',
-    secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
-  },
-
-  {
-    id: 6,
     title: 'Ticet EDU Website',
     category: 'Web Development',
     tools: ['Vite.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
-    image: '/assets/images/projects/id6/1.jpg',
+    image: '/assets/images/projects/id5/1.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     primaryLink: 'https://ticet-edu-website.vercel.app/',
@@ -190,11 +177,24 @@ const projects: Project[] = [
   },
 
   {
-    id: 7,
+    id: 6,
     title: 'Ticet EDU Website - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
-    image: '/assets/images/projects/id2/2.jpg',
+    image: '/assets/images/projects/id6/1.jpg',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    primaryLink: 'https://about.ticetedu.com/',
+    secondaryLink: 'https://ticetedu.com/',
+    tags: ['#', '#', '#'],
+  },
+
+  {
+    id: 7,
+    title: 'Ticet EDU LMS - UI/UX',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id7/1.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     primaryLink: 'https://about.ticetedu.com/',
@@ -220,7 +220,7 @@ const projects: Project[] = [
     title: 'LVBICE Website - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
-    image: '/assets/images/projects/id2/2.jpg',
+    image: '/assets/images/projects/id9/1.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     primaryLink: 'https://about.ticetedu.com/',
