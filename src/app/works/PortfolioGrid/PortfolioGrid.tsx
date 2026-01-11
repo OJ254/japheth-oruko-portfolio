@@ -168,7 +168,7 @@ const projects: Project[] = [
     title: 'Ticet EDU LMS - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
-    image: '/assets/images/projects/id2/2.jpg',
+    image: '/assets/images/projects/id5/1.jpg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
     primaryLink: 'https://about.ticetedu.com/',

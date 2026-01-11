@@ -208,29 +208,32 @@ const ProjectDetails = ({
             </div>
           </div>
 
-          {project.primaryLink && project.secondaryLink && (
+          {(project.primaryLink || project.secondaryLink) && (
             <div className='flex min-w-0 flex-1 flex-col justify-end gap-2'>
               {[
                 { label: primaryLabel, url: project.primaryLink },
                 { label: secondaryLabel, url: project.secondaryLink },
-              ].map((link, idx) => (
-                <Link
-                  key={idx}
-                  href={link.url}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <Typography
-                    variant='body2'
-                    className='max-w-max truncate text-right font-semibold'
-                  >
-                    {link.label}:{' '}
-                    <span className='text-primary-color transition-all duration-100 hover:underline'>
-                      {link.url}
-                    </span>
-                  </Typography>
-                </Link>
-              ))}
+              ].map(
+                (link, idx) =>
+                  link.url && (
+                    <Link
+                      key={idx}
+                      href={link.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <Typography
+                        variant='body2'
+                        className='max-w-max truncate text-right font-semibold'
+                      >
+                        {link.label}:{' '}
+                        <span className='text-primary-color transition-all duration-100 hover:underline'>
+                          {link.url}
+                        </span>
+                      </Typography>
+                    </Link>
+                  )
+              )}
             </div>
           )}
 
