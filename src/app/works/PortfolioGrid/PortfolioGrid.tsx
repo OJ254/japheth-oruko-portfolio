@@ -163,7 +163,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: 'LVBICE Website - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
@@ -176,7 +176,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: 'LVBICE Website',
     category: 'Web Development',
     tools: ['Next.js', 'TypeScript', 'MaterialUI', 'Tailwind', 'HTML', 'CSS'],
@@ -189,7 +189,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 10,
+    id: 11,
     title: 'Hospital Management System - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
@@ -202,7 +202,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 11,
+    id: 12,
     title: 'Linda Insurance Website - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
