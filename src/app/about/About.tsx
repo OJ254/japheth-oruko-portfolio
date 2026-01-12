@@ -82,7 +82,17 @@ const About = () => {
           </Typography>
         </div>
         <Divider className='w-full' />
-        <div className='mb-8 w-full p-8 pb-0'>
+        <div className='mb-8 w-full space-y-4 p-8 pb-0'>
+          <Typography variant='subtitle2' className='text-primary-color'>
+            Where AI Stops, Intuition & Customization Begins
+          </Typography>
+
+          <Typography variant='body1'>
+            AI may inspire or even write code, but if you need the intuition of
+            a creative, user‑centric designer and front‑end developer, I'm your
+            guy. I bring the best of both worlds.
+          </Typography>
+
           <Typography variant='body1'>
             My design philosophy centers on creating digital experiences that
             are both beautiful and functional. I focus on clarity,
