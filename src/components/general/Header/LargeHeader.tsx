@@ -38,7 +38,7 @@ export default function LargeHeader({ onNavigate }: LargeHeaderProps) {
   return (
     <header className='hidden space-y-2 lg:block'>
       {/* Logo + Theme */}
-      <div className='surface flex flex-col items-center justify-between gap-4 rounded-sm py-6'>
+      <div className='surface flex flex-col items-center justify-between gap-4 rounded-full py-6'>
         <Image
           src='/assets/images/logo.png'
           alt='japheth logo'
@@ -47,19 +47,40 @@ export default function LargeHeader({ onNavigate }: LargeHeaderProps) {
           priority
           className='dark:invert'
         />
-        <button onClick={toggleTheme}>
-          <ThemeModeToggle theme={theme} />
-        </button>
+        <ListItem
+          disablePadding
+          className='flex w-full items-center justify-center'
+        >
+          <Button
+            onClick={toggleTheme}
+            className='flex h-20 flex-col justify-center'
+            sx={{
+              color: 'text.primary',
+              '&:hover': { bgcolor: 'action.hover' },
+            }}
+          >
+            <ThemeModeToggle
+              theme={theme}
+              className='mb-1 min-w-0 justify-center'
+            />
+            <ListItemText
+              primary={
+                <Typography variant='caption' className='font-medium uppercase'>
+                  Theme
+                </Typography>
+              }
+            />
+          </Button>
+        </ListItem>
       </div>
 
       {/* Navigation */}
-      <nav className='surface w-full rounded-sm'>
+      <nav className='surface w-full rounded-full py-8'>
         <List>
           {[
             { label: 'About', icon: <PersonIcon /> },
             { label: 'Services', icon: <BuildIcon /> },
             { label: 'Works', icon: <WorkOutlineIcon /> },
-            { label: 'Blog', icon: <ArticleIcon /> },
             { label: 'Contact', icon: <ContactMailIcon /> },
           ].map((item, index, array) => (
             <React.Fragment key={item.label}>

@@ -17,7 +17,11 @@ const Services = () => {
     <Box className='flex h-full flex-col gap-4'>
       <div>
         <div className='p-8'>
-          <Typography variant='h5' className='font-semibold tracking-wider'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{services.charAt(0)}</span>
             {services.slice(1)}
           </Typography>

@@ -1,7 +1,7 @@
 'use client';
 
 import { Divider, Typography, Box, Button } from '@mui/material';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import PortfolioGrid from '@/app/works/PortfolioGrid/PortfolioGrid';
 
 const Works = () => {
@@ -16,8 +16,9 @@ const Works = () => {
         <div className='flex w-full items-center justify-between gap-8 p-8'>
           <Typography
             variant='h5'
-            className='font-semibold tracking-wider whitespace-nowrap'
+            className='relative font-semibold tracking-wider'
           >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{portfolio.charAt(0)}</span>
             {portfolio.slice(1)}
           </Typography>

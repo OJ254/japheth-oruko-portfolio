@@ -283,7 +283,11 @@ const About = () => {
     <Box className='flex h-full flex-col gap-4'>
       <div className='mb-8'>
         <div className='p-8'>
-          <Typography variant='h5' className='font-semibold tracking-wider'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{about.charAt(0)}</span>
             {about.slice(1)}
           </Typography>
@@ -342,9 +346,13 @@ const About = () => {
         </div>
       </div>
 
-      <div>
+      <div className='mb-8'>
         <div className='p-8'>
-          <Typography variant='h5' className='font-semibold tracking-wider'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{philosophy.charAt(0)}</span>
             {philosophy.slice(1)}
           </Typography>
@@ -368,7 +376,11 @@ const About = () => {
 
       <div className='mb-8'>
         <div className='p-8'>
-          <Typography variant='h5' className='font-semibold tracking-wider'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{skills.charAt(0)}</span>
             {skills.slice(1)}
           </Typography>
@@ -446,9 +458,13 @@ const About = () => {
         </div>
       </div>
 
-      <div>
+      <div className='mb-8'>
         <div className='p-8'>
-          <Typography variant='h5' className='font-semibold tracking-wider'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{education.charAt(0)}</span>
             {education.slice(1)}
           </Typography>
@@ -505,9 +521,13 @@ const About = () => {
         </div>
       </div>
 
-      <div>
+      <div className='mb-8'>
         <div className='p-8'>
-          <Typography variant='h5' className='font-semibold tracking-wider'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{work.charAt(0)}</span>
             {work.slice(1)}
           </Typography>
@@ -601,9 +621,13 @@ const About = () => {
         </div>
       </div>
 
-      <div>
+      <div className='mb-8'>
         <div className='p-8'>
-          <Typography variant='h5' className='font-semibold tracking-wider'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
             <span className='text-primary-color'>{pricing.charAt(0)}</span>
             {pricing.slice(1)}
           </Typography>

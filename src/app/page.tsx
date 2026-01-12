@@ -29,6 +29,7 @@ import SmallHeader from '@/components/general/Header/SmallHeader';
 import About from '@/app/about/About';
 import Services from '@/app/services/Services';
 import Works from '@/app/works/Works';
+import Contact from '@/app/contact/Contact';
 
 const roles = [
   'Product Designer (UI/UX)',
@@ -43,7 +44,7 @@ export default function Home() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<
-    'about' | 'services' | 'works' | 'blog'
+    'about' | 'services' | 'works' | 'contact'
   >('about');
 
   useEffect(() => {
@@ -165,7 +166,7 @@ export default function Home() {
           {activeSection === 'about' && <About />}
           {activeSection === 'services' && <Services />}
           {activeSection === 'works' && <Works />}
-          {activeSection === 'blog' && <div>Blog</div>}
+          {activeSection === 'contact' && <Contact />}
         </div>
       </main>
     </div>
