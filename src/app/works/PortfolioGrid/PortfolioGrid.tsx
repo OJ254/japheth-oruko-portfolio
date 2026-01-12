@@ -71,7 +71,7 @@ const projects: Project[] = [
     ],
     image: '/assets/images/projects/id1/1.jpg',
     description:
-      'A personal showcase that highlights my expertise across business development, product management, UI/UX design, and frontend engineering. Designed as both a technical and creative hub, it demonstrates my ability to bridge strategy, design, and implementation through clean layouts, responsive components, and thoughtful user experience. The site not only presents my professional journey and key projects but also reflects my branding skills and attention to detail, serving as a comprehensive representation of my work and the value I bring to collaborative, impact‑driven initiatives.',
+      'Personal portfolio that highlights my expertise across business development, product management, UI/UX design, and frontend engineering. Designed as both a technical and creative hub, it demonstrates my ability to bridge strategy, design, and implementation through clean layouts, responsive components, and thoughtful user experience. The site not only presents my professional journey and key projects but also reflects my branding skills and attention to detail, serving as a comprehensive representation of my work and the value I bring to collaborative, impact‑driven initiatives.',
     primaryLink: 'https://japheth-oruko-portfolio.vercel.app/',
     secondaryLink: 'https://github.com/OJ254/japheth-oruko-portfolio',
     tags: [
@@ -90,8 +90,10 @@ const projects: Project[] = [
     tools: ['Figma'],
     image: '/assets/images/projects/id2/1.jpg',
     description:
-      'The Ticet EDU Design Kit is a comprehensive UI/UX toolkit created to support the development of Ticet EDU’s web platform. It includes a fully structured library of reusable components, responsive layouts, typography systems, color palettes, icons, and interactive elements designed for seamless user experiences. The kit emphasizes clarity, accessibility, and consistency, enabling rapid prototyping and ensuring a visually cohesive platform.\n\n' +
-      'Key highlights include a modular component system for courses, exercises, and community features, interactive states for buttons, forms, and navigation, as well as style guidelines for color, spacing, and typography. The design kit reflects a modern, clean, and engaging aesthetic while prioritizing usability and personalization, supporting Ticet EDU’s mission to provide a flexible and interactive learning environment.\n\n' +
+      'The Ticet EDU Design Kit is a comprehensive UI/UX toolkit created to support the development of Ticet EDU’s web platform. It includes a fully structured library of reusable components, responsive layouts, typography systems, color palettes, icons, and interactive elements designed for seamless user experiences. The kit emphasizes clarity, accessibility, and consistency, enabling rapid prototyping and ensuring a visually cohesive platform.' +
+      '\n' +
+      'Key highlights include a modular component system for courses, exercises, and community features, interactive states for buttons, forms, and navigation, as well as style guidelines for color, spacing, and typography. The design kit reflects a modern, clean, and engaging aesthetic while prioritizing usability and personalization, supporting Ticet EDU’s mission to provide a flexible and interactive learning environment.' +
+      '\n' +
       'By using this kit, developers and designers can efficiently build and scale the platform while maintaining brand consistency and a premium user experience across all touchpoints.',
     primaryLink: '',
     secondaryLink: '',
@@ -122,8 +124,10 @@ const projects: Project[] = [
     ],
     image: '/assets/images/projects/id3/1.jpg',
     description:
-      'The front end of the web application for Ticet EDU Learning Experience Platform (LXP) is built using Next.js and TypeScript, with a strong focus on performance, scalability, and clean, maintainable code. The application integrates securely with backend APIs to fetch and manage dynamic content such as courses, users, and learning resources.\n\n' +
-      'Redux is used for state management to ensure predictable data flow and a smooth user experience across the platform. The user interface is implemented using Tailwind CSS and Material UI, enabling responsive layouts, consistent styling, and rapid development. Core HTML and CSS best practices are applied to ensure accessibility, semantic structure, and cross-browser compatibility.\n\n' +
+      'The front end of the web application for Ticet EDU Learning Experience Platform (LXP) is built using Next.js and TypeScript, with a strong focus on performance, scalability, and clean, maintainable code. The application integrates securely with backend APIs to fetch and manage dynamic content such as courses, users, and learning resources.' +
+      '\n' +
+      'Redux is used for state management to ensure predictable data flow and a smooth user experience across the platform. The user interface is implemented using Tailwind CSS and Material UI, enabling responsive layouts, consistent styling, and rapid development. Core HTML and CSS best practices are applied to ensure accessibility, semantic structure, and cross-browser compatibility.' +
+      '\n' +
       'The result is a modern, responsive, and user-focused learning platform that balances strong engineering foundations with polished UI/UX execution.',
     primaryLink: 'https://ticetedu.com/',
     secondaryLink: '',
@@ -167,13 +171,15 @@ const projects: Project[] = [
     id: 5,
     title: 'Ticet EDU Website',
     category: 'Web Development',
-    tools: ['Vite.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
+    tools: ['GitHub', 'Vite.js', 'JavaScript', 'Tailwind', 'HTML', 'CSS'],
     image: '/assets/images/projects/id5/1.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+      'Ticet EDU is a collaborative learning platform designed to transform education by merging innovation with community-driven engagement. Built with modern web technologies including GitHub, Vite.js, JavaScript, Tailwind, HTML, and CSS, the project emphasizes speed, scalability, and responsive design. The platform provides an interactive environment where educators, learners, and stakeholders connect seamlessly, making education more accessible and impactful.' +
+      '\n' +
+      'This project also reflects my focus on bridging technical development with user experience. From structuring reusable components to crafting intuitive layouts, Ticet EDU demonstrates my ability to integrate branding, design systems, and frontend engineering into a cohesive product. It stands as both a technical showcase and a mission-driven initiative to empower education through innovation',
     primaryLink: 'https://ticet-edu-website.vercel.app/',
     secondaryLink: 'https://github.com/OJ254/ticet-edu-website',
-    tags: ['#', '#', '#'],
+    tags: ['WebDev', 'ResponsiveDesign', 'LandingPage'],
   },
 
   {
@@ -183,10 +189,20 @@ const projects: Project[] = [
     tools: ['Figma'],
     image: '/assets/images/projects/id6/1.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    primaryLink: 'https://about.ticetedu.com/',
-    secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+      'The design process for Ticet EDU began in Figma, where I created a structured system of wireframes, mockups, and interactive prototypes to guide development. The goal was to balance clarity, accessibility, and modern aesthetics while ensuring the platform could scale across devices. Each screen was carefully mapped to highlight the user journey—from the landing page to deeper content sections—emphasizing intuitive navigation and clean visual hierarchy.' +
+      '\n' +
+      'Using Figma’s component-based workflow, I built reusable UI elements such as buttons, cards, and navigation bars, styled consistently with Tailwind-inspired design tokens. This allowed rapid iteration and ensured design fidelity during handoff to development. Prototypes showcased responsive layouts, animated transitions, and interactive states, giving stakeholders a realistic preview of the final experience before coding began.',
+    primaryLink: '',
+    secondaryLink: '',
+    tags: [
+      'LearningExperienceDesign',
+      'UXDesignForEdTech',
+      'FigmaDesignSystem',
+      'ResponsiveUI',
+      'InteractiveLearning',
+      'ScalableDesign',
+      'UserCentricDesign',
+    ],
   },
 
   {
@@ -196,10 +212,22 @@ const projects: Project[] = [
     tools: ['Figma'],
     image: '/assets/images/projects/id7/1.jpg',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
-    primaryLink: 'https://about.ticetedu.com/',
-    secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+      'The Ticet EDU LMS project focused on designing a modern, learner-centered interface that balances clarity, accessibility, and engagement. Using Figma, I developed wireframes, high-fidelity mockups, and interactive prototypes to map the full user journey—from onboarding and course browsing to progress tracking and feedback submission.' +
+      '\n' +
+      'The design system emphasized consistency and scalability, with reusable components for navigation, cards, and forms. Typography, iconography, and color palettes were carefully curated to reflect Ticet EDU’s educational mission while maintaining a clean, professional aesthetic. Interactive prototypes showcased responsive layouts and micro-interactions, enabling stakeholders to experience the platform’s flow before development began.' +
+      '\n' +
+      'This work highlights my ability to translate educational goals into intuitive digital experiences, ensuring that both learners and educators can interact with the LMS seamlessly. The Figma prototypes served as a blueprint for development, bridging design vision with technical execution.',
+    primaryLink: '',
+    secondaryLink: '',
+    tags: [
+      'DesignSystems',
+      'UserExperience',
+      'EdTech',
+      'DigitalEducation',
+      'EducationDesign',
+      'TechForLearning',
+      'UserCentric',
+    ],
   },
 
   {
@@ -208,11 +236,10 @@ const projects: Project[] = [
     category: 'Product Management',
     tools: ['Jira', 'Confluence'],
     image: '/assets/images/projects/id2/1.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    description: 'Loreis' + '\n' + 'Loreis' + '\n' + 'Loreis',
     primaryLink: 'https://about.ticetedu.com/',
     secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+    tags: ['Lorem', 'Lorem', 'Lorem'],
   },
 
   {
@@ -221,11 +248,10 @@ const projects: Project[] = [
     category: 'UI/UX Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id9/1.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    description: 'Loreis' + '\n' + 'Loreis' + '\n' + 'Loreis',
     primaryLink: 'https://about.ticetedu.com/',
     secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+    tags: ['Lorem', 'Lorem', 'Lorem'],
   },
 
   {
@@ -234,11 +260,10 @@ const projects: Project[] = [
     category: 'Web Development',
     tools: ['Next.js', 'TypeScript', 'MaterialUI', 'Tailwind', 'HTML', 'CSS'],
     image: '/assets/images/projects/id10/1.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    description: 'Loreis' + '\n' + 'Loreis' + '\n' + 'Loreis',
     primaryLink: 'https://www.lvbice.com/',
     secondaryLink: 'https://github.com/OJ254/lvbice-website',
-    tags: ['#', '#', '#'],
+    tags: ['Lorem', 'Lorem', 'Lorem'],
   },
 
   {
@@ -247,11 +272,10 @@ const projects: Project[] = [
     category: 'UI/UX Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id2/2.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    description: 'Loreis' + '\n' + 'Loreis' + '\n' + 'Loreis',
     primaryLink: 'https://about.ticetedu.com/',
     secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+    tags: ['Lorem', 'Lorem', 'Lorem'],
   },
 
   {
@@ -260,11 +284,31 @@ const projects: Project[] = [
     category: 'UI/UX Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id2/2.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque eum illo in magni nemo nobis nulla quas quibusdam soluta. Cumque dolorem doloribus excepturi iusto, natus non perferendis perspiciatis totam.',
+    description: 'Lore. Ctam.',
     primaryLink: 'https://about.ticetedu.com/',
     secondaryLink: 'https://ticetedu.com/',
-    tags: ['#', '#', '#'],
+    tags: ['Lorem', 'Lorem', 'Lorem'],
+  },
+
+  {
+    id: 13,
+    title: 'Event Listing Page',
+    category: 'UI/UX Design',
+    tools: ['Figma'],
+    image: '/assets/images/projects/id13/2.jpg',
+    description:
+      'For a UI/UX design assignment completed during a job interview, I designed a reusable Event Card component and a scalable Events Listing Page for an event discovery platform. The project focused on solving key user needs such as quickly scanning event details, identifying featured or registered events, and filtering by type, mode, and pricing. I emphasized clarity, visual hierarchy, and system‑level consistency by creating flexible card states, intuitive search and filter controls, and a highlighted upcoming event section. Delivered in Figma, the work demonstrates my ability to balance usability, structure, and design reasoning within tight timelines while producing components that can scale across multiple contexts.',
+    primaryLink:
+      'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=4-6598',
+    secondaryLink:
+      'https://www.figma.com/proto/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=9096-21636&t=FPCj8UyIeFdOkOJr-1',
+    tags: [
+      'UIUXDesign',
+      'ConditionalRendering',
+      'ComponentLogic',
+      'DynamicUI',
+      'UserCentricDesign',
+    ],
   },
 ];
 
