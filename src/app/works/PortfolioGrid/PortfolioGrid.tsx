@@ -192,8 +192,10 @@ const projects: Project[] = [
       'The design process for Ticet EDU began in Figma, where I created a structured system of wireframes, mockups, and interactive prototypes to guide development. The goal was to balance clarity, accessibility, and modern aesthetics while ensuring the platform could scale across devices. Each screen was carefully mapped to highlight the user journey—from the landing page to deeper content sections—emphasizing intuitive navigation and clean visual hierarchy.\n' +
       '\n' +
       'Using Figma’s component-based workflow, I built reusable UI elements such as buttons, cards, and navigation bars, styled consistently with Tailwind-inspired design tokens. This allowed rapid iteration and ensured design fidelity during handoff to development. Prototypes showcased responsive layouts, animated transitions, and interactive states, giving stakeholders a realistic preview of the final experience before coding began.',
-    primaryLink: '',
-    secondaryLink: '',
+    primaryLink:
+      'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=105-985',
+    secondaryLink:
+      'https://www.figma.com/proto/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6210-36526&t=DZedl3Y68or48MTT-1',
     tags: [
       'LearningExperienceDesign',
       'UXDesignForEdTech',
@@ -280,22 +282,36 @@ const projects: Project[] = [
     title: 'Hospital Management System - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
-    image: '/assets/images/projects/id2/2.jpg',
-    description: 'Loreis.\n' + '\n' + 'Loreis.\n' + '\n' + 'Loreis',
-    primaryLink: 'https://about.ticetedu.com/',
-    secondaryLink: 'https://ticetedu.com/',
-    tags: ['Lorem', 'Lorem', 'Lorem'],
+    image: '/assets/images/projects/id11/1.jpg',
+    description:
+      'This Figma project focused on designing a user-centric Hospital Management System that streamlines clinical workflows and enhances patient care. The interface features a clean, intuitive dashboard tailored for healthcare professionals, with quick access to patient records, medical history, vitals, medication schedules, and SOAP (Subjective, Objective, Assessment, Plan) documentation.\n' +
+      '\n' +
+      'Created modular components for authentication, role-based access, and responsive layouts to ensure usability across devices. Each screen was optimized for clarity and speed, allowing clinicians to navigate between patient profiles, update treatment plans, and monitor health metrics with minimal friction. The design prioritizes accessibility, data visualization, and workflow efficiency—critical for high-pressure medical environments.\n' +
+      '\n' +
+      'This project demonstrates my ability to translate complex healthcare requirements into functional, elegant UI systems that support real-time decision-making and improve the user experience for both medical staff and administrators.',
+    primaryLink:
+      'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=105-985',
+    secondaryLink:
+      'https://www.figma.com/proto/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=8179-2388&t=FPCj8UyIeFdOkOJr-1',
+    tags: [
+      'HospitalManagement',
+      'HealthcareTech',
+      'DigitalHealth',
+      'UserCentricDesign',
+    ],
   },
 
   {
     id: 12,
-    title: 'Linda Insurance Website - UI/UX',
+    title: 'Infobrix Insurance Website - UI/UX',
     category: 'UI/UX Design',
     tools: ['Figma'],
-    image: '/assets/images/projects/id2/2.jpg',
-    description: 'Loreis.\n' + '\n' + 'Loreis.\n' + '\n' + 'Loreis',
-    primaryLink: 'https://about.ticetedu.com/',
-    secondaryLink: 'https://ticetedu.com/',
+    image: '/assets/images/projects/id12/1.jpg',
+    description: 'Loreis',
+    primaryLink:
+      'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23368',
+    secondaryLink:
+      'https://www.figma.com/proto/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23582&t=DZedl3Y68or48MTT-1',
     tags: ['Lorem', 'Lorem', 'Lorem'],
   },
 
