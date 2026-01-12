@@ -30,7 +30,11 @@ import About from '@/app/about/About';
 import Services from '@/app/services/Services';
 import Works from '@/app/works/Works';
 
-const roles = ['UI/UX Designer', 'Product Manager', 'Frontend Developer'];
+const roles = [
+  'Product Designer (UI/UX)',
+  'Product Manager',
+  'Frontend Developer',
+];
 
 export default function Home() {
   const { theme, toggleTheme } = useThemeToggle();

@@ -20,6 +20,7 @@ import Css from '@/components/ui/dataDisplay/icons/logos/Css';
 import ViteJS from '@/components/ui/dataDisplay/icons/logos/ViteJS';
 import Redux from '@/components/ui/dataDisplay/icons/logos/Redux';
 import GitHub from '@/components/ui/dataDisplay/icons/logos/GitHub';
+import Atlassian from '@/components/ui/dataDisplay/icons/logos/Atlassian';
 
 import ProjectDetails from './ProjectDetails';
 
@@ -50,6 +51,7 @@ const toolIcons: Record<string, JSX.Element> = {
   CSS: <Css className='h-6 w-6' />,
   'Vite.js': <ViteJS className='h-6 w-6' />,
   'Redux Toolkit': <Redux className='h-6 w-6' />,
+  Atlassian: <Atlassian className='h-6 w-6' />,
   GitHub: (
     <GitHub className='h-7 w-7 rounded-full text-black dark:text-white' />
   ),
@@ -236,7 +238,7 @@ const projects: Project[] = [
     id: 8,
     title: 'Sample Documentation',
     category: 'Product Management',
-    tools: ['Jira', 'Confluence'],
+    tools: ['Atlassian', 'Jira', 'Confluence'],
     image: '/assets/images/projects/id8/1.jpg',
     description: 'Loreis.\n' + '\n' + 'Loreis.\n' + '\n' + 'Loreis',
     primaryLink: '',
@@ -322,7 +324,7 @@ const projects: Project[] = [
     tools: ['Figma'],
     image: '/assets/images/projects/id13/2.jpg',
     description:
-      'For a UI/UX design assignment completed during a job interview, I designed a reusable Event Card component and a scalable Events Listing Page for an event discovery platform. The project focused on solving key user needs such as quickly scanning event details, identifying featured or registered events, and filtering by type, mode, and pricing. I emphasized clarity, visual hierarchy, and system‑level consistency by creating flexible card states, intuitive search and filter controls, and a highlighted upcoming event section. Delivered in Figma, the work demonstrates my ability to balance usability, structure, and design reasoning within tight timelines while producing components that can scale across multiple contexts.',
+      'For a UI/UX design assignment completed as part of a job interview, I designed a reusable Event Card component and a scalable Events Listing Page for an event discovery platform. The project focused on solving key user needs such as quickly scanning event details, identifying featured or registered events, and filtering by type, mode, and pricing. I emphasized clarity, visual hierarchy, and system‑level consistency by creating flexible card states, intuitive search and filter controls, and a highlighted upcoming event section. Delivered in Figma, the work demonstrates my ability to balance usability, structure, and design reasoning within tight timelines while producing components that can scale across multiple contexts.',
     primaryLink:
       'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=4-6598',
     secondaryLink:
