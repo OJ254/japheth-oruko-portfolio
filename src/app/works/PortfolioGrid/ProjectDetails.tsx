@@ -92,14 +92,22 @@ const ProjectDetails = ({
   const onMouseUp = () => setDragStart(null);
   const onMouseLeave = () => setDragStart(null);
 
-  const linkLabels: Record<'Web Development' | 'UI/UX Design', string[]> = {
+  const linkLabels: Record<
+    'Web Development' | 'UI/UX Design' | 'Product Management',
+    string[]
+  > = {
     'Web Development': ['Project Link', 'GitHub Repo'],
     'UI/UX Design': ['Design Link', 'Prototype Link'],
+    'Product Management': ['Project Link', 'Case Study'],
   };
 
-  // Tell TS that project.category is one of the keys
   const [primaryLabel, secondaryLabel] =
-    linkLabels[project.category as 'Web Development' | 'UI/UX Design'];
+    linkLabels[
+      project.category as
+        | 'Web Development'
+        | 'UI/UX Design'
+        | 'Product Management'
+    ];
 
   return (
     <div

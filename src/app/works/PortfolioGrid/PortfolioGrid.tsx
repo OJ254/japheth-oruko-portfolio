@@ -237,7 +237,7 @@ const projects: Project[] = [
     title: 'Sample Documentation',
     category: 'Product Management',
     tools: ['Jira', 'Confluence'],
-    image: '/assets/images/projects/id2/1.jpg',
+    image: '/assets/images/projects/id8/1.jpg',
     description: 'Loreis.\n' + '\n' + 'Loreis.\n' + '\n' + 'Loreis',
     primaryLink: '',
     secondaryLink: '',

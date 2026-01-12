@@ -17,7 +17,7 @@ import {
 import { Email as ContactIcon, DescriptionOutlined } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import CustomCard from '@/components/general/cards/CustomCard';
-import japhethOruko from '@/assets/images/japheth-oruko.jpg';
+import japhethOruko from '@/assets/images/japheth-oruko.png';
 import {
   LinkedInLogo,
   GitHubLogo,
