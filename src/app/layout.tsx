@@ -36,16 +36,16 @@ export default function RootLayout({
         <title>Next.js 16 Starter Template</title>
         <meta name='description' content={metadata.description as string} />
         <meta name='keywords' content='SEO Words' />
-        <meta name='author' content='organizationName' />
+        <meta name='author' content='Japheth Oruko' />
         <meta name='robots' content='index, follow' />
-        <meta property='og:title' content='organizationName' />
+        <meta property='og:title' content='Japheth Oruko' />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'organizationName',
+              '@type': 'Japheth Oruko',
+              name: 'Japheth Oruko',
               url: 'url', // e.g: https://ticetedu.com
               logo: 'url', // e.g: https://ticetedu.com/public/ticet-small.svg
               sameAs: [
