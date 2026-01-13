@@ -1,9 +1,9 @@
-# Next.js 16 + TypeScript + Tailwind CSS + Material UI Starter Template
+# JaphethOruko's Portfolio
 
 ---
+Japheth Oruko Portfolio is a personal showcase of my work across business development, product management, UI/UX design, and frontend engineering. This repository serves as both a technical and creative portfolio, reflecting my ability to bridge strategy, design, and implementation.
 
-This is a [Next.js](https://nextjs.org) starter template bootstrapped with
-[`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app), updated to use **TypeScript**, **Tailwind CSS 4**, **ESLint**, and **Prettier** for a clean and modern development setup.
+Built with Next.js, TypeScript, Tailwind CSS 4, ESLint, and Prettier to ensure a scalable, maintainable, and modern development setup.
 
 ---
 
@@ -37,6 +37,7 @@ This project includes the following main dependencies:
 - [Next.js 16.0.3](https://nextjs.org/)
 - [React 19.2.0](https://reactjs.org/)
 - [React DOM 19.2.0](https://reactjs.org/)
+- [Resend](https://resend.com/)
 
 ### **Development Dependencies**
 
@@ -60,26 +61,11 @@ This project includes the following main dependencies:
 
 ---
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Copyright
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+© 2026 Japheth Oruko. All rights reserved.
 
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js) - your
-feedback and contributions are welcome!
+This repository and its contents, including code, design assets, documentation, and other materials, are the intellectual property of Japheth Oruko.
 
----
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
-
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
-for more details.
+You may view, clone, or fork this repository for personal or educational purposes only. Any commercial use, redistribution, or modification without explicit permission is prohibited.
