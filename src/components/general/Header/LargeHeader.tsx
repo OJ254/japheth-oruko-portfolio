@@ -13,28 +13,15 @@ import {
 import ThemeModeToggle from '@/components/shared/ThemeToggle/ThemeModeToggle';
 import { useThemeToggle } from '@/hooks/useThemeToggle';
 
-// icons (replace with your actual imports)
-// import {
-//   Person as PersonIcon,
-//   Build as ServicesIcon,
-//   Work as WorksIcon,
-//   Article as BlogIcon,
-//   Email as ContactIcon,
-//   DescriptionOutlined,
-// } from '@mui/icons-material';
-import PersonIcon from '@mui/icons-material/Person';
-import BuildIcon from '@mui/icons-material/Build';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import ArticleIcon from '@mui/icons-material/Article';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
+import { Person, Build, Work, ContactMail } from '@mui/icons-material';
 
 type LargeHeaderProps = {
-  onNavigate: (section: string) => void;
+  onNavigateAction: (section: string) => void;
   activeSection: string;
 };
 
 export default function LargeHeader({
-  onNavigate,
+  onNavigateAction,
   activeSection,
 }: LargeHeaderProps) {
   const { theme, toggleTheme } = useThemeToggle();
@@ -82,10 +69,10 @@ export default function LargeHeader({
       <nav className='surface w-full rounded-full py-8'>
         <List>
           {[
-            { label: 'About', icon: <PersonIcon /> },
-            { label: 'Services', icon: <BuildIcon /> },
-            { label: 'Works', icon: <WorkOutlineIcon /> },
-            { label: 'Contact', icon: <ContactMailIcon /> },
+            { label: 'About', icon: <Person /> },
+            { label: 'Services', icon: <Build /> },
+            { label: 'Works', icon: <Work /> },
+            { label: 'Contact', icon: <ContactMail /> },
           ].map((item, index, array) => {
             const sectionKey = item.label.toLowerCase();
             const isActive = activeSection === sectionKey;
@@ -94,7 +81,7 @@ export default function LargeHeader({
               <React.Fragment key={item.label}>
                 <ListItem disablePadding className='py-1'>
                   <Button
-                    onClick={() => onNavigate(sectionKey)}
+                    onClick={() => onNavigateAction(sectionKey)}
                     fullWidth
                     className='active:bg-primary-color flex h-20 flex-col justify-center'
                     sx={{

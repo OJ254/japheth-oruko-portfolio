@@ -597,7 +597,7 @@ const About = () => {
                   >
                     Responsibilities:
                   </Typography>
-                  <Typography variant='body2'>
+                  <Typography variant='body2' className='ml-6 md:ml-4'>
                     {item.responsibilities}
                   </Typography>
                 </div>
@@ -609,7 +609,9 @@ const About = () => {
                   >
                     Achievements:
                   </Typography>
-                  <Typography variant='body2'>{item.achievements}</Typography>
+                  <Typography variant='body2' className='ml-6 md:ml-4'>
+                    {item.achievements}
+                  </Typography>
                 </div>
               </div>
 
@@ -648,7 +650,10 @@ const About = () => {
 
             <Divider className='my-2 w-full' />
 
-            <Typography variant='body1' className='text-center text-sm'>
+            <Typography
+              variant='body1'
+              className='ms pb-8 text-center text-sm md:pb-0 lg:pb-8 xl:pb-0'
+            >
               $20–$60 per hour depending on project complexity. Ideal for
               smaller projects, UI audits, and interactive prototypes.
             </Typography>

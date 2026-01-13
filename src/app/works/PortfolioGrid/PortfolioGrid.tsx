@@ -270,7 +270,7 @@ const projects: Project[] = [
       'The prototypes served as a bridge between design and engineering, ensuring smooth handoff and fidelity in implementation. This project highlights my ability to translate institutional goals into a cohesive digital experience, combining thoughtful UI/UX design with scalable systems that support long-term growth.',
     primaryLink:
       'https://www.figma.com/design/tlz7RVpv2Rr6tGwiupmEHc/LVBIWCE---Website?node-id=5598-7991&t=kesJxF2mY6cn9tez-1',
-    secondaryLink: '/',
+    secondaryLink: '',
     tags: ['UIUXDesign', 'ResponsiveDesign', 'LandingPage'],
   },
 
@@ -296,6 +296,8 @@ const projects: Project[] = [
     tools: ['Figma'],
     image: '/assets/images/projects/id11/1.jpg',
     description:
+      "Click 'Sign In' button to interact with the prototype.\n" +
+      '\n' +
       'This Figma project focused on designing a user-centric Hospital Management System that streamlines clinical workflows and enhances patient care. The interface features a clean, intuitive dashboard tailored for healthcare professionals, with quick access to patient records, medical history, vitals, medication schedules, and SOAP (Subjective, Objective, Assessment, Plan) documentation.\n' +
       '\n' +
       'Created modular components for authentication, role-based access, and responsive layouts to ensure usability across devices. Each screen was optimized for clarity and speed, allowing clinicians to navigate between patient profiles, update treatment plans, and monitor health metrics with minimal friction. The design prioritizes accessibility, data visualization, and workflow efficiency—critical for high-pressure medical environments.\n' +

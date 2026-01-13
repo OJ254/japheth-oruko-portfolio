@@ -14,11 +14,7 @@ import {
   IconButton,
   Slide,
 } from '@mui/material';
-import {
-  Email as ContactIcon,
-  DescriptionOutlined,
-  Close,
-} from '@mui/icons-material';
+import { Email as ContactIcon, Description, Close } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import CustomCard from '@/components/general/cards/CustomCard';
 import japhethOruko from '@/assets/images/japheth-oruko.png';
@@ -99,15 +95,18 @@ export default function Home() {
 
   return (
     <div className='flex h-full w-full max-w-7xl flex-col items-start justify-center gap-4 font-sans lg:flex-row lg:items-center'>
-      <header className='w-full lg:w-auto'>
-        <SmallHeader />
+      <header className='relative w-full lg:w-auto'>
+        <SmallHeader
+          onNavigateAction={section => setActiveSection(section as any)}
+          activeSection={activeSection}
+        />
         <LargeHeader
-          onNavigate={section => setActiveSection(section as any)}
+          onNavigateAction={section => setActiveSection(section as any)}
           activeSection={activeSection}
         />
       </header>
 
-      <main className='flex w-full flex-col items-center justify-between lg:flex-row'>
+      <main className='mt-20 flex w-full flex-col items-center justify-between lg:mt-0 lg:flex-row'>
         <div className='relative flex h-full w-full flex-col items-center shadow-xl lg:w-2/5'>
           <div className='surface absolute right-4 bottom-4 -z-10 flex h-[750px] w-full flex-col items-center rounded-lg opacity-50 shadow-2xl md:h-[1000px] lg:h-[750px]' />
           <CustomCard className='flex w-full flex-col items-center shadow-2xl'>
@@ -155,7 +154,7 @@ export default function Home() {
                 <Button
                   onClick={() => setIsResumeModalOpen(true)}
                   className='flex h-16 w-full uppercase'
-                  endIcon={<DescriptionOutlined />}
+                  endIcon={<Description />}
                   sx={{
                     color: 'text.primary',
                     '&:hover': {
