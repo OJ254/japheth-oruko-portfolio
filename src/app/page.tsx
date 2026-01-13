@@ -212,7 +212,7 @@ export default function Home() {
         open={isResumeModalOpen}
         onClose={() => setIsResumeModalOpen(false)}
       >
-        <Box className='absolute top-1/2 left-1/2 flex h-[90vh] w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg bg-[#3c3c3c] shadow-2xl'>
+        <Box className='lg:max-w-8xl absolute top-1/2 left-1/2 flex h-[90vh] w-full max-w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg bg-[#3c3c3c] shadow-2xl'>
           {/* Close button */}
           <div className='flex justify-end p-2'>
             <IconButton onClick={() => setIsResumeModalOpen(false)}>

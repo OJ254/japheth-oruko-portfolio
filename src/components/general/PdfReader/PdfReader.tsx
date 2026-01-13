@@ -3,7 +3,7 @@ import React from 'react';
 const PdfReader = () => {
   return (
     <iframe
-      src='/documents/resume.pdf'
+      src='/documents/japheth-oruko_resume.pdf'
       title='Resume'
       width='100%'
       height='100%'

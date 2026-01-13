@@ -1,4 +1,3 @@
-// src/app/api/contact/route.ts
 // API Route (App Router) for handling contact form submissions.
 // This file runs on the server by default in Next.js 13+ App Router and must
 // NOT include the "use client" directive. It does not access browser-only APIs
@@ -20,7 +19,7 @@
 //   mitigate abuse and oversized payloads.
 // - Add simple anti-spam measures (honeypot field, rate limiting, CAPTCHA).
 // - Log with a structured logger and avoid echoing untrusted data in logs.
-// - If exposing this publicly, consider CORS controls if used cross-origin.
+// - If exposing this publicly, // src/app/api/contact/route.tsconsider CORS controls if used cross-origin.
 
 import { Resend } from 'resend';
 

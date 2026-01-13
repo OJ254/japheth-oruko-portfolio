@@ -176,7 +176,7 @@ const experience = [
     achievements: (
       <ul className='list-disc'>
         <li>
-          Authored over 200 detailed user stories with clear acceptance
+          Authored over 400 detailed user stories with clear acceptance
           criteria, enabling predictable and efficient development.
         </li>
         <li>
