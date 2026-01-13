@@ -312,7 +312,7 @@ const About = () => {
               your guy. I bring the best of both worlds.
             </Typography>
 
-            <Typography variant='caption' className='text-primary-color'>
+            <Typography variant='subtitle2' className='text-primary-color'>
               Where AI Stops, Intuition & Customization Begins
             </Typography>
           </div>

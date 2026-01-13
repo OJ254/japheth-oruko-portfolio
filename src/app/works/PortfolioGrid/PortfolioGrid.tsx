@@ -240,10 +240,20 @@ const projects: Project[] = [
     category: 'Product Management',
     tools: ['Atlassian', 'Jira', 'Confluence'],
     image: '/assets/images/projects/id8/1.jpg',
-    description: 'Loreis.\n' + '\n' + 'Loreis.\n' + '\n' + 'Loreis',
+    description:
+      'Samples demonstrate structured feature documentation and agile workflows using Confluence and Jira. Confluence pages outline subscription packages, features, and pricing with clear specifications, diagrams, and linked resources to align stakeholders. Jira boards organize the backlog into epics, user stories, tasks, and bugs, ensuring traceability from ideation to delivery.\n' +
+      '\n' +
+      'User stories follow a consistent format to keep development user‑centric, while epics capture larger objectives and tasks provide granular visibility. Documentation supports agile project management, enabling sprint planning, prioritization, and iterative delivery. Together, Confluence and Jira showcase how transparent documentation and backlog management drive collaboration, accountability, and continuous improvement.',
     primaryLink: '',
     secondaryLink: '',
-    tags: ['Lorem', 'Lorem', 'Lorem'],
+    tags: [
+      'AgileProjectManagement',
+      'ConfluenceDocumentation',
+      'JiraUserStories',
+      'ScrumWorkflow',
+      'BacklogManagement',
+      'ProductManagement',
+    ],
   },
 
   {

@@ -30,9 +30,13 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 
 type LargeHeaderProps = {
   onNavigate: (section: string) => void;
+  activeSection: string;
 };
 
-export default function LargeHeader({ onNavigate }: LargeHeaderProps) {
+export default function LargeHeader({
+  onNavigate,
+  activeSection,
+}: LargeHeaderProps) {
   const { theme, toggleTheme } = useThemeToggle();
 
   return (
@@ -82,39 +86,51 @@ export default function LargeHeader({ onNavigate }: LargeHeaderProps) {
             { label: 'Services', icon: <BuildIcon /> },
             { label: 'Works', icon: <WorkOutlineIcon /> },
             { label: 'Contact', icon: <ContactMailIcon /> },
-          ].map((item, index, array) => (
-            <React.Fragment key={item.label}>
-              <ListItem disablePadding className='py-1'>
-                <Button
-                  onClick={() => onNavigate(item.label.toLowerCase())}
-                  fullWidth
-                  className='flex h-20 flex-col justify-center'
-                  sx={{
-                    color: 'text.primary',
-                    '&:hover': { bgcolor: 'action.hover' },
-                  }}
-                >
-                  <ListItemIcon className='mb-1 min-w-0 justify-center'>
-                    {item.icon}
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={
-                      <Typography
-                        variant='caption'
-                        className='font-medium uppercase'
-                      >
-                        {item.label}
-                      </Typography>
-                    }
-                  />
-                </Button>
-              </ListItem>
+          ].map((item, index, array) => {
+            const sectionKey = item.label.toLowerCase();
+            const isActive = activeSection === sectionKey;
 
-              {index < array.length - 1 && (
-                <Divider variant='middle' className='m-0 w-full' />
-              )}
-            </React.Fragment>
-          ))}
+            return (
+              <React.Fragment key={item.label}>
+                <ListItem disablePadding className='py-1'>
+                  <Button
+                    onClick={() => onNavigate(sectionKey)}
+                    fullWidth
+                    className='active:bg-primary-color flex h-20 flex-col justify-center'
+                    sx={{
+                      color: 'text.primary',
+                      '&:hover': { bgcolor: 'action.hover' },
+                    }}
+                  >
+                    <ListItemIcon
+                      className={`mb-1 min-w-0 justify-center transition-colors duration-200 ${
+                        isActive ? 'text-primary-color' : ''
+                      }`}
+                    >
+                      {item.icon}
+                    </ListItemIcon>
+
+                    <ListItemText
+                      primary={
+                        <Typography
+                          variant='caption'
+                          className={`font-medium uppercase transition-colors duration-200 ${
+                            isActive ? 'text-primary-color' : ''
+                          }`}
+                        >
+                          {item.label}
+                        </Typography>
+                      }
+                    />
+                  </Button>
+                </ListItem>
+
+                {index < array.length - 1 && (
+                  <Divider variant='middle' className='m-0 w-full' />
+                )}
+              </React.Fragment>
+            );
+          })}
         </List>
       </nav>
     </header>
