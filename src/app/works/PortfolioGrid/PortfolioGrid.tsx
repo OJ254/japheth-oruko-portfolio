@@ -321,12 +321,12 @@ const projects: Project[] = [
     category: 'UI/UX Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id12/1.jpg',
-    description: 'Loreis',
+    description: 'This UI/UX project is a high-fidelity Figma design prototype featuring fully designed light and dark modes for a modern insurance technology platform. The design focuses on clarity, accessibility, and visual consistency, with carefully structured layouts, reusable components, and a clear content hierarchy that scales across sections such as product overview, features, analytics, integrations, and mobile apps. The light and dark themes are not simple color inversions, they are thoughtfully adapted to maintain contrast, readability, and brand identity in both modes. Interactive components, buttons, cards, and data visuals are designed as a unified system to ensure a smooth user experience, reduce cognitive load, and support complex information in a clean, professional interface suitable for enterprise and consumer use.',
     primaryLink:
       'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23368',
     secondaryLink:
       'https://www.figma.com/proto/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23582&t=DZedl3Y68or48MTT-1',
-    tags: ['Lorem', 'Lorem', 'Lorem'],
+    tags: ['DarkModeLightMode', 'LandingPage', 'FigmaPrototype'],
   },
 
   {
