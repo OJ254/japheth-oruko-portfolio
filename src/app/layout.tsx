@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from 'next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -70,6 +71,7 @@ export default function RootLayout({
               <AnimatedBackground />
               <main className='relative z-10 flex min-h-screen w-full flex-col lg:items-center lg:justify-center'>
                 {children}
+                <SpeedInsights />
                 <Analytics />
               </main>
             </div>
