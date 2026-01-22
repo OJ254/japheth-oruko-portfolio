@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-        <title>Next.js 16 Starter Template</title>
+        <title>Japheth Oruko's Portfolio</title>
         <meta name='description' content={metadata.description as string} />
         <meta
           name='keywords'
