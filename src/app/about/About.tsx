@@ -360,12 +360,12 @@ const About = () => {
             <Typography variant='h6'>Hello! I’m Japheth Oruko</Typography>
 
             <Typography variant='body2'>
-              I’m a Product Designer (UI/UX) with strong hands-on experience as
-              a Product Owner and Frontend Developer. Based in Nairobi, Kenya, I
-              bring over 8 years of experience designing and building thoughtful
-              digital products. I specialize in 0 to 1 product development,
-              taking ideas from early discovery and concept through design,
-              validation, and full implementation.
+              I’m a UI/UX Product Designer with hands-on experience as a Product
+              Owner and Frontend Developer. I’m based in Nairobi, Kenya, and
+              bring over 8 years of experience creating thoughtful,
+              user-centered digital products. I specialize in 0 to 1 product
+              development, taking ideas from early discovery and concept through
+              design, validation, and full implementation.
             </Typography>
 
             <Typography variant='body2'>
@@ -429,6 +429,7 @@ const About = () => {
             designs that are engaging, meaningful, and aligned with the overall
             product vision.
           </Typography>
+
           <Typography variant='body2'>
             AI can inspire ideas, accelerate execution, and even generate
             layouts, colors, buttons, or full websites in seconds, but
