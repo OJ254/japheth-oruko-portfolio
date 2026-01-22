@@ -4,3 +4,4 @@ export { default as LinkedInLogo } from './LinkedInLogo';
 export { default as GitHubLogo } from './GitHubLogo';
 export { default as BehanceLogo } from './BehanceLogo';
 export { default as SpotifyLogo } from './SpotifyLogo';
+export { default as CalendlyLogo } from './CalendlyLogo';

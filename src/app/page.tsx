@@ -2,7 +2,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useThemeToggle } from '@/hooks/useThemeToggle';
 import Link from 'next/link';
 import {
@@ -13,9 +13,9 @@ import {
   Box,
   IconButton,
   Slide,
+  Tooltip,
 } from '@mui/material';
 import { Email as ContactIcon, Description, Close } from '@mui/icons-material';
-import { useEffect, useState } from 'react';
 import CustomCard from '@/components/general/cards/CustomCard';
 import japhethOruko from '@/assets/images/japheth-oruko.png';
 import {
@@ -23,6 +23,7 @@ import {
   GitHubLogo,
   BehanceLogo,
   SpotifyLogo,
+  CalendlyLogo,
 } from '@/components/ui/dataDisplay/icons';
 import LargeHeader from '@/components/general/Header/LargeHeader';
 import SmallHeader from '@/components/general/Header/SmallHeader';
@@ -39,15 +40,30 @@ const roles = [
 ];
 
 const socialLinks = [
-  { href: 'https://www.behance.net/japhethoruko', Icon: BehanceLogo },
-  { href: 'https://github.com/OJ254', Icon: GitHubLogo },
+  {
+    href: 'https://www.behance.net/japhethoruko',
+    Icon: BehanceLogo,
+    label: 'Behance',
+  },
   {
     href: 'https://www.linkedin.com/in/japheth-oruko-b5b9a4301/',
     Icon: LinkedInLogo,
+    label: 'LinkedIn',
+  },
+  {
+    href: 'https://github.com/OJ254',
+    Icon: GitHubLogo,
+    label: 'GitHub',
+  },
+  {
+    href: 'https://calendly.com/japhethoruko',
+    Icon: CalendlyLogo,
+    label: 'Calendly',
   },
   {
     href: 'https://open.spotify.com/user/vdfj74s06581jrp8n5rr3ic2k',
     Icon: SpotifyLogo,
+    label: 'Spotify',
   },
 ];
 
@@ -68,16 +84,15 @@ export default function Home() {
     const handleTyping = () => {
       setText(prev => {
         if (!isDeleting) {
-          // Add one character
-          if (prev.length < currentRole.length)
+          if (prev.length < currentRole.length) {
             return currentRole.slice(0, prev.length + 1);
-          // Wait before deleting
+          }
           setTimeout(() => setIsDeleting(true), 2400);
           return prev;
         } else {
-          // Delete one character
-          if (prev.length > 0) return prev.slice(0, prev.length - 1);
-          // Move to next role
+          if (prev.length > 0) {
+            return prev.slice(0, prev.length - 1);
+          }
           setIsDeleting(false);
           setRoleIndex(prevIndex => (prevIndex + 1) % roles.length);
           return '';
@@ -109,6 +124,7 @@ export default function Home() {
       <main className='mt-20 flex w-full flex-col items-center justify-between lg:mt-0 lg:flex-row'>
         <div className='relative flex h-full w-full flex-col items-center shadow-xl lg:w-2/5'>
           <div className='surface absolute right-4 bottom-4 -z-10 flex h-[750px] w-full flex-col items-center rounded-lg opacity-50 shadow-2xl md:h-[1000px] lg:h-[750px]' />
+
           <CustomCard className='flex w-full flex-col items-center shadow-2xl'>
             <div
               className='flex h-[500px] w-full items-center justify-center bg-cover bg-center md:h-[750px] lg:h-[500px]'
@@ -117,6 +133,7 @@ export default function Home() {
                 clipPath: 'polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%)',
               }}
             />
+
             <div className='lg flex w-full flex-col items-center justify-between'>
               <div className='flex w-full flex-col items-center gap-4 py-4'>
                 <div className='flex flex-col items-center'>
@@ -133,17 +150,19 @@ export default function Home() {
                     {text}
                   </Typography>
                 </div>
+
                 <div className='flex gap-4'>
-                  {socialLinks.map(({ href, Icon }) => (
-                    <a
-                      key={href}
-                      href={href}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='transition-all duration-300 hover:scale-120'
-                    >
-                      <Icon className='h-6 w-6 cursor-pointer' />
-                    </a>
+                  {socialLinks.map(({ href, Icon, label }) => (
+                    <Tooltip key={href} title={label} arrow placement='top'>
+                      <a
+                        href={href}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='transition-all duration-300 hover:scale-120'
+                      >
+                        <Icon className='h-6 w-6 cursor-pointer' />
+                      </a>
+                    </Tooltip>
                   ))}
                 </div>
               </div>
@@ -157,16 +176,16 @@ export default function Home() {
                   endIcon={<Description />}
                   sx={{
                     color: 'text.primary',
-                    '&:hover': {
-                      bgcolor: 'action.hover',
-                    },
+                    '&:hover': { bgcolor: 'action.hover' },
                   }}
                 >
                   <Typography variant='body1' className='font-medium'>
                     My Resume
                   </Typography>
                 </Button>
+
                 <Divider orientation='vertical' />
+
                 <Button
                   onClick={() => setActiveSection('contact')}
                   fullWidth
@@ -174,9 +193,7 @@ export default function Home() {
                   endIcon={<ContactIcon />}
                   sx={{
                     color: 'text.primary',
-                    '&:hover': {
-                      bgcolor: 'action.hover',
-                    },
+                    '&:hover': { bgcolor: 'action.hover' },
                   }}
                 >
                   <Typography variant='body1' className='font-medium uppercase'>
@@ -191,7 +208,7 @@ export default function Home() {
         <div className='body scrollbar-custom w-full overflow-hidden rounded-r-md lg:h-[700px] lg:w-3/5'>
           <Slide
             direction='left'
-            in={true}
+            in
             mountOnEnter
             unmountOnExit
             key={activeSection}
@@ -212,14 +229,12 @@ export default function Home() {
         onClose={() => setIsResumeModalOpen(false)}
       >
         <Box className='lg:max-w-8xl absolute top-1/2 left-1/2 flex h-[90vh] w-full max-w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg bg-[#3c3c3c] shadow-2xl'>
-          {/* Close button */}
           <div className='flex justify-end p-2'>
             <IconButton onClick={() => setIsResumeModalOpen(false)}>
               <Close className='text-primary-color' />
             </IconButton>
           </div>
 
-          {/* PDF Viewer */}
           <div className='flex-1 overflow-hidden'>
             <PdfReader />
           </div>

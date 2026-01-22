@@ -14,8 +14,16 @@ import {
 const contactInfo = [
   { label: 'Phone', value: '+254 739 134882' },
   { label: 'Email', value: 'japhethoruko@gmail.com' },
-  { label: 'WhatsApp', value: '+254 739 134882' },
-  { label: 'LinkedIn', value: '@japheth-oruko' },
+  {
+    label: 'Calendly',
+    value: 'Book an appointment',
+    url: 'https://calendly.com/japhethoruko',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'View my profile',
+    url: 'https://www.linkedin.com/in/japheth-oruko-b5b9a4301/',
+  },
 ];
 
 export default function Contact() {
@@ -106,8 +114,23 @@ export default function Contact() {
                   >
                     {item.label}:
                   </Typography>
-                  <Typography variant='body2'>{item.value}</Typography>
+
+                  {item.url ? (
+                    <Typography
+                      variant='body2'
+                      component='a'
+                      href={item.url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-primary-color underline'
+                    >
+                      {item.value}
+                    </Typography>
+                  ) : (
+                    <Typography variant='body2'>{item.value}</Typography>
+                  )}
                 </div>
+
                 {index < contactInfo.length && <Divider className='w-full' />}
               </div>
             ))}

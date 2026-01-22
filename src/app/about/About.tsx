@@ -48,7 +48,6 @@ const toolIcons: Record<string, JSX.Element> = {
 
 const personalInfo = [
   { label: 'Age', value: '35 Years' },
-  { label: 'Gender', value: 'Male (He/Him)' },
   { label: 'Residence', value: 'Nairobi, Kenya' },
   { label: 'Phone', value: '+254 739 134882' },
   { label: 'Email', value: 'japhethoruko@gmail.com' },
@@ -62,7 +61,6 @@ const personalInfo = [
   },
   { label: 'Full Time', value: 'Available' },
   { label: 'Contract', value: 'Available' },
-  { label: 'Freelance', value: 'Available' },
 ];
 
 const schools = [
@@ -362,30 +360,20 @@ const About = () => {
             <Typography variant='h6'>Hello! I’m Japheth Oruko</Typography>
 
             <Typography variant='body2'>
-              I’m an experienced UI/UX Designer, Product Owner, and Frontend
-              Developer based in Nairobi, Kenya, with over 8 years of experience
-              designing and building thoughtful digital products. I specialize
-              in 0 to 1 product development, taking ideas from early concept and
-              discovery through design, validation, and full implementation.
+              I’m a Product Designer (UI/UX) with strong hands-on experience as
+              a Product Owner and Frontend Developer. Based in Nairobi, Kenya, I
+              bring over 8 years of experience designing and building thoughtful
+              digital products. I specialize in 0 to 1 product development,
+              taking ideas from early discovery and concept through design,
+              validation, and full implementation.
             </Typography>
 
             <Typography variant='body2'>
-              An experienced UI/UX Designer, Product Owner, and Frontend
-              Developer from Nairobi, Kenya. I have over 8 years of experience
-              creating thoughtful digital experiences that balance design and
-              functionality. I enjoy working across the product lifecycle, from
-              concept and design to implementation, and I’m always happy to
-              connect and collaborate.
-            </Typography>
-
-            <Typography variant='body2'>
-              AI may inspire or even write code, but if you need the intuition
-              of a creative, user‑centric designer and front‑end developer, I'm
-              your guy. I bring the best of both worlds.
-            </Typography>
-
-            <Typography variant='subtitle2' className='text-primary-color'>
-              Where AI Stops, Intuition & Customization Begins
+              I create digital experiences that balance user needs, business
+              goals, and technical feasibility. I work comfortably across the
+              entire product lifecycle, from research and design to delivery and
+              iteration, and I enjoy collaborating closely with founders,
+              engineers, and stakeholders.
             </Typography>
           </div>
 
@@ -397,7 +385,7 @@ const About = () => {
 
           <div className='flex h-full w-full flex-col justify-between space-y-3 p-8 pb-0'>
             {personalInfo.map((item, index) => (
-              <div key={index} className='space-y-3'>
+              <div key={index} className='w-full space-y-3'>
                 <div className='flex w-full justify-between gap-4'>
                   <Typography
                     variant='body2'
@@ -409,9 +397,7 @@ const About = () => {
                   <Typography variant='body2'>{item.value}</Typography>
                 </div>
 
-                {index < personalInfo.length - 1 && (
-                  <Divider className='w-full' />
-                )}
+                {index < personalInfo.length && <Divider className='w-full' />}
               </div>
             ))}
           </div>
@@ -442,6 +428,24 @@ const About = () => {
             iteration, and empathy guide my process, allowing me to deliver
             designs that are engaging, meaningful, and aligned with the overall
             product vision.
+          </Typography>
+          <Typography variant='body2'>
+            AI can inspire ideas, accelerate execution, and even generate
+            layouts, colors, buttons, or full websites in seconds, but
+            meaningful user experience still depends on human judgment and
+            design intuition. It can’t understand why a user hesitates, doesn’t
+            trust a brand, or scrolls without converting — that’s where I come
+            in. I complement AI, not compete with it: knowing when a hero
+            section should reassure instead of impress, when copy should sell
+            instead of just sound clever, when flows should reduce fear, not
+            just look clean. As a user-centric designer with hands-on frontend
+            expertise, I bridge design and implementation to deliver
+            empathy-driven experiences that make users feel understood and help
+            businesses succeed.
+          </Typography>
+
+          <Typography variant='subtitle2' className='text-primary-color'>
+            Where AI Stops, Intuition & Customization Begins
           </Typography>
         </div>
       </div>
