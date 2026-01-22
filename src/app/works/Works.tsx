@@ -7,7 +7,7 @@ import { projects, filterMap } from '@/app/works/PortfolioGrid/PortfolioGrid'; /
 
 const Works = () => {
   const portfolio = 'My Portfolio';
-  const filters = ['All', 'UX Logic', 'UI Design', 'Web Dev', 'Product Mgmt'];
+  const filters = ['All', 'UI Design', 'UX Logic', 'Web Dev', 'Product Mgmt'];
 
   const [activeFilter, setActiveFilter] = useState('All');
 

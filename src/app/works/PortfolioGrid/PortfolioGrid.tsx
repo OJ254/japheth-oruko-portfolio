@@ -337,7 +337,7 @@ const projects: Project[] = [
   {
     id: 13,
     title: 'Event Listing Page',
-    category: 'User Interface Design',
+    category: 'User Experience Logic',
     tools: ['Figma'],
     image: '/assets/images/projects/id13/2.jpg',
     description:
