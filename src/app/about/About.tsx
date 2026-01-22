@@ -465,10 +465,9 @@ const About = () => {
             {tools.map(tool => {
               const Icon = toolIcons[tool];
               return (
-                <Box
+                <div
                   key={tool}
                   className='surface flex items-center gap-2 rounded-md px-3 py-1.5 text-sm'
-                  sx={{ border: 1, borderColor: 'divider' }}
                 >
                   <div className='flex h-6 w-6 items-center justify-center'>
                     {Icon ?? (
@@ -476,7 +475,7 @@ const About = () => {
                     )}
                   </div>
                   <span className='whitespace-nowrap'>{tool}</span>
-                </Box>
+                </div>
               );
             })}
           </div>
