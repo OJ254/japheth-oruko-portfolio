@@ -93,19 +93,24 @@ const ProjectDetails = ({
   const onMouseLeave = () => setDragStart(null);
 
   const linkLabels: Record<
-    'Web Development' | 'UI/UX Design' | 'Product Management',
+    | 'User Experience Logic'
+    | 'User Interface Design'
+    | 'Web Development'
+    | 'Product Management',
     string[]
   > = {
     'Web Development': ['Project Link', 'GitHub Repo'],
-    'UI/UX Design': ['Design Link', 'Prototype Link'],
+    'User Interface Design': ['Design Link', 'Prototype Link'],
+    'User Experience Logic': ['Design Link', 'Prototype Link'],
     'Product Management': ['Project Link', 'Case Study'],
   };
 
   const [primaryLabel, secondaryLabel] =
     linkLabels[
       project.category as
+        | 'User Experience Logic'
+        | 'User Interface Design'
         | 'Web Development'
-        | 'UI/UX Design'
         | 'Product Management'
     ];
 
