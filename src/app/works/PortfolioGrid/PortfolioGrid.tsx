@@ -33,7 +33,11 @@ type Project = {
   primaryLink: string;
   secondaryLink: string;
   tags: string[];
-  category: 'UI/UX Design' | 'Web Development' | 'Product Management';
+  category:
+    | 'User Experience Logic'
+    | 'User Interface Design'
+    | 'Web Development'
+    | 'Product Management';
 };
 
 const toolIcons: Record<string, JSX.Element> = {
@@ -88,7 +92,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: 'Ticet EDU Design System',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id2/1.jpg',
     description:
@@ -147,7 +151,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: 'Ticet EDU LXP - UI/UX',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id4/1.jpg',
     description:
@@ -187,7 +191,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: 'Ticet EDU Website - UI/UX',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id6/1.jpg',
     description:
@@ -212,7 +216,7 @@ const projects: Project[] = [
   {
     id: 7,
     title: 'Ticet EDU LMS - UI/UX',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id7/1.jpg',
     description:
@@ -259,7 +263,7 @@ const projects: Project[] = [
   {
     id: 9,
     title: 'LVBICE Website - UI/UX',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id9/1.jpg',
     description:
@@ -292,7 +296,7 @@ const projects: Project[] = [
   {
     id: 11,
     title: 'Hospital Management System - UI/UX',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id11/1.jpg',
     description:
@@ -318,10 +322,11 @@ const projects: Project[] = [
   {
     id: 12,
     title: 'Infobrix Insurance Website - UI/UX',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id12/1.jpg',
-    description: 'This UI/UX project is a high-fidelity Figma design prototype featuring fully designed light and dark modes for a modern insurance technology platform. The design focuses on clarity, accessibility, and visual consistency, with carefully structured layouts, reusable components, and a clear content hierarchy that scales across sections such as product overview, features, analytics, integrations, and mobile apps. The light and dark themes are not simple color inversions, they are thoughtfully adapted to maintain contrast, readability, and brand identity in both modes. Interactive components, buttons, cards, and data visuals are designed as a unified system to ensure a smooth user experience, reduce cognitive load, and support complex information in a clean, professional interface suitable for enterprise and consumer use.',
+    description:
+      'This UI/UX project is a high-fidelity Figma design prototype featuring fully designed light and dark modes for a modern insurance technology platform. The design focuses on clarity, accessibility, and visual consistency, with carefully structured layouts, reusable components, and a clear content hierarchy that scales across sections such as product overview, features, analytics, integrations, and mobile apps. The light and dark themes are not simple color inversions, they are thoughtfully adapted to maintain contrast, readability, and brand identity in both modes. Interactive components, buttons, cards, and data visuals are designed as a unified system to ensure a smooth user experience, reduce cognitive load, and support complex information in a clean, professional interface suitable for enterprise and consumer use.',
     primaryLink:
       'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23368',
     secondaryLink:
@@ -332,7 +337,7 @@ const projects: Project[] = [
   {
     id: 13,
     title: 'Event Listing Page',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id13/2.jpg',
     description:
@@ -353,7 +358,7 @@ const projects: Project[] = [
   {
     id: 14,
     title: 'World Federation for Animals Website',
-    category: 'UI/UX Design',
+    category: 'User Interface Design',
     tools: ['Figma'],
     image: '/assets/images/projects/id14/1.jpg',
     description:
@@ -369,9 +374,13 @@ const projects: Project[] = [
 
 const filterMap: Record<
   string,
-  'UI/UX Design' | 'Web Development' | 'Product Management'
+  | 'User Experience Logic'
+  | 'User Interface Design'
+  | 'Web Development'
+  | 'Product Management'
 > = {
-  'UI/UX': 'UI/UX Design',
+  'UX Logic': 'User Experience Logic',
+  'UI Design': 'User Interface Design',
   'Web Dev': 'Web Development',
   'Product Mgmt': 'Product Management',
 };
@@ -474,4 +483,5 @@ const PortfolioGrid = ({ activeFilter }: { activeFilter: string }) => {
   );
 };
 
+export { projects, filterMap };
 export default PortfolioGrid;

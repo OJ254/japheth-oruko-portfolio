@@ -1,13 +1,57 @@
 // src/app/about/About.tsx
 
 import { Divider, Typography, Box, Button } from '@mui/material';
-import React from 'react';
-import { Schedule, WorkOutline, Language } from '@mui/icons-material';
+import React, { JSX } from 'react';
+import {
+  Schedule,
+  WorkOutline,
+  Language,
+  BuildOutlined,
+} from '@mui/icons-material';
+import Figma from '@/components/ui/dataDisplay/icons/logos/Figma';
+import MaterialUI from '@/components/ui/dataDisplay/icons/logos/MaterialUI';
+import NextJS from '@/components/ui/dataDisplay/icons/logos/NextJS';
+import Tailwind from '@/components/ui/dataDisplay/icons/logos/Tailwind';
+import Jira from '@/components/ui/dataDisplay/icons/logos/Jira';
+import Confluence from '@/components/ui/dataDisplay/icons/logos/Confluence';
+import PostgreSQL from '@/components/ui/dataDisplay/icons/logos/PostgreSQL';
+import TypeScript from '@/components/ui/dataDisplay/icons/logos/Typescript';
+import ReactIcon from '@/components/ui/dataDisplay/icons/logos/React';
+import Javascript from '@/components/ui/dataDisplay/icons/logos/JavaScript';
+import Html from '@/components/ui/dataDisplay/icons/logos/Html';
+import Css from '@/components/ui/dataDisplay/icons/logos/Css';
+import ViteJS from '@/components/ui/dataDisplay/icons/logos/ViteJS';
+import Redux from '@/components/ui/dataDisplay/icons/logos/Redux';
+import Atlassian from '@/components/ui/dataDisplay/icons/logos/Atlassian';
+import GitHub from '@/components/ui/dataDisplay/icons/logos/GitHub';
+
+const toolIcons: Record<string, JSX.Element> = {
+  Figma: <Figma className='h-6 w-6' />,
+  MaterialUI: <MaterialUI className='h-6 w-6' />,
+  'Next.js': <NextJS className='h-6 w-6 text-black dark:text-white' />,
+  Tailwind: <Tailwind className='h-6 w-6' />,
+  Jira: <Jira className='h-6 w-6' />,
+  Confluence: <Confluence className='h-6 w-6' />,
+  PostgreSQL: <PostgreSQL className='h-6 w-6' />,
+  TypeScript: <TypeScript className='h-6 w-6' />,
+  'React.js': <ReactIcon className='h-6 w-6' />,
+  JavaScript: <Javascript className='h-6 w-6' />,
+  HTML: <Html className='h-6 w-6' />,
+  CSS: <Css className='h-6 w-6' />,
+  'Vite.js': <ViteJS className='h-6 w-6' />,
+  'Redux Toolkit': <Redux className='h-6 w-6' />,
+  Atlassian: <Atlassian className='h-6 w-6' />,
+  GitHub: (
+    <GitHub className='h-7 w-7 rounded-full text-black dark:text-white' />
+  ),
+};
 
 const personalInfo = [
   { label: 'Age', value: '35 Years' },
   { label: 'Gender', value: 'Male (He/Him)' },
   { label: 'Residence', value: 'Nairobi, Kenya' },
+  { label: 'Phone', value: '+254 739 134882' },
+  { label: 'Email', value: 'japhethoruko@gmail.com' },
   {
     label: 'Languages',
     value: (
@@ -278,6 +322,26 @@ const About = () => {
   const pricing = 'Pricing';
   const education = 'Education';
   const work = 'Work Experience';
+  const techStack = 'Tech Stack';
+
+  const tools = [
+    'Figma',
+    'MaterialUI',
+    'Next.js',
+    'Tailwind',
+    'Jira',
+    'Confluence',
+    'PostgreSQL',
+    'TypeScript',
+    'React.js',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Vite.js',
+    'Redux Toolkit',
+    'Atlassian',
+    'GitHub',
+  ];
 
   return (
     <Box className='flex h-full flex-col gap-4'>
@@ -296,6 +360,14 @@ const About = () => {
         <div className='flex w-full flex-col md:flex-row lg:flex-col xl:flex-row'>
           <div className='flex w-full flex-col gap-2 p-8 pb-0'>
             <Typography variant='h6'>Hello! I’m Japheth Oruko</Typography>
+
+            <Typography variant='body2'>
+              I’m an experienced UI/UX Designer, Product Owner, and Frontend
+              Developer based in Nairobi, Kenya, with over 8 years of experience
+              designing and building thoughtful digital products. I specialize
+              in 0 to 1 product development, taking ideas from early concept and
+              discovery through design, validation, and full implementation.
+            </Typography>
 
             <Typography variant='body2'>
               An experienced UI/UX Designer, Product Owner, and Frontend
@@ -371,6 +443,43 @@ const About = () => {
             designs that are engaging, meaningful, and aligned with the overall
             product vision.
           </Typography>
+        </div>
+      </div>
+
+      <div className='mb-8'>
+        <div className='p-8'>
+          <Typography
+            variant='h5'
+            className='relative font-semibold tracking-wider'
+          >
+            <span className='bg-primary-color absolute -bottom-1 -left-2.5 h-8 w-8 rounded-full opacity-10' />
+            <span className='text-primary-color'>{techStack.charAt(0)}</span>
+            {techStack.slice(1)}
+          </Typography>
+        </div>
+
+        <Divider className='w-full' />
+
+        <div className='mb-8 w-full space-y-4 p-8 pb-0'>
+          <div className='flex flex-wrap gap-x-6 gap-y-3'>
+            {tools.map(tool => {
+              const Icon = toolIcons[tool];
+              return (
+                <Box
+                  key={tool}
+                  className='surface flex items-center gap-2 rounded-md px-3 py-1.5 text-sm'
+                  sx={{ border: 1, borderColor: 'divider' }}
+                >
+                  <div className='flex h-6 w-6 items-center justify-center'>
+                    {Icon ?? (
+                      <BuildOutlined fontSize='small' className='opacity-60' />
+                    )}
+                  </div>
+                  <span className='whitespace-nowrap'>{tool}</span>
+                </Box>
+              );
+            })}
+          </div>
         </div>
       </div>
 
