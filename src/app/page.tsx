@@ -1,245 +1,81 @@
-// src/app/page.tsx
-
-'use client';
-
-import React, { useEffect, useState } from 'react';
-import { useThemeToggle } from '@/hooks/useThemeToggle';
-import Link from 'next/link';
+import { Overview, ProfileHeader } from '@/components/portfolio/profile';
+import { ProductProcessSection } from '@/components/portfolio/product-process';
+import { ProjectArchiveSection } from '@/components/portfolio/projects';
 import {
-  Button,
-  Typography,
-  Divider,
-  Modal,
-  Box,
-  IconButton,
-  Slide,
-  Tooltip,
-} from '@mui/material';
-import { Email as ContactIcon, Description, Close } from '@mui/icons-material';
-import CustomCard from '@/components/general/cards/CustomCard';
-import japhethOruko from '@/assets/images/japheth-oruko.png';
-import {
-  LinkedInLogo,
-  GitHubLogo,
-  BehanceLogo,
-  SpotifyLogo,
-  CalendlyLogo,
-} from '@/components/ui/dataDisplay/icons';
-import LargeHeader from '@/components/general/Header/LargeHeader';
-import SmallHeader from '@/components/general/Header/SmallHeader';
-import About from '@/app/about/About';
-import Services from '@/app/services/Services';
-import Works from '@/app/works/Works';
-import Contact from '@/app/contact/Contact';
-import PdfReader from '@/components/general/PdfReader/PdfReader';
-
-const roles = [
-  'Product Designer (UI/UX)',
-  'Product Manager',
-  'Frontend Developer',
-];
-
-const socialLinks = [
-  {
-    href: 'https://www.behance.net/japhethoruko',
-    Icon: BehanceLogo,
-    label: 'Behance',
-  },
-  {
-    href: 'https://www.linkedin.com/in/japheth-oruko-b5b9a4301/',
-    Icon: LinkedInLogo,
-    label: 'LinkedIn',
-  },
-  {
-    href: 'https://github.com/OJ254',
-    Icon: GitHubLogo,
-    label: 'GitHub',
-  },
-  {
-    href: 'https://calendly.com/japhethoruko',
-    Icon: CalendlyLogo,
-    label: 'Calendly',
-  },
-  {
-    href: 'https://open.spotify.com/user/vdfj74s06581jrp8n5rr3ic2k',
-    Icon: SpotifyLogo,
-    label: 'Spotify',
-  },
-];
+  AboutSection,
+  CapabilitiesSection,
+  ContactSection,
+  EducationSection,
+  ExperienceSection,
+  MetricsSection,
+  TechStackSection,
+} from '@/components/portfolio/sections';
+import { GitHubActivity } from '@/components/portfolio/github-activity';
+import { USER } from '@/data/user';
 
 export default function Home() {
-  const { theme, toggleTheme } = useThemeToggle();
-  const [text, setText] = useState('');
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<
-    'about' | 'services' | 'works' | 'contact'
-  >('about');
-
-  useEffect(() => {
-    const currentRole = roles[roleIndex];
-    const speed = isDeleting ? 50 : 100;
-
-    const handleTyping = () => {
-      setText(prev => {
-        if (!isDeleting) {
-          if (prev.length < currentRole.length) {
-            return currentRole.slice(0, prev.length + 1);
-          }
-          setTimeout(() => setIsDeleting(true), 2400);
-          return prev;
-        } else {
-          if (prev.length > 0) {
-            return prev.slice(0, prev.length - 1);
-          }
-          setIsDeleting(false);
-          setRoleIndex(prevIndex => (prevIndex + 1) % roles.length);
-          return '';
-        }
-      });
-    };
-
-    const timeout = setTimeout(
-      handleTyping,
-      text === '' && !isDeleting ? 100 : speed
-    );
-
-    return () => clearTimeout(timeout);
-  }, [text, isDeleting, roleIndex]);
-
   return (
-    <div className='flex h-full w-full max-w-7xl flex-col items-start justify-center gap-4 font-sans lg:flex-row lg:items-center'>
-      <header className='relative w-full lg:w-auto'>
-        <SmallHeader
-          onNavigateAction={section => setActiveSection(section as any)}
-          activeSection={activeSection}
-        />
-        <LargeHeader
-          onNavigateAction={section => setActiveSection(section as any)}
-          activeSection={activeSection}
-        />
-      </header>
-
-      <main className='mt-20 flex w-full flex-col items-center justify-between lg:mt-0 lg:flex-row'>
-        <div className='relative flex h-full w-full flex-col items-center shadow-xl lg:w-2/5'>
-          <div className='surface absolute right-4 bottom-4 -z-10 flex h-[750px] w-full flex-col items-center rounded-lg opacity-50 shadow-2xl md:h-[1000px] lg:h-[750px]' />
-
-          <CustomCard className='flex w-full flex-col items-center shadow-2xl'>
-            <div
-              className='flex h-[500px] w-full items-center justify-center bg-cover bg-center md:h-[750px] lg:h-[500px]'
-              style={{
-                backgroundImage: `url(${japhethOruko.src})`,
-                clipPath: 'polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%)',
-              }}
-            />
-
-            <div className='lg flex w-full flex-col items-center justify-between'>
-              <div className='flex w-full flex-col items-center gap-4 py-4'>
-                <div className='flex flex-col items-center'>
-                  <Typography
-                    variant='h4'
-                    className='mt-6 leading-tight font-semibold'
-                  >
-                    Japheth Oruko
-                  </Typography>
-                  <Typography
-                    variant='body1'
-                    className='secondary-text h-6 font-medium'
-                  >
-                    {text}
-                  </Typography>
-                </div>
-
-                <div className='flex gap-4'>
-                  {socialLinks.map(({ href, Icon, label }) => (
-                    <Tooltip key={href} title={label} arrow placement='top'>
-                      <a
-                        href={href}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='transition-all duration-300 hover:scale-120'
-                      >
-                        <Icon className='h-6 w-6 cursor-pointer' />
-                      </a>
-                    </Tooltip>
-                  ))}
-                </div>
-              </div>
-
-              <Divider variant='middle' className='mt-4 w-full' />
-
-              <div className='flex h-16 w-full'>
-                <Button
-                  onClick={() => setIsResumeModalOpen(true)}
-                  className='flex h-16 w-full uppercase'
-                  endIcon={<Description />}
-                  sx={{
-                    color: 'text.primary',
-                    '&:hover': { bgcolor: 'action.hover' },
-                  }}
-                >
-                  <Typography variant='body1' className='font-medium'>
-                    My Resume
-                  </Typography>
-                </Button>
-
-                <Divider orientation='vertical' />
-
-                <Button
-                  onClick={() => setActiveSection('contact')}
-                  fullWidth
-                  className='h-16 normal-case'
-                  endIcon={<ContactIcon />}
-                  sx={{
-                    color: 'text.primary',
-                    '&:hover': { bgcolor: 'action.hover' },
-                  }}
-                >
-                  <Typography variant='body1' className='font-medium uppercase'>
-                    Contact Me
-                  </Typography>
-                </Button>
-              </div>
-            </div>
-          </CustomCard>
-        </div>
-
-        <div className='body scrollbar-custom w-full overflow-hidden rounded-r-md lg:h-[700px] lg:w-3/5'>
-          <Slide
-            direction='left'
-            in
-            mountOnEnter
-            unmountOnExit
-            key={activeSection}
-            timeout={300}
-          >
-            <div className='scrollbar-custom h-full overflow-auto'>
-              {activeSection === 'about' && <About />}
-              {activeSection === 'services' && <Services />}
-              {activeSection === 'works' && <Works />}
-              {activeSection === 'contact' && <Contact />}
-            </div>
-          </Slide>
-        </div>
-      </main>
-
-      <Modal
-        open={isResumeModalOpen}
-        onClose={() => setIsResumeModalOpen(false)}
-      >
-        <Box className='lg:max-w-8xl absolute top-1/2 left-1/2 flex h-[90vh] w-full max-w-[90vw] -translate-x-1/2 -translate-y-1/2 flex-col rounded-lg bg-[#3c3c3c] shadow-2xl'>
-          <div className='flex justify-end p-2'>
-            <IconButton onClick={() => setIsResumeModalOpen(false)}>
-              <Close className='text-primary-color' />
-            </IconButton>
-          </div>
-
-          <div className='flex-1 overflow-hidden'>
-            <PdfReader />
-          </div>
-        </Box>
-      </Modal>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getJsonLd()).replace(/</g, '\\u003c'),
+        }}
+      />
+      <div className="mx-auto max-w-5xl px-2 *:scroll-mt-20">
+        <ProfileHeader />
+        <Separator />
+        <Overview />
+        <Separator />
+        <GitHubActivity />
+        <Separator />
+        <AboutSection />
+        <Separator />
+        <MetricsSection />
+        <Separator />
+        <CapabilitiesSection />
+        <Separator />
+        <ExperienceSection />
+        <Separator />
+        <ProductProcessSection />
+        <Separator />
+        <TechStackSection />
+        <Separator />
+        <EducationSection />
+        <Separator />
+        <ProjectArchiveSection />
+        <Separator />
+        <ContactSection />
+      </div>
+    </>
   );
+}
+
+function Separator() {
+  return <div className="h-8 border-x border-line bg-[repeating-linear-gradient(135deg,var(--portfolio-line)_0,var(--portfolio-line)_1px,transparent_1px,transparent_12px)]" />;
+}
+
+function getJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    name: 'Japheth Oruko Portfolio',
+    url: 'https://japheth-oruko-portfolio.vercel.app/',
+    mainEntity: {
+      '@type': 'Person',
+      name: USER.displayName,
+      image: 'https://japheth-oruko-portfolio.vercel.app/assets/images/logo.png',
+      jobTitle: USER.primaryTitle,
+      email: `mailto:${USER.email}`,
+      telephone: USER.phone,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Nairobi',
+        addressCountry: 'KE',
+      },
+      url: 'https://japheth-oruko-portfolio.vercel.app/',
+      sameAs: [USER.github, USER.linkedin, USER.behance, USER.spotify],
+      knowsAbout: USER.keywords,
+    },
+  };
 }

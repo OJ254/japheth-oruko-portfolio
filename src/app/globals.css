@@ -1,159 +1,255 @@
-/* Tailwind CSS */
-@layer theme, base, mui, components, utilities;
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-/* Custom variants */
-@custom-variant dark (&:where(.dark, .dark-mode, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* =========================
-   Base theme variables
-========================= */
 :root {
-    --background: #edf2f6;
-    --foreground: #171717;
-    --body-color: #edf2f6;
-    --surface: #f8fafc;
-    --scrollbar-color: rgba(0, 0, 0, 0.3);
-
-    --primary-color: #60A5FA;
-
-    /* Light theme gradient colors */
-    --gradient-1: #c9f2ff;
-    --gradient-2: #d9d3ff;
-    --gradient-3: #f3c6ff;
-
-    /* font colors */
-    --secondary-text: #52525c;
+  --portfolio-surface: #ffffff;
+  --portfolio-muted-text: #5d6b66;
+  --portfolio-line: #dfe4e1;
+  --portfolio-brand: #14b8a6;
+  --portfolio-brand-soft: #dff7f6;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Dark theme overrides */
 .dark {
-    --background: #121419;
-    --foreground: #f5f5f7;
-    --body-color: #121419;
-    --surface: #1b1d24;
-    --scrollbar-color: rgba(255, 255, 255, 0.3);
-
-    --primary-color: #A78BFA;
-
-    /* Dark theme gradient colors (deeper, muted) */
-    --gradient-1: #1e2a4a;
-    --gradient-2: #3b2a5a;
-    --gradient-3: #5a2d5f;
-
-    /* font colors */
-    --secondary-text: #9f9fa9;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --portfolio-surface: #101413;
+  --portfolio-muted-text: #a6b8b1;
+  --portfolio-line: #27302c;
+  --portfolio-brand: #5ee0d7;
+  --portfolio-brand-soft: #123331;
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* =========================
-   Theme variables
-========================= */
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
-
-    /* Gradient animation */
-    --animate-gradient: pastelShift 14s ease-in-out infinite;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--portfolio-surface);
+  --color-muted-text: var(--portfolio-muted-text);
+  --color-muted: var(--muted);
+  --color-line: var(--portfolio-line);
+  --color-brand: var(--portfolio-brand);
+  --color-brand-soft: var(--portfolio-brand-soft);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@theme {
-    /* Aspect ratios */
-    --aspect-retro: 5 / 5;
-
-    /* Spacing */
-    --spacing-192: 48rem; /* 36rem × 16px = 576px */
+* {
+  box-sizing: border-box;
 }
 
-/* =========================
-   Typography
-========================= */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    @apply antialiased tracking-wide;
+html {
+  scroll-behavior: smooth;
 }
 
-/* =========================
-   Body
-========================= */
-body,
-.body {
-    background-color: var(--body-color);
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--portfolio-line) 42%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--portfolio-line) 34%, transparent) 1px, transparent 1px),
+    var(--background);
+  background-size: 44px 44px;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
-
-/* =========================
-   Animated gradient
-========================= */
-.animated-gradient {
-    background: linear-gradient(
-            120deg,
-            var(--gradient-1),
-            var(--gradient-2),
-            var(--gradient-3)
-    );
-    background-size: 300% 300%;
-    animation: var(--animate-gradient);
+.profile-cover {
+  background:
+    linear-gradient(90deg, transparent 49.9%, var(--portfolio-line) 50%, transparent 50.1%),
+    linear-gradient(180deg, transparent 49.9%, var(--portfolio-line) 50%, transparent 50.1%),
+    radial-gradient(circle at 50% 52%, color-mix(in srgb, var(--portfolio-brand) 12%, transparent), transparent 42%),
+    var(--background);
 }
 
-/* =========================
-   Keyframes
-========================= */
-@keyframes pastelShift {
-    0% {
-        background-position: 0% 50%;
-        filter: hue-rotate(0deg);
-    }
-
-    50% {
-        background-position: 100% 50%;
-        filter: hue-rotate(12deg);
-    }
-
-    100% {
-        background-position: 0% 50%;
-        filter: hue-rotate(0deg);
-    }
+.profile-cover::before,
+.profile-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-/* Hide the arrows/buttons in the scrollbar */
-.scrollbar-custom::-webkit-scrollbar-button {
-    display: none; /* Chrome, Safari, Edge */
+.profile-cover::before {
+  background:
+    linear-gradient(32deg, transparent calc(50% - 1px), color-mix(in srgb, var(--portfolio-line) 60%, transparent) 50%, transparent calc(50% + 1px)),
+    linear-gradient(148deg, transparent calc(50% - 1px), color-mix(in srgb, var(--portfolio-line) 60%, transparent) 50%, transparent calc(50% + 1px));
 }
 
-/* Optional: style the scrollbar itself */
-.scrollbar-custom::-webkit-scrollbar {
-    width: 8px; /* Adjust width */
+.profile-cover::after {
+  background-image: repeating-linear-gradient(135deg, color-mix(in srgb, var(--portfolio-line) 55%, transparent) 0 1px, transparent 1px 9px);
+  mask: linear-gradient(90deg, transparent, black 24%, black 76%, transparent);
+  opacity: 0.35;
 }
 
-.scrollbar-custom::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-color); /* Thumb color */
-    border-radius: 4px; /* Rounded corners */
+.wire-mark {
+  color: transparent;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(6rem, 22vw, 14rem);
+  font-weight: 900;
+  line-height: 0.8;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--foreground) 12%, transparent);
+  text-shadow: 0 0 24px color-mix(in srgb, var(--portfolio-brand) 10%, transparent);
 }
 
-
-
-.surface {
-    background-color: var(--surface);
+.form-field {
+  min-height: 2.75rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid var(--portfolio-line);
+  background: var(--portfolio-surface);
+  padding: 0.75rem;
+  color: var(--foreground);
+  outline: none;
 }
 
-.secondary-text {
-    color: var(--secondary-text);
+.form-field:focus {
+  border-color: var(--portfolio-brand);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--portfolio-brand) 24%, transparent);
 }
 
-.text-primary-color {
-    @apply text-blue-400 dark:text-purple-500;
+.grid-cols-24 {
+  grid-template-columns: repeat(24, minmax(0, 1fr));
 }
 
-.bg-primary-color {
-    @apply bg-blue-400 dark:bg-purple-500;
+a {
+  text-underline-offset: 4px;
 }
 
+button,
+a,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--background) 94%, transparent);
+}
+
+::selection {
+  background: var(--portfolio-brand-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

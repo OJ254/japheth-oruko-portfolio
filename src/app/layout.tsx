@@ -1,14 +1,19 @@
-// src/app/layout.tsx
-
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { ThemeProvider } from '@mui/material/styles';
-import ThemeRegistry from '@/components/shared/ThemeToggle/ThemeRegistry';
+import { Geist, Geist_Mono, Inter } from 'next/font/google';
+
+import { SiteFooter } from '@/components/site/site-footer';
+import { SiteHeader } from '@/components/site/site-header';
+import { ThemeProvider } from '@/components/site/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import { USER } from '@/data/user';
+
 import './globals.css';
-import AnimatedBackground from '@/components/general/AnimatedBackground/AnimatedBackground';
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -23,60 +28,61 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Japheth Oruko's Portfolio",
+  metadataBase: new URL('https://japheth-oruko-portfolio.vercel.app'),
+  title: {
+    default: 'Japheth Oruko | Lead Product Designer, Frontend Lead & React/Next.js Developer',
+    template: '%s | Japheth Oruko',
+  },
   description:
-    'Showcasing frontend development, design systems, and product ownership work.',
+    'Portfolio of Japheth Oruko, a Nairobi-based Lead Product Designer and Frontend Lead helping teams design, document, and ship user-centered digital products with React, Next.js, modern UI systems, Claude, and Codex.',
+  keywords: [...USER.keywords],
+  authors: [{ name: USER.displayName, url: USER.linkedin }],
+  creator: USER.displayName,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Japheth Oruko | Lead Product Designer, Frontend Lead & React/Next.js Developer',
+    description:
+      'A serious product/design/frontend portfolio for startup founders, product leaders, design managers, and engineering teams.',
+    url: '/',
+    siteName: 'Japheth Oruko Portfolio',
+    type: 'profile',
+    images: [{ url: '/assets/images/logo.png', width: 512, height: 512, alt: 'Japheth Oruko portfolio logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Japheth Oruko | Lead Product Designer, Frontend Lead & React/Next.js Developer',
+    description:
+      'Nairobi-based product designer, product manager, frontend lead, and AI-assisted product builder.',
+    images: ['/assets/images/logo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <head>
-        <title>Japheth Oruko's Portfolio</title>
-        <meta name='description' content={metadata.description as string} />
-        <meta
-          name='keywords'
-          content='japheth oruko resume, ui/ux desiger, product designer, product manager, product owner, frontend developer, user expirience, user design, user centric design'
-        />
-        <meta name='author' content='Japheth Oruko' />
-        <meta name='robots' content='index, follow' />
-        <meta property='og:title' content='Japheth Oruko' />
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Japheth Oruko',
-              name: 'Japheth Oruko',
-              url: 'url', // e.g: https://ticetedu.com
-              logo: 'url', // e.g: https://ticetedu.com/public/ticet-small.svg
-              sameAs: [
-                'url', // e.g: https://www.facebook.com/ticetedu
-                'url', // e.g: https://twitter.com/ticetedu
-                'url', // e.g: https://linkedin.com/company/ticet-edu
-              ],
-            }),
-          }}
-        />
-      </head>
+    <html lang='en' suppressHydrationWarning className={cn("font-sans", inter.variable)}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeRegistry>
-            <div className='relative min-h-screen overflow-hidden p-4 md:p-8 lg:p-0'>
-              <AnimatedBackground />
-              <main className='relative z-10 flex min-h-screen w-full flex-col lg:items-center lg:justify-center'>
-                {children}
-                <SpeedInsights />
-                <Analytics />
-              </main>
-            </div>
-          </ThemeRegistry>
-        </AppRouterCacheProvider>
+        <ThemeProvider>
+          <TooltipProvider>
+            <SiteHeader />
+            <main>{children}</main>
+            <SiteFooter />
+            <Toaster />
+            <SpeedInsights />
+            <Analytics />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
