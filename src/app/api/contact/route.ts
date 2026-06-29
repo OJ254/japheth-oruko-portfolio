@@ -23,8 +23,6 @@
 
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 /**
  * Handle POST /api/contact
  *
@@ -54,6 +52,15 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+
+    if (!process.env.RESEND_API_KEY) {
+      return Response.json(
+        { error: 'Contact email is not configured' },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Send the email via Resend. "to" must be an array. We use replyTo so the
     // recipient can reply directly to the sender's address.
@@ -94,13 +101,14 @@ export async function POST(req: Request) {
 
     // Return the result from Resend (useful for debugging in development).
     return Response.json({ success: true, result });
-  } catch (error: any) {
+  } catch (error: unknown) {
     // Avoid leaking sensitive internals; include message for observability.
     console.error('Contact API Error:', error);
+    const message = error instanceof Error ? error.message : String(error);
     return Response.json(
       {
         error: 'Failed to send email',
-        details: error?.message || String(error),
+        details: message,
       },
       { status: 500 }
     );

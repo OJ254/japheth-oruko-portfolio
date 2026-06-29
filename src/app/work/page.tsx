@@ -1,0 +1,28 @@
+import type { Metadata } from 'next';
+
+import { PageIntro } from '@/components/portfolio/page-intro';
+import { ProjectArchiveSection } from '@/components/portfolio/projects';
+
+export const metadata: Metadata = {
+  title: 'Work',
+  description:
+    'Case-study archive for Japheth Oruko across PixeSci, Ticet EDU, product documentation, UI/UX design, and frontend implementation.',
+};
+
+export default function WorkPage() {
+  return (
+    <div className="mx-auto max-w-5xl px-2 *:scroll-mt-20">
+      <PageIntro
+        kicker="Work"
+        title="Case-study material across product design, product management, and frontend delivery."
+        body="PixeSci appears first as current work across the website, application experience, and design system, followed by detailed Ticet EDU proof and selected UI/UX, documentation, and implementation samples."
+      />
+      <Separator />
+      <ProjectArchiveSection />
+    </div>
+  );
+}
+
+function Separator() {
+  return <div className="h-8 border-x border-line bg-[repeating-linear-gradient(135deg,var(--portfolio-line)_0,var(--portfolio-line)_1px,transparent_1px,transparent_12px)]" />;
+}
