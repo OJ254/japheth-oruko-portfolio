@@ -11,9 +11,9 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { USER } from '@/data/user';
 
 import './globals.css';
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 const geistSans = Geist({
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -30,11 +30,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://japheth-oruko-portfolio.vercel.app'),
   title: {
-    default: 'Japheth Oruko | Lead Product Designer, Frontend Lead & React/Next.js Developer',
+    default:
+      'Japheth Oruko | Product Designer, Project Manager, Frontend Developer & React/Next.js Developer',
     template: '%s | Japheth Oruko',
   },
   description:
-    'Portfolio of Japheth Oruko, a Nairobi-based Lead Product Designer and Frontend Lead helping teams design, document, and ship user-centered digital products with React, Next.js, modern UI systems, Claude, and Codex.',
+    'Portfolio of Japheth Oruko, a Nairobi-based Frontend Developer, Product Designer, and Project Manager helping teams design, document, and ship user-centered digital products with React, Next.js, modern UI systems, Claude, and Codex.',
   keywords: [...USER.keywords],
   authors: [{ name: USER.displayName, url: USER.linkedin }],
   creator: USER.displayName,
@@ -42,19 +43,28 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Japheth Oruko | Lead Product Designer, Frontend Lead & React/Next.js Developer',
+    title:
+      'Japheth Oruko | Product Designer, Project Manager, Frontend Developer & React/Next.js Developer',
     description:
       'A serious product/design/frontend portfolio for startup founders, product leaders, design managers, and engineering teams.',
     url: '/',
     siteName: 'Japheth Oruko Portfolio',
     type: 'profile',
-    images: [{ url: '/assets/images/logo.png', width: 512, height: 512, alt: 'Japheth Oruko portfolio logo' }],
+    images: [
+      {
+        url: '/assets/images/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Japheth Oruko portfolio logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Japheth Oruko | Lead Product Designer, Frontend Lead & React/Next.js Developer',
+    title:
+      'Japheth Oruko | Product Designer, Project Manager, Frontend Developer & React/Next.js Developer',
     description:
-      'Nairobi-based product designer, product manager, frontend lead, and AI-assisted product builder.',
+      'Nairobi-based product designer, product manager, frontend developer, and AI-assisted product builder.',
     images: ['/assets/images/logo.png'],
   },
   robots: {
@@ -69,7 +79,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning className={cn("font-sans", inter.variable)}>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className={cn('font-sans', inter.variable)}
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

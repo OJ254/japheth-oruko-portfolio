@@ -9,7 +9,7 @@ export const experience: ExperienceCompany[] = [
     status: 'current',
     roles: [
       {
-        title: 'Lead Product Designer and Frontend Lead',
+        title: 'Lead Product Designer and Frontend Developer',
         duration: 'Current',
         summary:
           'Lead product design and frontend direction for a scientific workflow platform, connecting product storytelling, application UX, design-system foundations, Figma product design, and implementation guidance.',

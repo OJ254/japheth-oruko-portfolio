@@ -1,6 +1,12 @@
 import type { Project, ProjectCategory } from '@/types/portfolio';
 
-const imageSet = (legacyId: number, title: string, start = 1, count = 10, extension = 'jpg') =>
+const imageSet = (
+  legacyId: number,
+  title: string,
+  start = 1,
+  count = 10,
+  extension = 'jpg'
+) =>
   Array.from({ length: count }, (_, index) => {
     const imageNumber = index + 1;
     return {
@@ -30,13 +36,26 @@ const projectEntries = [
     category: 'frontend-development',
     featured: true,
     priority: 1,
-    role: ['Lead Product Designer', 'Frontend Lead'],
+    role: ['Lead Product Designer', 'Lead Frontend Developer'],
     organization: 'PixeSci',
     period: 'Current',
-    tools: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS', 'Figma', 'Claude', 'Codex'],
-    skills: ['Product website', 'Market readiness', 'SEO foundations', 'Conversion paths'],
+    tools: [
+      'Next.js',
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Figma',
+      'Claude',
+      'Codex',
+    ],
+    skills: [
+      'Product website',
+      'Market readiness',
+      'SEO foundations',
+      'Conversion paths',
+    ],
     summary:
-      "A responsive product-led website for PixeSci that gives the company a clearer public presence, stronger product positioning, reusable page systems, SEO foundations, product visuals, and demo-booking conversion paths.",
+      'A responsive product-led website for PixeSci that gives the company a clearer public presence, stronger product positioning, reusable page systems, SEO foundations, product visuals, and demo-booking conversion paths.',
     context:
       'PixeSci needed a credible market-facing website that could explain a technically complex scientific workflow platform to regulated life sciences, secure research, core facilities, and other high-control scientific environments.',
     approach:
@@ -53,11 +72,27 @@ const projectEntries = [
     category: 'frontend-development',
     featured: true,
     priority: 2,
-    role: ['Lead Product Designer', 'Frontend Lead'],
+    role: ['Lead Product Designer', 'Lead Frontend Developer'],
     organization: 'PixeSci',
     period: 'Current',
-    tools: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit', 'shadcn-style UI primitives', 'Radix UI', 'Tauri', 'Claude', 'Codex'],
-    skills: ['Application redesign', 'Scientific workflow UX', 'Frontend direction', 'Component systems'],
+    tools: [
+      'React.js',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Redux Toolkit',
+      'shadcn-style UI primitives',
+      'Radix UI',
+      'Tauri',
+      'Claude',
+      'Codex',
+    ],
+    skills: [
+      'Application redesign',
+      'Scientific workflow UX',
+      'Frontend direction',
+      'Component systems',
+    ],
     summary:
       'A recreated PixeSci application experience that moves the product from an earlier interface into a cleaner, more structured, and more market-ready product UI for complex scientific workflow automation.',
     context:
@@ -79,8 +114,19 @@ const projectEntries = [
     role: ['Lead Product Designer'],
     organization: 'PixeSci',
     period: 'Current',
-    tools: ['Figma', 'Claude', 'Codex', 'Tailwind CSS', 'shadcn-style UI primitives'],
-    skills: ['Design systems', 'Figma product design', 'Interaction states', 'Design-to-code direction'],
+    tools: [
+      'Figma',
+      'Claude',
+      'Codex',
+      'Tailwind CSS',
+      'shadcn-style UI primitives',
+    ],
+    skills: [
+      'Design systems',
+      'Figma product design',
+      'Interaction states',
+      'Design-to-code direction',
+    ],
     summary:
       'A PixeSci design system and Figma product-design foundation covering interface patterns, product visuals, responsive behavior, typography, spacing, color, component states, and scientific workflow surfaces.',
     context:
@@ -90,7 +136,13 @@ const projectEntries = [
     outcome:
       'Established a consistent visual and product system that supports faster design-to-code iteration, stronger UI consistency, and clearer translation of scientific automation concepts into buildable product interfaces.',
     links: [{ label: 'PixeSci', href: 'https://pixesci.com/' }],
-    images: imageSet(17, 'PixeSci Design System and Figma Product Design', 1, 2, 'png'),
+    images: imageSet(
+      17,
+      'PixeSci Design System and Figma Product Design',
+      1,
+      2,
+      'png'
+    ),
   },
   {
     id: 'ticet-edu-design-system',
@@ -102,7 +154,12 @@ const projectEntries = [
     role: ['Lead Product Designer'],
     organization: 'Ticet EDU Limited',
     tools: ['Figma'],
-    skills: ['Design systems', 'Component libraries', 'Handoff', 'Responsive UI'],
+    skills: [
+      'Design systems',
+      'Component libraries',
+      'Handoff',
+      'Responsive UI',
+    ],
     summary:
       "A structured Figma design kit for Ticet EDU's web platform, covering reusable components, responsive layouts, typography, color palettes, icons, interaction states, and product patterns.",
     context:
@@ -123,8 +180,22 @@ const projectEntries = [
     priority: 5,
     role: ['Frontend Developer'],
     organization: 'Ticet EDU Limited',
-    tools: ['GitHub', 'Next.js', 'TypeScript', 'Redux Toolkit', 'Material UI', 'Tailwind CSS', 'HTML', 'CSS'],
-    skills: ['Frontend architecture', 'API integration', 'State management', 'Responsive UI'],
+    tools: [
+      'GitHub',
+      'Next.js',
+      'TypeScript',
+      'Redux Toolkit',
+      'Material UI',
+      'Tailwind CSS',
+      'HTML',
+      'CSS',
+    ],
+    skills: [
+      'Frontend architecture',
+      'API integration',
+      'State management',
+      'Responsive UI',
+    ],
     summary:
       'A Next.js and TypeScript frontend for the Ticet EDU Learning Experience Platform, focused on responsive interfaces, scalable component architecture, API integration, and polished implementation of complex learning workflows.',
     context:
@@ -146,7 +217,12 @@ const projectEntries = [
     role: ['Lead Product Designer'],
     organization: 'Ticet EDU Limited',
     tools: ['Figma'],
-    skills: ['UX strategy', 'Product design', 'Responsive layouts', 'Prototyping'],
+    skills: [
+      'UX strategy',
+      'Product design',
+      'Responsive layouts',
+      'Prototyping',
+    ],
     summary:
       "A personalized learning experience design for Ticet EDU's LXP, covering onboarding, dashboards, content discovery, analytics, creator tools, responsive layouts, and interactive learning flows.",
     context:
@@ -167,7 +243,12 @@ const projectEntries = [
     priority: 7,
     role: ['Product Manager'],
     tools: ['Atlassian', 'Jira', 'Confluence'],
-    skills: ['User stories', 'Acceptance criteria', 'Backlog management', 'Agile delivery'],
+    skills: [
+      'User stories',
+      'Acceptance criteria',
+      'Backlog management',
+      'Agile delivery',
+    ],
     summary:
       'A product documentation sample showing how Confluence and Jira can turn subscription packages, feature requirements, epics, user stories, tasks, and acceptance criteria into a transparent delivery system.',
     context:
@@ -187,11 +268,23 @@ const projectEntries = [
     featured: true,
     priority: 8,
     role: ['Frontend Developer'],
-    tools: ['Next.js', 'TypeScript', 'Material UI', 'Tailwind CSS', 'HTML', 'CSS'],
-    skills: ['Responsive development', 'Institutional website', 'Accessible navigation'],
+    tools: [
+      'Next.js',
+      'TypeScript',
+      'Material UI',
+      'Tailwind CSS',
+      'HTML',
+      'CSS',
+    ],
+    skills: [
+      'Responsive development',
+      'Institutional website',
+      'Accessible navigation',
+    ],
     summary:
       'A modern institutional website built with Next.js, TypeScript, Material UI, Tailwind CSS, HTML, and CSS, focused on responsive layouts, accessible navigation, performance, and professional brand presentation.',
-    context: 'The website needed to translate an institutional identity into a clear, responsive digital presence.',
+    context:
+      'The website needed to translate an institutional identity into a clear, responsive digital presence.',
     approach:
       "Built structured layouts, reusable components, and a responsive front-end architecture aligned with the institution's design direction.",
     links: [
@@ -217,8 +310,14 @@ const projectEntries = [
     approach:
       'Designed authentication, role-based access patterns, patient profiles, dashboard views, clinical documentation surfaces, and responsive layouts with accessibility and data clarity in mind.',
     links: [
-      { label: 'Figma design', href: 'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=105-985' },
-      { label: 'Prototype', href: 'https://www.figma.com/proto/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=8179-2388&t=FPCj8UyIeFdOkOJr-1' },
+      {
+        label: 'Figma design',
+        href: 'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=105-985',
+      },
+      {
+        label: 'Prototype',
+        href: 'https://www.figma.com/proto/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=8179-2388&t=FPCj8UyIeFdOkOJr-1',
+      },
     ],
     images: imageSet(11, 'Hospital Management System UI/UX'),
   },
@@ -229,7 +328,15 @@ const projectEntries = [
     category: 'frontend-development',
     priority: 10,
     role: ['Frontend Developer', 'Product Designer'],
-    tools: ['GitHub', 'Next.js', 'TypeScript', 'Material UI', 'Tailwind CSS', 'HTML', 'CSS'],
+    tools: [
+      'GitHub',
+      'Next.js',
+      'TypeScript',
+      'Material UI',
+      'Tailwind CSS',
+      'HTML',
+      'CSS',
+    ],
     skills: ['Portfolio strategy', 'Responsive layout', 'Personal brand'],
     summary:
       'A personal portfolio built to present product strategy, UI/UX design, product management, and frontend engineering work in one cohesive professional narrative.',
@@ -237,7 +344,10 @@ const projectEntries = [
       'The portfolio needed to function as both a career profile and work-sample hub, making it easy for founders, hiring managers, and collaborators to understand my hybrid product, design, and frontend capabilities.',
     links: [
       { label: 'Website', href: 'https://japheth-oruko-portfolio.vercel.app/' },
-      { label: 'GitHub', href: 'https://github.com/OJ254/japheth-oruko-portfolio' },
+      {
+        label: 'GitHub',
+        href: 'https://github.com/OJ254/japheth-oruko-portfolio',
+      },
     ],
     images: imageSet(1, 'Personal Portfolio'),
   },
@@ -280,8 +390,14 @@ const projectEntries = [
     approach:
       'Created a component-based design system, mapped the landing-page journey, defined responsive behavior, and prepared interactive prototypes to align stakeholders before development.',
     links: [
-      { label: 'Figma design', href: 'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=105-985' },
-      { label: 'Prototype', href: 'https://www.figma.com/proto/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6210-36526&t=DZedl3Y68or48MTT-1' },
+      {
+        label: 'Figma design',
+        href: 'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=105-985',
+      },
+      {
+        label: 'Prototype',
+        href: 'https://www.figma.com/proto/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6210-36526&t=DZedl3Y68or48MTT-1',
+      },
     ],
     images: imageSet(6, 'Ticet EDU Website UI/UX'),
   },
@@ -319,7 +435,12 @@ const projectEntries = [
       'The institution needed a modern public website design that could communicate credibility and make information easier to navigate across devices.',
     approach:
       'Created wireframes, high-fidelity screens, responsive layouts, reusable cards and forms, and interactive prototypes for stakeholder review and development handoff.',
-    links: [{ label: 'Figma design', href: 'https://www.figma.com/design/tlz7RVpv2Rr6tGwiupmEHc/LVBIWCE---Website?node-id=5598-7991&t=kesJxF2mY6cn9tez-1' }],
+    links: [
+      {
+        label: 'Figma design',
+        href: 'https://www.figma.com/design/tlz7RVpv2Rr6tGwiupmEHc/LVBIWCE---Website?node-id=5598-7991&t=kesJxF2mY6cn9tez-1',
+      },
+    ],
     images: imageSet(9, 'LVBICE Website UI/UX'),
   },
   {
@@ -338,8 +459,14 @@ const projectEntries = [
     approach:
       'Structured product sections, feature panels, data visuals, theme variants, and reusable interface components to support a polished enterprise-style presentation.',
     links: [
-      { label: 'Figma design', href: 'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23368' },
-      { label: 'Prototype', href: 'https://www.figma.com/proto/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23582&t=DZedl3Y68or48MTT-1' },
+      {
+        label: 'Figma design',
+        href: 'https://www.figma.com/design/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23368',
+      },
+      {
+        label: 'Prototype',
+        href: 'https://www.figma.com/proto/zNo81ytxKUm6UQ51fXWe5f/Website---Ticet-EDU?node-id=6386-23582&t=DZedl3Y68or48MTT-1',
+      },
     ],
     images: imageSet(12, 'Infobrix Insurance Website UI/UX'),
   },
@@ -361,8 +488,14 @@ const projectEntries = [
     outcome:
       'The solution prioritizes decision speed, pattern recognition, modular reuse, and immediate clarity around relevance, location, mode, cost, and registration status.',
     links: [
-      { label: 'Figma design', href: 'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=4-6598' },
-      { label: 'Prototype', href: 'https://www.figma.com/proto/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=9096-21636&t=FPCj8UyIeFdOkOJr-1' },
+      {
+        label: 'Figma design',
+        href: 'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=4-6598',
+      },
+      {
+        label: 'Prototype',
+        href: 'https://www.figma.com/proto/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=9096-21636&t=FPCj8UyIeFdOkOJr-1',
+      },
     ],
     images: imageSet(13, 'Event Listing Page UX Logic', 2),
   },
@@ -381,11 +514,18 @@ const projectEntries = [
       'The website needed to communicate advocacy, impact, and educational resources through an emotionally resonant but professional interface.',
     approach:
       'Designed homepage sections, navigation, advocacy updates, impact areas, educational content blocks, responsive components, and theme variations.',
-    links: [{ label: 'Figma design', href: 'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=6386-23676&t=FPCj8UyIeFdOkOJr-1' }],
+    links: [
+      {
+        label: 'Figma design',
+        href: 'https://www.figma.com/design/4Nb2RIzPtQgqZMWKposjwk/Personal-Projects?node-id=6386-23676&t=FPCj8UyIeFdOkOJr-1',
+      },
+    ],
     images: imageSet(14, 'World Federation for Animals Website UI/UX'),
   },
 ] satisfies Project[];
 
-export const projects: Project[] = [...projectEntries].sort((a, b) => a.priority - b.priority);
+export const projects: Project[] = [...projectEntries].sort(
+  (a, b) => a.priority - b.priority
+);
 
 export const featuredProjects = projects.filter(project => project.featured);

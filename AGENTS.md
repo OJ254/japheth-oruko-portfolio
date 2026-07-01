@@ -17,7 +17,7 @@ The site should make the following positioning unmistakable:
 - Japheth Oruko is a Nairobi-based Product Designer, Product Manager, Frontend Developer, and AI-assisted product builder.
 - He is especially valuable in zero-to-one and early-stage product environments where product thinking, design execution, and implementation judgment must work together.
 - He can also support established companies that need better UX, cleaner product documentation, stronger design systems, responsive frontend execution, and cross-functional product delivery.
-- His current role is Lead Product Designer and Frontend Lead at PixeSci.
+- His current role is Lead Product Designer and Frontend Developer at PixeSci.
 - His current PixeSci role has user-supplied detail: he leads product design and frontend direction across the PixeSci website, application experience, Figma product design, design system, frontend guidance, and AI-assisted design-to-code workflow.
 - His strongest existing detailed proof comes from previous Ticet EDU work, where he contributed as Lead Product Designer, Product Manager, and Frontend Developer across a zero-to-one EdTech product.
 - His work samples should be treated as case-study material, not just gallery images.
@@ -55,7 +55,7 @@ Known identity details:
 
 - Name: Japheth Oruko
 - Location: Nairobi, Kenya
-- Phone: `+254 739 134882`
+- Phone: `+254 758 750674`
 - Email: `japhethoruko@gmail.com`
 - GitHub: `https://github.com/OJ254`
 - LinkedIn: `https://www.linkedin.com/in/japheth-oruko-b5b9a4301/`
@@ -64,7 +64,7 @@ Known identity details:
 - Spotify: `https://open.spotify.com/user/vdfj74s06581jrp8n5rr3ic2k`
 - Languages: English fluent, Swahili native
 - Availability: full-time and contract available
-- Current role: Lead Product Designer and Frontend Lead at PixeSci
+- Current role: Lead Product Designer and Frontend Developer at PixeSci
 - Current employer website/application: `https://pixesci.com/`
 - Roles: Product Designer, Product Manager, Frontend Developer, Frontend Lead, AI-assisted product builder
 - Mastered AI development tools: Claude and Codex
@@ -212,7 +212,7 @@ Write as a serious product professional:
 - Avoid pretending a personal project has enterprise traction.
 - Avoid overclaiming metrics that are not documented.
 - Present PixeSci as the current employer and current role using the supplied role details:
-  - Lead Product Designer and Frontend Lead at PixeSci.
+  - Lead Product Designer and Frontend Developer at PixeSci.
   - Created the company's new public website experience.
   - Created the PixeSci Design System.
   - Redesigned/recreated the application experience into a cleaner, more structured, market-ready product UI.
