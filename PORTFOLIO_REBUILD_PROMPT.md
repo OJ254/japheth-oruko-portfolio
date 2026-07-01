@@ -727,7 +727,7 @@ Key facts:
 
 Suggested about copy:
 
-`I'm a Nairobi-based Lead Product Designer and Lead Frontend Developerwith 8+ years of experience creating digital products. My strongest work sits at the intersection of product definition, user-centric UI/UX, interface systems, and React/Next.js implementation. I help teams make early product decisions clearer, turn user needs into buildable flows, and carry those ideas through design systems, prototypes, user stories, and responsive frontend interfaces.`
+`I'm a Nairobi-based Product Designer and Frontend Developer with 8+ years of experience creating digital products. My strongest work sits at the intersection of product definition, user-centric UI/UX, interface systems, and React/Next.js implementation. I help teams make early product decisions clearer, turn user needs into buildable flows, and carry those ideas through design systems, prototypes, user stories, and responsive frontend interfaces.`
 
 Second paragraph:
 
