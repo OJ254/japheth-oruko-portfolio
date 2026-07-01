@@ -50,7 +50,7 @@ The site should make the following positioning unmistakable:
 - Japheth Oruko is a Nairobi-based Product Designer, Product Manager, Frontend Developer, and AI-assisted product builder.
 - He is especially valuable in zero-to-one and early-stage product environments where product thinking, design execution, and implementation judgment must work together.
 - He can also support established companies that need better UX, cleaner product documentation, stronger design systems, responsive frontend execution, and cross-functional product delivery.
-- His current role is Lead Product Designer and Frontend Lead at PixeSci.
+- His current role is Lead Product Designer and Lead Frontend Developer at PixeSci.
 - His PixeSci achievements are still pending user-supplied detail; use clearly marked placeholder/dummy copy for now and make it easy to replace later.
 - His strongest existing detailed proof comes from previous Ticet EDU work, where he contributed as Lead Product Designer, Product Manager, and Frontend Developer across a zero-to-one EdTech product.
 - His work samples should be treated as case-study material, not just gallery images.
@@ -88,7 +88,7 @@ Known identity details:
 
 - Name: Japheth Oruko
 - Location: Nairobi, Kenya
-- Phone: `+254 739 134882`
+- Phone: `+254 758 750674`
 - Email: `japhethoruko@gmail.com`
 - GitHub: `https://github.com/OJ254`
 - LinkedIn: `https://www.linkedin.com/in/japheth-oruko-b5b9a4301/`
@@ -97,7 +97,7 @@ Known identity details:
 - Spotify: `https://open.spotify.com/user/vdfj74s06581jrp8n5rr3ic2k`
 - Languages: English fluent, Swahili native
 - Availability: full-time and contract available
-- Current role: Lead Product Designer and Frontend Lead at PixeSci
+- Current role: Lead Product Designer and Lead Frontend Developer at PixeSci
 - Current employer website/application placeholder: `https://pixesci.com/`
 - Roles: Product Designer, Product Manager, Frontend Developer, Frontend Lead, AI-assisted product builder
 - Mastered AI development tools: Claude and Codex
@@ -411,7 +411,7 @@ The first viewport should immediately answer:
 Ideal first-viewport message:
 
 - Name: `Japheth Oruko`
-- Positioning: `Lead Product Designer and Frontend Lead helping teams turn early product ideas into usable, scalable digital experiences.`
+- Positioning: `Lead Product Designer and Lead Frontend Developerhelping teams turn early product ideas into usable, scalable digital experiences.`
 - Location: `Nairobi, Kenya`
 - Availability: `Available for full-time and contract work`
 - Current focus: `User-centric UI/UX, frontend leadership, React/Next.js implementation, design systems, AI-assisted delivery, and product documentation`
@@ -484,7 +484,7 @@ Japheth Oruko helps teams design, define, and ship digital products with a rare 
 Support this with:
 
 - 8+ years creating digital products.
-- Current Lead Product Designer and Frontend Lead at PixeSci.
+- Current Lead Product Designer and Lead Frontend Developer at PixeSci.
 - Hands-on work as Product Designer, Product Manager, Frontend Developer, and Frontend Lead.
 - Startup experience at PixeSci and previous Ticet EDU work.
 - Strong Figma and design-system work.
@@ -562,7 +562,7 @@ Create a typed `USER` data object or equivalent with:
 - displayName: `Japheth Oruko`
 - username: `OJ254`
 - pronouns: omit unless user supplies them
-- primaryTitle: `Lead Product Designer, Frontend Lead & AI-assisted Product Builder`
+- primaryTitle: `Lead Product Designer, Lead Frontend Developer& AI-assisted Product Builder`
 - shortBio: `I help teams turn early product ideas into usable, scalable digital experiences across user-centric UI/UX, product thinking, design systems, documentation, and React/Next.js frontend implementation.`
 - currentCompany: `PixeSci`
 - currentCompanyWebsite: `https://pixesci.com/`
@@ -571,7 +571,7 @@ Create a typed `USER` data object or equivalent with:
 - currentRoleNote: `PixeSci achievements are placeholder/dummy content until the user supplies final details.`
 - location: `Nairobi, Kenya`
 - email: `japhethoruko@gmail.com`
-- phone: `+254 739 134882`
+- phone: `+254 758 750674`
 - calendly: `https://calendly.com/japhethoruko`
 - github: `https://github.com/OJ254`
 - linkedin: `https://www.linkedin.com/in/japheth-oruko-b5b9a4301/`
@@ -611,7 +611,7 @@ Suggested role rotation:
 - `Product Manager`
 - `Frontend Developer`
 - `Lead Product Designer at PixeSci`
-- `Frontend Lead at PixeSci`
+- `Lead Frontend Developer at PixeSci`
 - `React.js and Next.js specialist`
 - `MUI, DaisyUI, shadcn/ui, and Tailwind builder`
 - `Claude and Codex power user`
@@ -624,7 +624,7 @@ Hero copy option:
 
 Alternative tighter hero copy:
 
-`Lead Product Designer and Frontend Lead helping teams move from ambiguous ideas to user-centered, scalable digital products.`
+`Lead Product Designer and Lead Frontend Developerhelping teams move from ambiguous ideas to user-centered, scalable digital products.`
 
 Do not use a giant decorative hero background that overwhelms the portfolio.
 
@@ -647,7 +647,7 @@ Show:
 Role rows should include:
 
 - `Lead Product Designer at PixeSci`
-- `Frontend Lead at PixeSci`
+- `Lead Frontend Developer at PixeSci`
 - `Previous Lead Product Designer at Ticet EDU`
 - `Previous Product Manager at Ticet EDU`
 - `Previous Frontend Developer at Ticet EDU`
@@ -716,7 +716,7 @@ Key facts:
 
 - Based in Nairobi, Kenya.
 - 8+ years creating digital products.
-- Current Lead Product Designer and Frontend Lead at PixeSci.
+- Current Lead Product Designer and Lead Frontend Developer at PixeSci.
 - UI/UX Product Designer with hands-on experience as Product Owner/Product Manager, Frontend Developer, and Frontend Lead.
 - Specializes in zero-to-one product development.
 - Works from discovery and concept through design, validation, documentation, and implementation.
@@ -727,7 +727,7 @@ Key facts:
 
 Suggested about copy:
 
-`I'm a Nairobi-based Lead Product Designer and Frontend Lead with 8+ years of experience creating digital products. My strongest work sits at the intersection of product definition, user-centric UI/UX, interface systems, and React/Next.js implementation. I help teams make early product decisions clearer, turn user needs into buildable flows, and carry those ideas through design systems, prototypes, user stories, and responsive frontend interfaces.`
+`I'm a Nairobi-based Lead Product Designer and Lead Frontend Developerwith 8+ years of experience creating digital products. My strongest work sits at the intersection of product definition, user-centric UI/UX, interface systems, and React/Next.js implementation. I help teams make early product decisions clearer, turn user needs into buildable flows, and carry those ideas through design systems, prototypes, user stories, and responsive frontend interfaces.`
 
 Second paragraph:
 
@@ -853,7 +853,7 @@ Current company:
 
 PixeSci placeholder summary:
 
-`Lead Product Designer and Frontend Lead for PixeSci, currently shaping user-centered product experiences and frontend implementation for the PixeSci website and application. Placeholder details should emphasize scientific workflow UX, product interface design, responsive React/Next.js implementation, design-system foundations, frontend architecture, and AI-assisted delivery with Claude and Codex. Replace this copy once final achievements are provided.`
+`Lead Product Designer and Lead Frontend Developerfor PixeSci, currently shaping user-centered product experiences and frontend implementation for the PixeSci website and application. Placeholder details should emphasize scientific workflow UX, product interface design, responsive React/Next.js implementation, design-system foundations, frontend architecture, and AI-assisted delivery with Claude and Codex. Replace this copy once final achievements are provided.`
 
 PixeSci placeholder responsibilities:
 
@@ -1113,7 +1113,7 @@ Status:
 
 Summary:
 
-`Current work as Lead Product Designer and Frontend Lead at PixeSci, shaping user-centered UI/UX and frontend implementation for the PixeSci website and application. This placeholder case study should communicate Japheth's role across product interface design, responsive React/Next.js development, design-system direction, and AI-assisted delivery with Claude and Codex.`
+`Current work as Lead Product Designer and Lead Frontend Developer at PixeSci, shaping user-centered UI/UX and frontend implementation for the PixeSci website and application. This placeholder case study should communicate Japheth's role across product interface design, responsive React/Next.js development, design-system direction, and AI-assisted delivery with Claude and Codex.`
 
 Context:
 
@@ -1709,11 +1709,11 @@ Metadata copy:
 
 Title:
 
-`Japheth Oruko | Lead Product Designer, Frontend Lead & React/Next.js Developer`
+`Japheth Oruko | Lead Product Designer, Lead Frontend Developer& React/Next.js Developer`
 
 Description:
 
-`Portfolio of Japheth Oruko, a Nairobi-based Lead Product Designer and Frontend Lead helping teams design, document, and ship user-centered digital products with React, Next.js, modern UI systems, Claude, and Codex.`
+`Portfolio of Japheth Oruko, a Nairobi-based Lead Product Designer and Lead Frontend Developerhelping teams design, document, and ship user-centered digital products with React, Next.js, modern UI systems, Claude, and Codex.`
 
 Keywords:
 

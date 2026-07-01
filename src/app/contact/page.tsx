@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div className='mx-auto max-w-5xl px-2 *:scroll-mt-20'>
       <PageIntro
         kicker='Contact'
-        title='Start with the product problem, the UX gap, or the frontend work that needs sharper execution.'
+        title='Start with the product problem, the UI/UX gap, or the frontend work that needs sharper execution.'
         body='Use the contact form, reach out directly by email, or book an appointment via Calendly.'
       />
       <Separator />

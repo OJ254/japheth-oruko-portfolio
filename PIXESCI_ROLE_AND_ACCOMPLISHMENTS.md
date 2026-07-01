@@ -3,7 +3,7 @@
 ## Portfolio Role Entry
 
 **Company:** PixeSci  
-**Role:** Lead Product Designer and Frontend Lead  
+**Role:** Lead Product Designer and Frontend Developer  
 **Location:** Remote / Nairobi, Kenya  
 **Status:** Current  
 **Focus:** Company website, PixeSci Design System, Figma product design, application redesign, frontend direction, market launch
@@ -18,7 +18,7 @@ At PixeSci, I work at the intersection of product design, frontend direction, an
 
 As Lead Product Designer, I own the design process: mapping user flows, creating wireframes, designing high-fidelity Figma screens, prototyping interactions, defining UI patterns, and creating the PixeSci Design System. This includes design foundations for layout, navigation, components, responsive behavior, interaction states, typography, color, spacing, product visuals, and complex workflow surfaces.
 
-As Frontend Lead, I guide and direct the frontend implementation path. I helped recreate the application experience around a modern frontend foundation, moving the product toward Next.js, TypeScript, Tailwind CSS, shadcn-style/Radix UI primitives, Redux Toolkit, and Tauri-oriented desktop patterns. I translate designs into buildable component requirements, review UI execution, and align implementation decisions with the intended product experience.
+As the Lead Frontend Developer, I guide and direct the frontend implementation path. I helped recreate the application experience around a modern frontend foundation, moving the product toward Next.js, TypeScript, Tailwind CSS, shadcn-style/Radix UI primitives, Redux Toolkit, and Tauri-oriented desktop patterns. I translate designs into buildable component requirements, review UI execution, and align implementation decisions with the intended product experience.
 
 ## Key Responsibilities
 
@@ -80,7 +80,7 @@ PixeSci Website And Application Experience
 
 ### Role
 
-Lead Product Designer and Frontend Lead
+Lead Product Designer and Frontend Developer
 
 ### Summary
 
