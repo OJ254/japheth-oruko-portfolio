@@ -89,16 +89,16 @@ export function ContactDialog({
           {buttonLabel}
         </button>
       </DialogTrigger>
-      <DialogContent className="max-h-[92vh] overflow-y-auto sm:max-w-2xl">
-        <DialogHeader>
+      <DialogContent className="max-h-[94vh] overflow-y-auto p-0 sm:max-w-2xl">
+        <DialogHeader className="sticky top-0 z-10 gap-1 border-b border-line bg-background/95 p-4 pr-14 backdrop-blur">
           <p className="font-mono text-xs uppercase text-muted-text">Contact form</p>
-          <DialogTitle className="text-2xl">Send me a message</DialogTitle>
+          <DialogTitle className="text-lg">Send me a message</DialogTitle>
           <DialogDescription>
             Use this form for product design, frontend, PixeSci, or portfolio-related opportunities. Email and Calendly remain available as direct options.
           </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-4">
+        <div className="space-y-4 p-4 sm:p-6">
           <Field id="contact-name" label="Name" required>
             <Input
               id="contact-name"

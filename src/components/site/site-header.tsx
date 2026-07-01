@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { ContactDialog } from '@/components/portfolio/contact-dialog';
 import { USER } from '@/data/user';
 
 import { ThemeToggle } from './theme-toggle';
@@ -31,9 +32,7 @@ export function SiteHeader() {
         <a className="hidden min-h-10 items-center rounded-md bg-foreground px-3 text-sm font-semibold text-background sm:inline-flex" href={USER.resume} target="_blank" rel="noreferrer">
           Resume
         </a>
-        <a className="hidden min-h-10 items-center rounded-md border border-line px-3 text-sm font-semibold sm:inline-flex" href={USER.calendly} target="_blank" rel="noreferrer">
-          Book
-        </a>
+        <ContactDialog buttonLabel="Email Me" className="hidden sm:inline-flex" />
         <ThemeToggle />
         <details className="relative md:hidden">
           <summary className="grid size-10 cursor-pointer list-none place-items-center rounded-md border border-line bg-surface font-semibold" aria-label="Open menu">
