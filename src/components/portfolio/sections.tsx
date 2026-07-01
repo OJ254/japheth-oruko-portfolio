@@ -246,7 +246,7 @@ export function TechStackSection() {
     <Panel id='stack'>
       <PanelHeader>
         <SectionKicker>Stack</SectionKicker>
-        <PanelTitle>Tools grouped by the work they support.</PanelTitle>
+        <PanelTitle>My tech stack.</PanelTitle>
       </PanelHeader>
       <PanelContent className='space-y-4'>
         {stackGroups.map(group => (
@@ -325,16 +325,16 @@ export function ContactSection() {
             target='_blank'
             rel='noreferrer'
           >
-            Book a call
+            Book an Appointment
           </ButtonLink>
-          <ContactDialog buttonLabel='Email Japheth' />
+          <ContactDialog buttonLabel='Send an Email' />
           <ButtonLink
             href={USER.resume}
             target='_blank'
             rel='noreferrer'
             download
           >
-            Download resume
+            Download Resume
           </ButtonLink>
           <ButtonLink href={USER.linkedin} target='_blank' rel='noreferrer'>
             View LinkedIn

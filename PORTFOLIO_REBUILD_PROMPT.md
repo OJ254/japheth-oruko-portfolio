@@ -887,15 +887,15 @@ Company:
 Roles:
 
 1. `Lead Product Designer`
-   - Duration: `February 2021 - Present`
+   - Duration: `February 2021 - December 2025`
    - Summary: Lead Product Designer for a zero-to-one educational platform focused on personalized and social learning. Owned end-to-end design of web and mobile experiences, from product discovery and UX strategy to high-fidelity UI, design systems, and developer handoff.
 
 2. `Product Manager`
-   - Duration: `June 2023 - Present`
+   - Duration: `June 2023 - December 2025`
    - Summary: Product Manager leading end-to-end product lifecycle of a zero-to-one digital learning platform serving learners, educators, and content creators. Owned roadmap strategy, backlog prioritization, MVP delivery, and alignment between business objectives, user needs, and engineering capacity.
 
 3. `Frontend Developer`
-   - Duration: `January 2025 - Present`
+   - Duration: `January 2021 - December 2025`
    - Summary: Frontend Developer building a zero-to-one EdTech web platform using React, Next.js, TypeScript, Material UI, Tailwind CSS, and Redux Toolkit. Translates complex UX designs into scalable, accessible, performant frontend features.
 
 Include responsibilities and achievements, but make them collapsible or summarized. Do not dump long bullet walls by default.

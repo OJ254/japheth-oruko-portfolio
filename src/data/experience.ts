@@ -42,7 +42,7 @@ export const experience: ExperienceCompany[] = [
     roles: [
       {
         title: 'Lead Product Designer',
-        duration: 'February 2021 - Present',
+        duration: 'February 2021 - December 2025',
         summary:
           'Lead Product Designer for a zero-to-one educational platform focused on personalized and social learning. Owned end-to-end design of web and mobile experiences from product discovery and UX strategy to high-fidelity UI, design systems, and developer handoff.',
         responsibilities: [
@@ -61,28 +61,8 @@ export const experience: ExperienceCompany[] = [
         ],
       },
       {
-        title: 'Product Manager',
-        duration: 'June 2023 - Present',
-        summary:
-          'Product Manager leading the end-to-end lifecycle of a zero-to-one digital learning platform serving learners, educators, and content creators. Owned roadmap strategy, backlog prioritization, MVP delivery, and stakeholder alignment.',
-        responsibilities: [
-          'Owned and prioritized roadmap, epics, and feature backlog.',
-          'Translated business requirements and research into user stories, workflows, and acceptance criteria.',
-          'Prioritized backlog with MoSCoW and impact-effort frameworks.',
-          'Facilitated Agile ceremonies and requirements sessions.',
-          'Bridged engineering, design, and business stakeholders.',
-          'Made scope, timeline, and priority tradeoffs for MVP delivery.',
-        ],
-        achievements: [
-          'Authored 400+ detailed user stories.',
-          'Delivered 120+ MVP features across web and mobile platform work.',
-          'Reduced delivery cycle time by 30%.',
-          'Increased early-stage tester satisfaction by 40%.',
-        ],
-      },
-      {
         title: 'Frontend Developer',
-        duration: 'January 2025 - Present',
+        duration: 'January 2021 - December 2025',
         summary:
           'Frontend Developer building a zero-to-one EdTech web platform using React, Next.js, TypeScript, Material UI, Tailwind CSS, and Redux Toolkit.',
         responsibilities: [
@@ -98,6 +78,26 @@ export const experience: ExperienceCompany[] = [
           'Delivered core MVP features including dashboards, onboarding flows, and content-driven interfaces.',
           'Improved state predictability and reduced UI bugs with Redux Toolkit slices.',
           'Strengthened design-to-code workflow through close collaboration during handoff.',
+        ],
+      },
+      {
+        title: 'Product Manager',
+        duration: 'June 2023 - December 2025',
+        summary:
+          'Product Manager leading the end-to-end lifecycle of a zero-to-one digital learning platform serving learners, educators, and content creators. Owned roadmap strategy, backlog prioritization, MVP delivery, and stakeholder alignment.',
+        responsibilities: [
+          'Owned and prioritized roadmap, epics, and feature backlog.',
+          'Translated business requirements and research into user stories, workflows, and acceptance criteria.',
+          'Prioritized backlog with MoSCoW and impact-effort frameworks.',
+          'Facilitated Agile ceremonies and requirements sessions.',
+          'Bridged engineering, design, and business stakeholders.',
+          'Made scope, timeline, and priority tradeoffs for MVP delivery.',
+        ],
+        achievements: [
+          'Authored 400+ detailed user stories.',
+          'Delivered 120+ MVP features across web and mobile platform work.',
+          'Reduced delivery cycle time by 30%.',
+          'Increased early-stage tester satisfaction by 40%.',
         ],
       },
     ],
