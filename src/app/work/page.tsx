@@ -2,24 +2,41 @@ import type { Metadata } from 'next';
 
 import { PageIntro } from '@/components/portfolio/page-intro';
 import { ProjectArchiveSection } from '@/components/portfolio/projects';
+import { JsonLd } from '@/components/seo/json-ld';
+import { projects } from '@/data/projects';
+import {
+  breadcrumbJsonLd,
+  createPageMetadata,
+  projectItemListJsonLd,
+} from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Work',
   description:
     'Case-study archive for Japheth Oruko across PixeSci, Ticet EDU, product documentation, UI/UX design, and frontend implementation.',
-};
+  path: '/work',
+});
 
 export default function WorkPage() {
   return (
-    <div className="mx-auto max-w-5xl px-2 *:scroll-mt-20">
-      <PageIntro
-        kicker="Work"
-        title="Case-study material across product design, product management, and frontend delivery."
-        body="PixeSci appears first as current work across the website, application experience, and design system, followed by detailed Ticet EDU proof and selected UI/UX, documentation, and implementation samples."
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work' },
+        ])}
       />
-      <Separator />
-      <ProjectArchiveSection />
-    </div>
+      <JsonLd data={projectItemListJsonLd(projects)} />
+      <div className="mx-auto max-w-5xl px-2 *:scroll-mt-20">
+        <PageIntro
+          kicker="Work"
+          title="Case-study material across product design, product management, and frontend delivery."
+          body="PixeSci appears first as current work across the website, application experience, and design system, followed by detailed Ticet EDU proof and selected UI/UX, documentation, and implementation samples."
+        />
+        <Separator />
+        <ProjectArchiveSection />
+      </div>
+    </>
   );
 }
 
