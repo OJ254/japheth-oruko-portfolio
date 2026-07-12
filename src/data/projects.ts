@@ -22,6 +22,7 @@ const imageSet = (
 export const projectCategoryLabels: Record<ProjectCategory | 'all', string> = {
   all: 'All',
   'design-system': 'Design Systems',
+  'fullstack-development': 'Fullstack',
   'frontend-development': 'Frontend Development',
   'product-management': 'Product Management',
   'ui-design': 'UI Design',
@@ -33,7 +34,7 @@ const projectEntries = [
     id: 'rwt-motors',
     legacyId: 18,
     title: 'RWT Motors',
-    category: 'frontend-development',
+    category: 'fullstack-development',
     featured: true,
     priority: 1,
     role: [

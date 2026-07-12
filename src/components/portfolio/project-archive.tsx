@@ -15,6 +15,7 @@ import { ProjectCard } from './project-card';
 
 const filters: Array<ProjectCategory | 'all'> = [
   'all',
+  'fullstack-development',
   'design-system',
   'frontend-development',
   'ui-design',

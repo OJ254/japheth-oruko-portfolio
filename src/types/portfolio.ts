@@ -4,6 +4,7 @@ export type LinkItem = {
 };
 
 export type ProjectCategory =
+  | 'fullstack-development'
   | 'frontend-development'
   | 'ui-design'
   | 'ux-logic'
