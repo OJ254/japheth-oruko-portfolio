@@ -51,6 +51,7 @@ export const USER = {
     'Product Designer',
     'Product Manager',
     'Frontend Developer',
+    'UI/UX Consultant',
     'Lead Product Designer at PixeSci',
     'Lead Frontend Developer at PixeSci',
     'React.js and Next.js specialist',

@@ -9,9 +9,10 @@ import { ThemeProvider } from '@/components/site/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { USER } from '@/data/user';
+import { defaultSeoDescription, SITE_NAME, SITE_URL } from '@/lib/seo';
+import { cn } from '@/lib/utils';
 
 import './globals.css';
-import { cn } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -28,48 +29,58 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://japheth-oruko-portfolio.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default:
-      'Japheth Oruko | Product Designer, Project Manager, Frontend Developer & React/Next.js Developer',
+      'Japheth Oruko | Product Designer, Product Manager, Frontend Developer & AI-assisted Product Builder',
     template: '%s | Japheth Oruko',
   },
-  description:
-    'Portfolio of Japheth Oruko, a Nairobi-based Frontend Developer, Product Designer, and Project Manager helping teams design, document, and ship user-centered digital products with React, Next.js, modern UI systems, Claude, and Codex.',
+  description: defaultSeoDescription,
+  applicationName: SITE_NAME,
   keywords: [...USER.keywords],
   authors: [{ name: USER.displayName, url: USER.linkedin }],
   creator: USER.displayName,
+  publisher: USER.displayName,
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title:
-      'Japheth Oruko | Product Designer, Project Manager, Frontend Developer & React/Next.js Developer',
-    description:
-      'A serious product/design/frontend portfolio for startup founders, product leaders, design managers, and engineering teams.',
+      'Japheth Oruko | Product Designer, Product Manager, Frontend Developer & AI-assisted Product Builder',
+    description: defaultSeoDescription,
     url: '/',
-    siteName: 'Japheth Oruko Portfolio',
+    siteName: SITE_NAME,
+    locale: 'en_KE',
     type: 'profile',
+    firstName: USER.firstName,
+    lastName: USER.lastName,
+    username: USER.username,
     images: [
       {
-        url: '/assets/images/logo.png',
-        width: 512,
-        height: 512,
-        alt: 'Japheth Oruko portfolio logo',
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Japheth Oruko portfolio social preview',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title:
-      'Japheth Oruko | Product Designer, Project Manager, Frontend Developer & React/Next.js Developer',
-    description:
-      'Nairobi-based product designer, product manager, frontend developer, and AI-assisted product builder.',
-    images: ['/assets/images/logo.png'],
+      'Japheth Oruko | Product Designer, Product Manager, Frontend Developer & AI-assisted Product Builder',
+    description: defaultSeoDescription,
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 
