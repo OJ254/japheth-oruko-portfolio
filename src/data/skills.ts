@@ -50,6 +50,7 @@ export const stackGroups = [
     title: 'Frontend and full-stack',
     items: [
       'Next.js',
+      'Nest.js',
       'React.js',
       'Tauri',
       'TypeScript',
@@ -58,7 +59,7 @@ export const stackGroups = [
       'CSS',
       'Tailwind CSS',
       'DaisyUI',
-      'shadcn/ui',
+      'Shadcn/ui',
       'Material UI',
       'Vite.js',
       'Drizzle ORM',
@@ -86,6 +87,7 @@ export const stackGroups = [
       'Redux Toolkit',
       'PostgreSQL',
       'Prisma',
+      'Keycloak',
     ],
   },
   {
