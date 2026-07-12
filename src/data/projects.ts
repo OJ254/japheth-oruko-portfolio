@@ -399,7 +399,7 @@ const projectEntries = [
         href: 'https://github.com/OJ254/japheth-oruko-portfolio',
       },
     ],
-    images: imageSet(1, 'Personal Portfolio'),
+    images: imageSet(1, 'Personal Portfolio', 1, 10, 'png'),
   },
   {
     id: 'ticet-edu-website',
