@@ -17,6 +17,7 @@ export function ProfileHeader() {
     'PixeSci',
     'Product Designer',
     'Frontend Developer',
+    'Full-Stack Builder',
     'Project Manager',
     'React.js',
     'Next.js',
@@ -76,8 +77,8 @@ export function ProfileHeader() {
             <p className='text-muted-text max-w-2xl text-sm leading-7'>
               I help founders and product teams turn rough ideas into clear,
               buildable digital products: user-centered flows, polished
-              interfaces, design systems, user stories, and production-ready
-              React/Next.js frontend experiences.
+              interfaces, design systems, user stories, production-ready
+              React/Next.js experiences, and practical backend workflows.
             </p>
           </div>
 
@@ -119,6 +120,7 @@ export function Overview() {
   const jobItems = [
     ['<>', 'Lead Product Designer', 'PixeSci', '/experience'],
     ['FE', 'Lead Frontend Developer', 'PixeSci', '/experience'],
+    ['FS', 'Full-Stack Portal Developer', 'PixeSci', '/experience'],
     ['PM', 'Previous Product Manager', 'Ticet EDU', '/experience'],
     ['UX', 'Previous Lead Product Designer', 'Ticet EDU', '/experience'],
   ];

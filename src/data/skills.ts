@@ -21,10 +21,10 @@ export const capabilities = [
     artifact: 'Epics, stories, acceptance criteria, backlog structure.',
   },
   {
-    title: 'Frontend development',
-    body: 'Build polished, responsive React.js and Next.js interfaces with TypeScript, MUI, DaisyUI, shadcn/ui, and Tailwind CSS.',
+    title: 'Frontend and portal development',
+    body: 'Build polished, responsive React.js and Next.js interfaces with TypeScript, MUI, DaisyUI, shadcn/ui, Tailwind CSS, and practical server-side product workflows.',
     artifact:
-      'Production-ready components, responsive pages, integrated UI flows.',
+      'Production-ready components, responsive pages, authenticated portal flows.',
   },
   {
     title: 'Claude and Codex workflow',
@@ -47,7 +47,7 @@ export const stackGroups = [
     ],
   },
   {
-    title: 'Frontend',
+    title: 'Frontend and full-stack',
     items: [
       'Next.js',
       'React.js',
@@ -61,6 +61,9 @@ export const stackGroups = [
       'shadcn/ui',
       'Material UI',
       'Vite.js',
+      'Drizzle ORM',
+      'libSQL',
+      'Access workflows',
     ],
   },
   {

@@ -55,19 +55,19 @@ export const productProcess: ProductProcessPhase[] = [
   {
     id: 'build',
     phase: '04',
-    title: 'Build the frontend and connect the product behavior',
+    title: 'Build the interface and product workflows',
     summary:
-      'I translate the product design into responsive React/Next.js interfaces, working with APIs, state, and implementation constraints.',
-    focus: 'Frontend development, component implementation, API integration, state, responsiveness, and QA.',
+      'I translate the product design into responsive React/Next.js interfaces and practical server-side workflows where the product requires them.',
+    focus: 'Frontend development, component implementation, portal workflows, API integration, state, responsiveness, and QA.',
     activities: [
       'Create component-driven frontend interfaces with React, Next.js, TypeScript, Tailwind CSS, and UI systems.',
-      'Connect screens to APIs and data states where the product requires it.',
-      'Account for loading states, errors, permissions, responsiveness, accessibility, and maintainability.',
+      'Connect screens to APIs, authenticated sessions, and data states where the product requires it.',
+      'Account for loading states, errors, permissions, data boundaries, responsiveness, accessibility, and maintainability.',
       'Use Claude and Codex to accelerate implementation, debugging, refactoring, and iteration while keeping product judgment in control.',
     ],
-    outputs: ['Frontend components', 'Integrated flows', 'Responsive UI', 'QA fixes', 'Implementation notes'],
+    outputs: ['Frontend components', 'Integrated flows', 'Portal workflows', 'Responsive UI', 'QA fixes', 'Implementation notes'],
     proof:
-      'A working product interface that respects the design intent while handling real implementation constraints.',
+      'A working product surface that respects the design intent while handling real implementation constraints.',
   },
   {
     id: 'improve',
@@ -93,5 +93,6 @@ export const processSignals = [
   'User flows before isolated screens',
   'Reusable systems before one-off UI',
   'Buildable stories before vague handoff',
+  'Data boundaries before backend shortcuts',
   'Testing and iteration before final claims',
 ] as const;

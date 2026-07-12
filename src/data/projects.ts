@@ -56,7 +56,7 @@ const projectEntries = [
       'NestJS',
       'Prisma',
       'PostgreSQL',
-      'Keycloak',
+      'Identity and access management',
       'Docker',
       'Figma',
       'Codex',
@@ -67,27 +67,32 @@ const projectEntries = [
       'Trust and safety UX',
       'Full-stack implementation',
       'Product documentation',
+      'SEO foundations',
     ],
     summary:
       'A self-built, pre-deployment vehicle rental marketplace for RWT Motors, designed to help renters choose vehicles with confidence while giving owners and rental companies stronger tools for listing vehicles, reviewing booking requests, recording condition, and building reputation.',
     context:
       'RWT Motors is being built as a reputation-driven marketplace for private car owners, rental companies, renters, drivers, company staff, and platform staff. The product focuses on discovery, booking requests, reviews, badges, maintenance and insurance visibility, inspections, messaging, subscriptions, and role-aware dashboards, while keeping rental payments outside the MVP.',
     approach:
-      'Defined the product scope, marketplace lifecycles, role model, backend API boundaries, auth architecture, security rules, frontend route map, and documentation system across separate docs, web app, marketing website, backend, infrastructure, and secrets repositories. Built the primary web app around Next.js, React, TypeScript, Tailwind CSS, shadcn-style primitives, Redux Toolkit, RTK Query, custom auth screens, protected dashboards, public discovery surfaces, and backend-mediated Keycloak sessions.',
+      'Defined the product scope, marketplace lifecycles, role model, access model, workflow rules, content structure, and documentation system. Built the primary product experience around Next.js, React, TypeScript, Tailwind CSS, shadcn-style primitives, Redux Toolkit, RTK Query, role-aware dashboards, public discovery surfaces, and backend-supported marketplace workflows.',
     outcome:
-      'Created a serious product foundation for a multi-role vehicle rental marketplace before deployment: documented domain rules, clear MVP boundaries, public and authenticated UX surfaces, backend-owned workflow rules, and a scalable frontend structure ready for deeper booking, messaging, inspection, review, and vehicle-management APIs.',
-    note: 'Current personal project. The product is still in local development and has no public deployment link yet.',
+      'Created a serious product foundation for a multi-role vehicle rental marketplace before release: documented domain rules, clear MVP boundaries, public and signed-in UX surfaces, backend-owned workflow rules, and a scalable product structure ready for deeper booking, messaging, inspection, review, and vehicle-management features.',
+    note: 'Current personal project. The product is still pre-release and has no public link yet.',
     links: [],
     images: imageSet(18, 'RWT Motors', 1, 10, 'png'),
   },
   {
     id: 'pixesci-website',
     legacyId: 15,
-    title: 'PixeSci Website',
-    category: 'frontend-development',
+    title: 'PixeSci Website and Portal',
+    category: 'fullstack-development',
     featured: true,
     priority: 2,
-    role: ['Lead Product Designer', 'Lead Frontend Developer'],
+    role: [
+      'Lead Product Designer',
+      'Lead Frontend Developer',
+      'Full-Stack Portal Developer',
+    ],
     organization: 'PixeSci',
     period: 'Current',
     tools: [
@@ -95,26 +100,31 @@ const projectEntries = [
       'React.js',
       'TypeScript',
       'Tailwind CSS',
+      'Redux Toolkit',
+      'Drizzle ORM',
+      'libSQL',
+      'Access workflows',
       'Figma',
       'Claude',
       'Codex',
     ],
     skills: [
       'Product website',
+      'Customer portal',
+      'Backend workflows',
       'Market readiness',
       'SEO foundations',
-      'Conversion paths',
     ],
     summary:
-      'A responsive product-led website for PixeSci that gives the company a clearer public presence, stronger product positioning, reusable page systems, SEO foundations, product visuals, and demo-booking conversion paths.',
+      'A full-stack PixeSci web platform that combines the public product website with an authenticated organization portal for account setup, license visibility, seat administration, and offline license-support workflows.',
     context:
-      'PixeSci needed a credible market-facing website that could explain a technically complex scientific workflow platform to regulated life sciences, secure research, core facilities, and other high-control scientific environments.',
+      'PixeSci needed more than a marketing frontend. The web project had to explain a technically complex scientific workflow platform while also supporting customer-facing portal workflows for controlled deployments and license administration.',
     approach:
-      'Created a product-led marketing experience with structured pages, reusable content sections, product-inspired visuals, route-level metadata, generated social image support, robots and sitemap foundations, analytics events, Speed Insights, uptime checks, demo-booking paths, and compliance-aware messaging.',
+      'Created the product-led marketing experience, reusable page system, product visuals, SEO foundations, analytics events, and demo-booking paths, then extended the project with authenticated portal UI, server-side account access workflows, organization profile workflows, license and seat management flows, audit-minded backend rules, and offline license-support artifacts.',
     outcome:
-      'Gave PixeSci a stronger market-facing product presence and clearer product narrative as the company moved into the market with a more polished public experience.',
+      'Turned the PixeSci web project into a broader full-stack product surface: a stronger market-facing website plus a practical portal foundation for customer administration and offline-ready license support without exposing sensitive operational details in the public experience.',
     links: [{ label: 'PixeSci', href: 'https://pixesci.com/' }],
-    images: imageSet(15, 'PixeSci Website', 1, 2, 'png'),
+    images: imageSet(15, 'PixeSci Website and Portal', 1, 5, 'png'),
   },
   {
     id: 'pixesci-application-experience',
@@ -134,7 +144,7 @@ const projectEntries = [
       'Redux Toolkit',
       'shadcn-style UI primitives',
       'Radix UI',
-      'Tauri',
+      'Desktop product patterns',
       'Claude',
       'Codex',
     ],
@@ -143,15 +153,16 @@ const projectEntries = [
       'Scientific workflow UX',
       'Frontend direction',
       'Component systems',
+      'SEO foundations',
     ],
     summary:
       'A recreated PixeSci application experience that moves the product from an earlier interface into a cleaner, more structured, and more market-ready product UI for complex scientific workflow automation.',
     context:
-      'The core product needed clearer workflows for a technical audience working with chat-linked workflows, workflow context, artifact review, template management, audit logs, agent activity, software catalogs, and admin/security surfaces.',
+      'The core product needed clearer workflows for a technical audience working with chat-linked workflows, workflow context, artifact review, template management, audit logs, agent activity, software catalogs, and administration surfaces.',
     approach:
-      'Mapped user flows, designed interaction patterns, shaped chat-to-workflow and workflow-side chat experiences, defined artifact and context surfaces, and guided frontend implementation around Next.js, React, TypeScript, Tailwind CSS, Redux Toolkit, shadcn-style/Radix primitives, and Tauri-oriented desktop patterns.',
+      'Mapped user flows, designed interaction patterns, shaped assistant-supported workflow experiences, defined review and context surfaces, and guided frontend implementation around Next.js, React, TypeScript, Tailwind CSS, Redux Toolkit, shadcn-style/Radix primitives, and desktop product patterns.',
     outcome:
-      'Helped move the application toward a more modern frontend foundation with clearer hierarchy, reusable component requirements, stronger workflow context, and desktop-ready UI patterns for a local-first scientific automation product.',
+      'Helped move the application toward a more modern product foundation with clearer hierarchy, reusable component requirements, stronger workflow context, and desktop-ready UI patterns for complex scientific automation work.',
     links: [{ label: 'PixeSci', href: 'https://pixesci.com/' }],
     images: imageSet(16, 'PixeSci Application Experience', 1, 2, 'png'),
   },
@@ -246,6 +257,7 @@ const projectEntries = [
       'API integration',
       'State management',
       'Responsive UI',
+      'SEO foundations',
     ],
     summary:
       'A Next.js and TypeScript frontend for the Ticet EDU Learning Experience Platform, focused on responsive interfaces, scalable component architecture, API integration, and polished implementation of complex learning workflows.',
@@ -331,6 +343,7 @@ const projectEntries = [
       'Responsive development',
       'Institutional website',
       'Accessible navigation',
+      'SEO foundations',
     ],
     summary:
       'A modern institutional website built with Next.js, TypeScript, Material UI, Tailwind CSS, HTML, and CSS, focused on responsive layouts, accessible navigation, performance, and professional brand presentation.',
@@ -388,7 +401,12 @@ const projectEntries = [
       'HTML',
       'CSS',
     ],
-    skills: ['Portfolio strategy', 'Responsive layout', 'Personal brand'],
+    skills: [
+      'Portfolio strategy',
+      'Responsive layout',
+      'Personal brand',
+      'SEO foundations',
+    ],
     summary:
       'A personal portfolio built to present product strategy, UI/UX design, product management, and frontend engineering work in one cohesive professional narrative.',
     context:
@@ -411,7 +429,12 @@ const projectEntries = [
     role: ['Frontend Developer'],
     organization: 'Ticet EDU Limited',
     tools: ['GitHub', 'Vite.js', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS'],
-    skills: ['Marketing site', 'Responsive sections', 'Reusable components'],
+    skills: [
+      'Marketing site',
+      'Responsive sections',
+      'Reusable components',
+      'SEO foundations',
+    ],
     summary:
       "A responsive marketing website for Ticet EDU, built with Vite, JavaScript, Tailwind CSS, HTML, and CSS to communicate the platform's collaborative learning mission and provide a clean public-facing brand experience.",
     context:

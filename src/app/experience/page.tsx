@@ -9,7 +9,7 @@ import { breadcrumbJsonLd, createPageMetadata } from '@/lib/seo';
 export const metadata: Metadata = createPageMetadata({
   title: 'Experience',
   description:
-    'Experience timeline for Japheth Oruko, including current PixeSci leadership and previous Ticet EDU product, design, and frontend work.',
+    'Experience timeline for Japheth Oruko, including current PixeSci product, design, frontend, and full-stack portal work plus previous Ticet EDU delivery proof.',
   path: '/experience',
 });
 
@@ -25,8 +25,8 @@ export default function ExperiencePage() {
       <div className="mx-auto max-w-5xl px-2 *:scroll-mt-20">
         <PageIntro
           kicker="Experience"
-          title="Current product/design/frontend leadership with zero-to-one delivery depth."
-          body="A focused view of my roles, responsibilities, and proof points, including current PixeSci website, application, design-system, and frontend leadership work."
+          title="Current product/design/full-stack leadership with zero-to-one delivery depth."
+          body="A focused view of my roles, responsibilities, and proof points, including current PixeSci website and portal, application, design-system, frontend, and backend workflow work."
         />
         <Separator />
         <ExperienceSection />

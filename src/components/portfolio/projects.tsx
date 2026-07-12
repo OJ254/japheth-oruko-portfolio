@@ -8,7 +8,7 @@ export function ProjectArchiveSection() {
     <Panel id="work">
       <PanelHeader>
         <SectionKicker>Work</SectionKicker>
-        <PanelTitle>Filtered case-study material across design systems, frontend development, UI design, UX logic, and product management.</PanelTitle>
+        <PanelTitle>Filtered case-study material across design systems, full-stack product development, frontend implementation, UI design, UX logic, and product management.</PanelTitle>
       </PanelHeader>
       <PanelContent>
         <ProjectArchive projects={projects} />
