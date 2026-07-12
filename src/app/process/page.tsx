@@ -8,7 +8,7 @@ import { breadcrumbJsonLd, createPageMetadata } from '@/lib/seo';
 export const metadata: Metadata = createPageMetadata({
   title: 'Process',
   description:
-    'Japheth Oruko product process from market research and discovery through UX, UI, design systems, frontend development, testing, launch, and optimization.',
+    'Japheth Oruko product process from market research and discovery through UX, UI, design systems, frontend development, portal workflows, testing, launch, and optimization.',
   path: '/process',
 });
 

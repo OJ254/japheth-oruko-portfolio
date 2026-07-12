@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og';
 import { USER } from '@/data/user';
 
 export const alt =
-  'Japheth Oruko portfolio - Product Designer, Product Manager, Frontend Developer, and AI-assisted product builder';
+  'Japheth Oruko portfolio - Product Designer, Product Manager, Full-Stack Product Builder, and AI-assisted product builder';
 export const contentType = 'image/png';
 export const size = {
   width: 1200,
@@ -67,8 +67,8 @@ export default function Image() {
               letterSpacing: 0,
             }}
           >
-            Product design, product management, and frontend implementation for
-            buildable digital products.
+            Product design, product management, and full-stack implementation
+            for buildable digital products.
           </div>
           <div
             style={{
@@ -78,8 +78,8 @@ export default function Image() {
               lineHeight: 1.35,
             }}
           >
-            Lead Product Designer and Frontend Developer at PixeSci. React,
-            Next.js, design systems, UX documentation, Claude, and Codex.
+            Lead Product Designer and Full-Stack Product Builder at PixeSci.
+            React, Next.js, design systems, portal workflows, Claude, and Codex.
           </div>
         </div>
 

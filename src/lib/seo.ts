@@ -11,13 +11,13 @@ export const SITE_NAME = 'Japheth Oruko Portfolio';
 export const SITE_LAST_MODIFIED = '2026-07-12';
 
 export const defaultSeoDescription =
-  'Portfolio of Japheth Oruko, a Nairobi-based Product Designer, Product Manager, Frontend Developer, and AI-assisted product builder helping teams design, document, and ship user-centered digital products with React, Next.js, Claude, and Codex.';
+  'Portfolio of Japheth Oruko, a Nairobi-based Product Designer, Product Manager, Full-Stack Product Builder, and AI-assisted product builder helping teams design, document, and ship user-centered digital products with React, Next.js, Claude, and Codex.';
 
 export const routes = [
   {
     path: '/',
     title:
-      'Japheth Oruko | Product Designer, Product Manager, Frontend Developer & AI-assisted Product Builder',
+      'Japheth Oruko | Product Designer, Product Manager, Full-Stack Product Builder & AI-assisted Product Builder',
     description: defaultSeoDescription,
     priority: 1,
   },
@@ -25,28 +25,28 @@ export const routes = [
     path: '/work',
     title: 'Work',
     description:
-      'Case-study archive for Japheth Oruko across PixeSci, Ticet EDU, product documentation, UI/UX design, design systems, and frontend implementation.',
+      'Case-study archive for Japheth Oruko across PixeSci, Ticet EDU, product documentation, UI/UX design, design systems, full-stack portal work, and frontend implementation.',
     priority: 0.9,
   },
   {
     path: '/experience',
     title: 'Experience',
     description:
-      'Experience timeline for Japheth Oruko, including current PixeSci product design and frontend leadership and previous Ticet EDU zero-to-one delivery work.',
+      'Experience timeline for Japheth Oruko, including current PixeSci product design, frontend leadership, full-stack portal work, and previous Ticet EDU zero-to-one delivery work.',
     priority: 0.8,
   },
   {
     path: '/process',
     title: 'Process',
     description:
-      'Japheth Oruko product process from market research and discovery through UX, UI, design systems, frontend development, testing, launch, and optimization.',
+      'Japheth Oruko product process from market research and discovery through UX, UI, design systems, frontend development, portal workflows, testing, launch, and optimization.',
     priority: 0.8,
   },
   {
     path: '/contact',
     title: 'Contact',
     description:
-      'Contact Japheth Oruko for product design, UX documentation, frontend implementation, contract work, or full-time opportunities.',
+      'Contact Japheth Oruko for product design, UX documentation, frontend implementation, full-stack portal work, contract work, or full-time opportunities.',
     priority: 0.8,
   },
 ] as const;
@@ -123,6 +123,7 @@ export function personJsonLd() {
       'Product Designer',
       'Product Manager',
       'Frontend Developer',
+      'Full-Stack Product Builder',
       USER.currentRole,
     ],
     description: USER.shortBio,

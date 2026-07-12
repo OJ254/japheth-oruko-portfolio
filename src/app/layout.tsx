@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      'Japheth Oruko | Product Designer, Product Manager, Frontend Developer & AI-assisted Product Builder',
+      'Japheth Oruko | Product Designer, Product Manager, Full-Stack Product Builder & AI-assisted Product Builder',
     template: '%s | Japheth Oruko',
   },
   description: defaultSeoDescription,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      'Japheth Oruko | Product Designer, Product Manager, Frontend Developer & AI-assisted Product Builder',
+      'Japheth Oruko | Product Designer, Product Manager, Full-Stack Product Builder & AI-assisted Product Builder',
     description: defaultSeoDescription,
     url: '/',
     siteName: SITE_NAME,
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      'Japheth Oruko | Product Designer, Product Manager, Frontend Developer & AI-assisted Product Builder',
+      'Japheth Oruko | Product Designer, Product Manager, Full-Stack Product Builder & AI-assisted Product Builder',
     description: defaultSeoDescription,
     images: ['/opengraph-image'],
   },
