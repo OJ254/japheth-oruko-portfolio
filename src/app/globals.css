@@ -218,110 +218,104 @@ body {
 
 .profile-logo-field {
   position: absolute;
-  inset: 3.5rem 0.75rem 1.75rem;
+  inset: 3.45rem 0.75rem 1rem;
   pointer-events: none;
 }
 
 .profile-logo-field::before {
   content: '';
   position: absolute;
-  inset: 16% 24%;
-  border: 1px solid color-mix(in srgb, var(--portfolio-brand) 18%, transparent);
-  border-radius: 999px;
-  filter: blur(0.2px);
-  opacity: 0.65;
-}
-
-.profile-logo-orbit,
-.profile-logo-rail {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  border-radius: 999px;
-}
-
-.profile-logo-orbit {
-  width: 1px;
-  height: 1px;
-}
-
-.profile-logo-orbit--outer,
-.profile-logo-rail--outer {
-  width: min(76vw, 40rem);
-  height: clamp(10rem, 24vw, 17rem);
-  --orbit-x: min(34vw, 19rem);
-  --orbit-x-neg: max(-34vw, -19rem);
-  --orbit-y: clamp(4.8rem, 11vw, 8rem);
-  --orbit-y-neg: clamp(-8rem, -11vw, -4.8rem);
-  --orbit-x-soft: min(21vw, 11rem);
-  --orbit-x-soft-neg: max(-21vw, -11rem);
-  --orbit-y-soft: clamp(3.5rem, 8vw, 5.75rem);
-  --orbit-y-soft-neg: clamp(-5.75rem, -8vw, -3.5rem);
-  --orbit-duration: 32.4s;
-  --logo-size: clamp(2.2rem, 4vw, 3.2rem);
-}
-
-.profile-logo-orbit--middle,
-.profile-logo-rail--middle {
-  width: min(66vw, 34rem);
-  height: clamp(8.6rem, 20vw, 14.5rem);
-  --orbit-x: min(30vw, 16rem);
-  --orbit-x-neg: max(-30vw, -16rem);
-  --orbit-y: clamp(4.2rem, 9.5vw, 6.75rem);
-  --orbit-y-neg: clamp(-6.75rem, -9.5vw, -4.2rem);
-  --orbit-x-soft: min(18vw, 9.5rem);
-  --orbit-x-soft-neg: max(-18vw, -9.5rem);
-  --orbit-y-soft: clamp(3rem, 7vw, 4.9rem);
-  --orbit-y-soft-neg: clamp(-4.9rem, -7vw, -3rem);
-  --orbit-duration: 26.1s;
-  --logo-size: clamp(2rem, 3.7vw, 2.85rem);
-}
-
-.profile-logo-orbit--inner,
-.profile-logo-rail--inner {
-  width: min(56vw, 28rem);
-  height: clamp(7.5rem, 17vw, 12rem);
-  --orbit-x: min(25vw, 13rem);
-  --orbit-x-neg: max(-25vw, -13rem);
-  --orbit-y: clamp(3.5rem, 8vw, 5.4rem);
-  --orbit-y-neg: clamp(-5.4rem, -8vw, -3.5rem);
-  --orbit-x-soft: min(15vw, 7.75rem);
-  --orbit-x-soft-neg: max(-15vw, -7.75rem);
-  --orbit-y-soft: clamp(2.5rem, 6vw, 3.9rem);
-  --orbit-y-soft-neg: clamp(-3.9rem, -6vw, -2.5rem);
-  --orbit-duration: 34s;
-  --logo-size: clamp(1.85rem, 3.4vw, 2.55rem);
-}
-
-.profile-logo-rail {
-  z-index: 1;
-  border: 1px solid color-mix(in srgb, var(--portfolio-line) 72%, transparent);
-  opacity: 0.42;
-}
-
-.profile-logo-rail--inner {
-  opacity: 0.26;
-}
-
-.profile-logo-rail--middle {
-  opacity: 0.32;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 18% 22%,
+      color-mix(in srgb, var(--portfolio-brand) 12%, transparent),
+      transparent 18%
+    ),
+    radial-gradient(
+      circle at 82% 76%,
+      color-mix(in srgb, var(--foreground) 8%, transparent),
+      transparent 20%
+    );
+  opacity: 0.7;
 }
 
 .profile-logo-token {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: var(--logo-y);
+  left: var(--logo-x);
   display: grid;
-  width: var(--logo-size);
+  width: var(--logo-size, clamp(1.75rem, 3.5vw, 2.85rem));
   aspect-ratio: 1;
   transform-origin: center;
-  animation: profile-logo-ellipse var(--orbit-duration) linear infinite;
+  animation: profile-logo-bounce var(--logo-duration, 22s) ease-in-out infinite;
   animation-delay: var(--logo-delay);
 }
 
-.profile-logo-orbit--middle .profile-logo-token {
-  animation-direction: reverse;
+.profile-logo-token--route-1 {
+  --move-a: clamp(2rem, 8vw, 7rem);
+  --move-b: clamp(-7rem, -9vw, -2rem);
+  --move-c: clamp(1.5rem, 6vw, 5rem);
+  --move-d: clamp(-5rem, -7vw, -1.5rem);
+  --move-back-a: clamp(-3.5rem, -5vw, -1rem);
+  --move-back-b: clamp(1.5rem, 4vw, 3.5rem);
+  --move-soft-a: clamp(-2.5rem, -3vw, -0.75rem);
+  --move-soft-b: clamp(1rem, 3vw, 2.5rem);
+}
+
+.profile-logo-token--route-2 {
+  --move-a: clamp(-7rem, -10vw, -2rem);
+  --move-b: clamp(1.5rem, 7vw, 5.5rem);
+  --move-c: clamp(2rem, 9vw, 7rem);
+  --move-d: clamp(-4.5rem, -6vw, -1.5rem);
+  --move-back-a: clamp(1rem, 5vw, 4rem);
+  --move-back-b: clamp(1.25rem, 4vw, 3rem);
+  --move-soft-a: clamp(1rem, 4vw, 3rem);
+  --move-soft-b: clamp(-2.5rem, -3vw, -0.75rem);
+}
+
+.profile-logo-token--route-3 {
+  --move-a: clamp(1.5rem, 6vw, 5rem);
+  --move-b: clamp(2rem, 8vw, 6rem);
+  --move-c: clamp(-6rem, -8vw, -2rem);
+  --move-d: clamp(-5rem, -7vw, -1.5rem);
+  --move-back-a: clamp(-1rem, -4vw, -3rem);
+  --move-back-b: clamp(-2.5rem, -4vw, -1rem);
+  --move-soft-a: clamp(-2.5rem, -3vw, -0.75rem);
+  --move-soft-b: clamp(-2.5rem, -4vw, -1rem);
+}
+
+.profile-logo-token--route-4 {
+  --move-a: clamp(-5.5rem, -8vw, -1.5rem);
+  --move-b: clamp(-4rem, -6vw, -1rem);
+  --move-c: clamp(2rem, 7vw, 5.5rem);
+  --move-d: clamp(2rem, 8vw, 6rem);
+  --move-back-a: clamp(1rem, 4vw, 3.5rem);
+  --move-back-b: clamp(-3rem, -4vw, -1rem);
+  --move-soft-a: clamp(-2rem, -3vw, -0.75rem);
+  --move-soft-b: clamp(-2rem, -3vw, -0.75rem);
+}
+
+.profile-logo-token--route-5 {
+  --move-a: clamp(2rem, 9vw, 7rem);
+  --move-b: clamp(-5rem, -7vw, -1.5rem);
+  --move-c: clamp(-5rem, -8vw, -2rem);
+  --move-d: clamp(1.5rem, 6vw, 4.5rem);
+  --move-back-a: clamp(-1rem, -4vw, -3.5rem);
+  --move-back-b: clamp(-2.5rem, -4vw, -1rem);
+  --move-soft-a: clamp(1rem, 3vw, 2.5rem);
+  --move-soft-b: clamp(1rem, 3vw, 2.5rem);
+}
+
+.profile-logo-token--route-6 {
+  --move-a: clamp(-6rem, -9vw, -2rem);
+  --move-b: clamp(2rem, 8vw, 6rem);
+  --move-c: clamp(1.5rem, 7vw, 5.5rem);
+  --move-d: clamp(-5rem, -8vw, -1.5rem);
+  --move-back-a: clamp(1rem, 4vw, 3rem);
+  --move-back-b: clamp(1rem, 4vw, 3rem);
+  --move-soft-a: clamp(-3rem, -4vw, -1rem);
+  --move-soft-b: clamp(-2rem, -3vw, -0.75rem);
 }
 
 .profile-logo-token__inner {
@@ -348,18 +342,6 @@ body {
   filter: saturate(1.04);
 }
 
-.profile-logo-field:hover .profile-logo-orbit--outer {
-  --orbit-duration: 42s;
-}
-
-.profile-logo-field:hover .profile-logo-orbit--inner {
-  --orbit-duration: 42s;
-}
-
-.profile-logo-field:hover .profile-logo-orbit--middle {
-  --orbit-duration: 35s;
-}
-
 .profile-logo-field:hover .profile-logo-token__inner {
   border-color: color-mix(
     in srgb,
@@ -372,115 +354,53 @@ body {
 
 @media (max-width: 640px) {
   .profile-logo-field {
-    inset: 4.75rem 0.75rem 2.75rem;
+    inset: 4.75rem 0.75rem 2rem;
   }
 
-  .profile-logo-field::before {
-    inset: 18% 22%;
-  }
-
-  .profile-logo-orbit--outer,
-  .profile-logo-rail--outer {
-    width: min(88vw, 21rem);
-    height: 10.5rem;
-    --orbit-x: min(38vw, 9rem);
-    --orbit-x-neg: max(-38vw, -9rem);
-    --orbit-y: 4.7rem;
-    --orbit-y-neg: -4.7rem;
-    --orbit-x-soft: min(23vw, 5.75rem);
-    --orbit-x-soft-neg: max(-23vw, -5.75rem);
-    --orbit-y-soft: 3.4rem;
-    --orbit-y-soft-neg: -3.4rem;
-    --logo-size: clamp(1.8rem, 8vw, 2.1rem);
-  }
-
-  .profile-logo-orbit--middle,
-  .profile-logo-rail--middle {
-    width: min(78vw, 18rem);
-    height: 8.8rem;
-    --orbit-x: min(34vw, 7.8rem);
-    --orbit-x-neg: max(-34vw, -7.8rem);
-    --orbit-y: 3.9rem;
-    --orbit-y-neg: -3.9rem;
-    --orbit-x-soft: min(20vw, 4.8rem);
-    --orbit-x-soft-neg: max(-20vw, -4.8rem);
-    --orbit-y-soft: 2.8rem;
-    --orbit-y-soft-neg: -2.8rem;
-    --logo-size: clamp(1.65rem, 7.4vw, 1.95rem);
-  }
-
-  .profile-logo-orbit--inner,
-  .profile-logo-rail--inner {
-    width: min(66vw, 16rem);
-    height: 7.5rem;
-    --orbit-x: min(29vw, 6.7rem);
-    --orbit-x-neg: max(-29vw, -6.7rem);
-    --orbit-y: 3.3rem;
-    --orbit-y-neg: -3.3rem;
-    --orbit-x-soft: min(17vw, 4.1rem);
-    --orbit-x-soft-neg: max(-17vw, -4.1rem);
-    --orbit-y-soft: 2.35rem;
-    --orbit-y-soft-neg: -2.35rem;
-    --logo-size: clamp(1.5rem, 6.8vw, 1.8rem);
+  .profile-logo-token {
+    width: var(--logo-size, clamp(1.35rem, 6.2vw, 1.85rem));
   }
 }
 
-@keyframes profile-logo-ellipse {
+@keyframes profile-logo-bounce {
   0%,
   100% {
-    z-index: 4;
-    opacity: 0;
-    filter: blur(1px) saturate(0.72);
-    transform: translate3d(-50%, -50%, 0) translate(0, var(--orbit-y-neg))
-      scale(0.38);
-  }
-
-  10% {
-    opacity: 0.12;
-  }
-
-  24% {
-    z-index: 7;
+    z-index: 6;
     opacity: 0.42;
-    filter: blur(0.45px) saturate(0.88);
-    transform: translate3d(-50%, -50%, 0)
-      translate(var(--orbit-x), var(--orbit-y-soft-neg)) scale(0.72);
+    filter: blur(0.6px) saturate(0.82);
+    transform: translate3d(-50%, -50%, 0) translate(0, 0) scale(0.72);
   }
 
-  42% {
+  18% {
+    z-index: 12;
+    opacity: 0.9;
+    filter: blur(0) saturate(1.08);
+    transform: translate3d(-50%, -50%, 0)
+      translate(var(--move-a), var(--move-b)) scale(1.08);
+  }
+
+  38% {
+    z-index: 4;
+    opacity: 0.28;
+    filter: blur(1px) saturate(0.7);
+    transform: translate3d(-50%, -50%, 0)
+      translate(var(--move-back-a), var(--move-back-b)) scale(0.58);
+  }
+
+  62% {
     z-index: 14;
-    opacity: 0.95;
-    filter: blur(0) saturate(1.05);
-    transform: translate3d(-50%, -50%, 0)
-      translate(var(--orbit-x-soft), var(--orbit-y-soft)) scale(1.02);
-  }
-
-  50% {
-    z-index: 15;
     opacity: 1;
     filter: blur(0) saturate(1.12);
-    transform: translate3d(-50%, -50%, 0) translate(0, var(--orbit-y))
-      scale(1.22);
-  }
-
-  58% {
-    z-index: 14;
-    opacity: 0.95;
-    filter: blur(0) saturate(1.05);
     transform: translate3d(-50%, -50%, 0)
-      translate(var(--orbit-x-soft-neg), var(--orbit-y-soft)) scale(1.02);
+      translate(var(--move-c), var(--move-d)) scale(1.18);
   }
 
-  76% {
-    z-index: 7;
-    opacity: 0.42;
-    filter: blur(0.45px) saturate(0.88);
+  82% {
+    z-index: 8;
+    opacity: 0.62;
+    filter: blur(0.25px) saturate(0.92);
     transform: translate3d(-50%, -50%, 0)
-      translate(var(--orbit-x-neg), var(--orbit-y-soft-neg)) scale(0.72);
-  }
-
-  90% {
-    opacity: 0.12;
+      translate(var(--move-soft-a), var(--move-soft-b)) scale(0.88);
   }
 }
 

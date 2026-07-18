@@ -53,62 +53,333 @@ import { RoleFlip } from './role-flip';
 
 type LogoIcon = ComponentType<SVGProps<SVGSVGElement>>;
 
-type OrbitLogo = {
+type CoverLogo = {
   name: string;
   Icon: LogoIcon;
   delay: string;
+  duration: string;
+  route: 1 | 2 | 3 | 4 | 5 | 6;
+  size?: string;
+  x: string;
+  y: string;
 };
 
-const outerOrbitLogos: OrbitLogo[] = [
-  { name: 'React', Icon: ReactLogo, delay: '0s' },
-  { name: 'Next.js', Icon: NextJS, delay: '-3.6s' },
-  { name: 'TypeScript', Icon: Typescript, delay: '-7.2s' },
-  { name: 'Tailwind CSS', Icon: Tailwind, delay: '-10.8s' },
-  { name: 'Figma', Icon: Figma, delay: '-14.4s' },
-  { name: 'Claude', Icon: Claude, delay: '-16.2s' },
-  { name: 'OpenAI', Icon: OpenAI, delay: '-17.1s' },
-  { name: 'GitHub', Icon: GitHub, delay: '-18s' },
-  { name: 'shadcn/ui', Icon: ShadcnUI, delay: '-19.8s' },
-  { name: 'Visual Studio Code', Icon: VisualStudioCode, delay: '-21.6s' },
-  { name: 'WebStorm', Icon: WebStorm, delay: '-25.2s' },
-  { name: 'ViteJS', Icon: ViteJS, delay: '-28.8s' },
+const coverLogos: CoverLogo[] = [
+  {
+    name: 'React',
+    Icon: ReactLogo,
+    x: '8%',
+    y: '50%',
+    route: 1,
+    duration: '19s',
+    delay: '0s',
+  },
+  {
+    name: 'Next.js',
+    Icon: NextJS,
+    x: '78%',
+    y: '66%',
+    route: 4,
+    duration: '22s',
+    delay: '-3.6s',
+  },
+  {
+    name: 'TypeScript',
+    Icon: Typescript,
+    x: '88%',
+    y: '42%',
+    route: 2,
+    duration: '24s',
+    delay: '-7.2s',
+  },
+  {
+    name: 'Tailwind CSS',
+    Icon: Tailwind,
+    x: '54%',
+    y: '72%',
+    route: 5,
+    duration: '21s',
+    delay: '-10.8s',
+  },
+  {
+    name: 'Figma',
+    Icon: Figma,
+    x: '18%',
+    y: '73%',
+    route: 3,
+    duration: '18s',
+    delay: '-14.4s',
+  },
+  {
+    name: 'Claude',
+    Icon: Claude,
+    x: '64%',
+    y: '18%',
+    route: 6,
+    duration: '26s',
+    delay: '-16.2s',
+  },
+  {
+    name: 'OpenAI',
+    Icon: OpenAI,
+    x: '33%',
+    y: '20%',
+    route: 2,
+    duration: '23s',
+    delay: '-17.1s',
+  },
+  {
+    name: 'GitHub',
+    Icon: GitHub,
+    x: '12%',
+    y: '31%',
+    route: 4,
+    duration: '20s',
+    delay: '-18s',
+  },
+  {
+    name: 'shadcn/ui',
+    Icon: ShadcnUI,
+    x: '82%',
+    y: '22%',
+    route: 1,
+    duration: '25s',
+    delay: '-19.8s',
+  },
+  {
+    name: 'Visual Studio Code',
+    Icon: VisualStudioCode,
+    x: '6%',
+    y: '68%',
+    route: 5,
+    duration: '22s',
+    delay: '-21.6s',
+  },
+  {
+    name: 'WebStorm',
+    Icon: WebStorm,
+    x: '71%',
+    y: '78%',
+    route: 3,
+    duration: '24s',
+    delay: '-25.2s',
+  },
+  {
+    name: 'ViteJS',
+    Icon: ViteJS,
+    x: '92%',
+    y: '70%',
+    route: 6,
+    duration: '20s',
+    delay: '-28.8s',
+  },
+  {
+    name: 'HTML',
+    Icon: Html,
+    x: '23%',
+    y: '42%',
+    route: 2,
+    duration: '19s',
+    delay: '-1.3s',
+  },
+  {
+    name: 'CSS',
+    Icon: Css,
+    x: '44%',
+    y: '28%',
+    route: 5,
+    duration: '21s',
+    delay: '-4.2s',
+  },
+  {
+    name: 'JavaScript',
+    Icon: JavaScript,
+    x: '7%',
+    y: '19%',
+    route: 3,
+    duration: '23s',
+    delay: '-7.1s',
+  },
+  {
+    name: 'Redux',
+    Icon: Redux,
+    x: '29%',
+    y: '82%',
+    route: 1,
+    duration: '24s',
+    delay: '-10s',
+  },
+  {
+    name: 'Vue',
+    Icon: Vue,
+    x: '60%',
+    y: '54%',
+    route: 4,
+    duration: '20s',
+    delay: '-12.9s',
+  },
+  {
+    name: 'Angular',
+    Icon: Angular,
+    x: '78%',
+    y: '46%',
+    route: 6,
+    duration: '18s',
+    delay: '-15.8s',
+  },
+  {
+    name: 'Material UI',
+    Icon: MaterialUI,
+    x: '49%',
+    y: '15%',
+    route: 1,
+    duration: '22s',
+    delay: '-18.7s',
+  },
+  {
+    name: 'DaisyUI',
+    Icon: DaisyUI,
+    x: '36%',
+    y: '65%',
+    route: 2,
+    duration: '25s',
+    delay: '-20.1s',
+  },
+  {
+    name: 'Adobe XD',
+    Icon: AdobeXD,
+    x: '16%',
+    y: '84%',
+    route: 6,
+    duration: '21s',
+    delay: '-21.6s',
+  },
+  {
+    name: 'Atlassian',
+    Icon: Atlassian,
+    x: '67%',
+    y: '36%',
+    route: 3,
+    duration: '19s',
+    delay: '-24.5s',
+  },
+  {
+    name: 'Bitbucket',
+    Icon: Bitbucket,
+    x: '84%',
+    y: '84%',
+    route: 5,
+    duration: '23s',
+    delay: '-1.7s',
+  },
+  {
+    name: 'Node.js',
+    Icon: NodeJS,
+    x: '41%',
+    y: '77%',
+    route: 4,
+    duration: '20s',
+    delay: '-5.1s',
+  },
+  {
+    name: 'PostgreSQL',
+    Icon: PostgreSQL,
+    x: '27%',
+    y: '56%',
+    route: 6,
+    duration: '24s',
+    delay: '-8.5s',
+  },
+  {
+    name: 'Docker',
+    Icon: Docker,
+    x: '56%',
+    y: '42%',
+    route: 1,
+    duration: '18s',
+    delay: '-11.9s',
+  },
+  {
+    name: 'Prisma',
+    Icon: Prisma,
+    x: '73%',
+    y: '12%',
+    route: 5,
+    duration: '22s',
+    delay: '-15.3s',
+  },
+  {
+    name: 'Codex',
+    Icon: Codex,
+    x: '48%',
+    y: '88%',
+    route: 2,
+    duration: '20s',
+    delay: '-17s',
+  },
+  {
+    name: 'Jira',
+    Icon: Jira,
+    x: '90%',
+    y: '29%',
+    route: 4,
+    duration: '21s',
+    delay: '-18.7s',
+  },
+  {
+    name: 'Confluence',
+    Icon: Confluence,
+    x: '20%',
+    y: '14%',
+    route: 1,
+    duration: '26s',
+    delay: '-22.1s',
+  },
+  {
+    name: 'Jest',
+    Icon: Jest,
+    x: '31%',
+    y: '37%',
+    route: 5,
+    duration: '19s',
+    delay: '-25.5s',
+  },
+  {
+    name: 'Keycloak',
+    Icon: Keycloak,
+    x: '63%',
+    y: '82%',
+    route: 3,
+    duration: '23s',
+    delay: '-28.9s',
+  },
+  {
+    name: 'NestJS',
+    Icon: NestJS,
+    x: '12%',
+    y: '61%',
+    route: 2,
+    duration: '22s',
+    delay: '-32.3s',
+  },
 ];
 
-const middleOrbitLogos: OrbitLogo[] = [
-  { name: 'HTML', Icon: Html, delay: '-1.3s' },
-  { name: 'CSS', Icon: Css, delay: '-4.2s' },
-  { name: 'JavaScript', Icon: JavaScript, delay: '-7.1s' },
-  { name: 'Redux', Icon: Redux, delay: '-10s' },
-  { name: 'Vue', Icon: Vue, delay: '-12.9s' },
-  { name: 'Angular', Icon: Angular, delay: '-15.8s' },
-  { name: 'Material UI', Icon: MaterialUI, delay: '-18.7s' },
-  { name: 'DaisyUI', Icon: DaisyUI, delay: '-20.1s' },
-  { name: 'Adobe XD', Icon: AdobeXD, delay: '-21.6s' },
-  { name: 'Atlassian', Icon: Atlassian, delay: '-24.5s' },
-];
-
-const innerOrbitLogos: OrbitLogo[] = [
-  { name: 'Bitbucket', Icon: Bitbucket, delay: '-1.7s' },
-  { name: 'Node.js', Icon: NodeJS, delay: '-5.1s' },
-  { name: 'PostgreSQL', Icon: PostgreSQL, delay: '-8.5s' },
-  { name: 'Docker', Icon: Docker, delay: '-11.9s' },
-  { name: 'Prisma', Icon: Prisma, delay: '-15.3s' },
-  { name: 'Codex', Icon: Codex, delay: '-17s' },
-  { name: 'Jira', Icon: Jira, delay: '-18.7s' },
-  { name: 'Confluence', Icon: Confluence, delay: '-22.1s' },
-  { name: 'Jest', Icon: Jest, delay: '-25.5s' },
-  { name: 'Keycloak', Icon: Keycloak, delay: '-28.9s' },
-  { name: 'NestJS', Icon: NestJS, delay: '-32.3s' },
-];
-
-function OrbitLogoToken({ logo }: { logo: OrbitLogo }) {
+function CoverLogoToken({ logo }: { logo: CoverLogo }) {
   const { Icon } = logo;
   const style = {
+    '--logo-duration': logo.duration,
     '--logo-delay': logo.delay,
+    '--logo-size': logo.size,
+    '--logo-x': logo.x,
+    '--logo-y': logo.y,
   } as CSSProperties;
 
   return (
-    <span className='profile-logo-token' style={style} title={logo.name}>
+    <span
+      className={`profile-logo-token profile-logo-token--route-${logo.route}`}
+      style={style}
+      title={logo.name}
+    >
       <span className='profile-logo-token__inner'>
         <Icon className='profile-logo-token__icon' />
       </span>
@@ -119,24 +390,9 @@ function OrbitLogoToken({ logo }: { logo: OrbitLogo }) {
 function ProfileCoverLogoOrbit() {
   return (
     <div className='profile-logo-field' aria-hidden='true'>
-      <div className='profile-logo-orbit profile-logo-orbit--outer'>
-        {outerOrbitLogos.map(logo => (
-          <OrbitLogoToken key={logo.name} logo={logo} />
-        ))}
-      </div>
-      <div className='profile-logo-orbit profile-logo-orbit--middle'>
-        {middleOrbitLogos.map(logo => (
-          <OrbitLogoToken key={logo.name} logo={logo} />
-        ))}
-      </div>
-      <div className='profile-logo-orbit profile-logo-orbit--inner'>
-        {innerOrbitLogos.map(logo => (
-          <OrbitLogoToken key={logo.name} logo={logo} />
-        ))}
-      </div>
-      <div className='profile-logo-rail profile-logo-rail--outer' />
-      <div className='profile-logo-rail profile-logo-rail--middle' />
-      <div className='profile-logo-rail profile-logo-rail--inner' />
+      {coverLogos.map(logo => (
+        <CoverLogoToken key={logo.name} logo={logo} />
+      ))}
     </div>
   );
 }
