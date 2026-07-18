@@ -1,3 +1,5 @@
+// @/components/portfolio/profile.tsx
+
 import Image from 'next/image';
 
 import japhethOruko from '@/assets/images/japheth-oruko.png';
@@ -31,7 +33,10 @@ export function ProfileHeader() {
 
   return (
     <Panel className='overflow-hidden'>
-      <div className='profile-cover border-line relative min-h-[300px] border-b sm:min-h-[390px]'>
+      <div
+        id='profile-cover'
+        className='profile-cover border-line relative min-h-[300px] border-b sm:min-h-[390px]'
+      >
         <div className='absolute inset-0 grid place-items-center opacity-80'>
           <div className='wire-mark' aria-hidden='true'>
             JO
