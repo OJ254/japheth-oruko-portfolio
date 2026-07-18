@@ -1,5 +1,7 @@
 // @/components/portfolio/profile.tsx
 
+import type { ComponentType, CSSProperties, SVGProps } from 'react';
+
 import Image from 'next/image';
 
 import japhethOruko from '@/assets/images/japheth-oruko.png';
@@ -7,12 +9,127 @@ import { Badge } from '@/components/ui/badge';
 import { ButtonLink } from '@/components/ui/button';
 import { CopyButton } from '@/components/ui/copy-button';
 import { Panel, PanelContent } from '@/components/ui/panel';
+import {
+  AdobeXD,
+  Angular,
+  Atlassian,
+  Bitbucket,
+  Confluence,
+  Css,
+  Docker,
+  Figma,
+  GitHub,
+  Html,
+  JavaScript,
+  Jest,
+  Jira,
+  Keycloak,
+  MaterialUI,
+  NestJS,
+  NextJS,
+  NodeJS,
+  PostgreSQL,
+  Prisma,
+  ReactLogo,
+  Redux,
+  Tailwind,
+  Typescript,
+  VisualStudioCode,
+  ViteJS,
+  Vue,
+  WebStorm,
+} from '@/components/ui/dataDisplay/icons/logos';
 import { socialLinks } from '@/data/social-links';
 import { USER } from '@/data/user';
 
 import { ContactDialog } from './contact-dialog';
 import { LocalTime } from './local-time';
 import { RoleFlip } from './role-flip';
+
+type LogoIcon = ComponentType<SVGProps<SVGSVGElement>>;
+
+type OrbitLogo = {
+  name: string;
+  Icon: LogoIcon;
+  delay: string;
+};
+
+const outerOrbitLogos: OrbitLogo[] = [
+  { name: 'React', Icon: ReactLogo, delay: '0s' },
+  { name: 'Next.js', Icon: NextJS, delay: '-3.6s' },
+  { name: 'TypeScript', Icon: Typescript, delay: '-7.2s' },
+  { name: 'Tailwind CSS', Icon: Tailwind, delay: '-10.8s' },
+  { name: 'Figma', Icon: Figma, delay: '-14.4s' },
+  { name: 'GitHub', Icon: GitHub, delay: '-18s' },
+  { name: 'Visual Studio Code', Icon: VisualStudioCode, delay: '-21.6s' },
+  { name: 'WebStorm', Icon: WebStorm, delay: '-25.2s' },
+  { name: 'ViteJS', Icon: ViteJS, delay: '-28.8s' },
+];
+
+const middleOrbitLogos: OrbitLogo[] = [
+  { name: 'HTML', Icon: Html, delay: '-1.3s' },
+  { name: 'CSS', Icon: Css, delay: '-4.2s' },
+  { name: 'JavaScript', Icon: JavaScript, delay: '-7.1s' },
+  { name: 'Redux', Icon: Redux, delay: '-10s' },
+  { name: 'Vue', Icon: Vue, delay: '-12.9s' },
+  { name: 'Angular', Icon: Angular, delay: '-15.8s' },
+  { name: 'Material UI', Icon: MaterialUI, delay: '-18.7s' },
+  { name: 'Adobe XD', Icon: AdobeXD, delay: '-21.6s' },
+  { name: 'Atlassian', Icon: Atlassian, delay: '-24.5s' },
+];
+
+const innerOrbitLogos: OrbitLogo[] = [
+  { name: 'Bitbucket', Icon: Bitbucket, delay: '-1.7s' },
+  { name: 'Node.js', Icon: NodeJS, delay: '-5.1s' },
+  { name: 'PostgreSQL', Icon: PostgreSQL, delay: '-8.5s' },
+  { name: 'Docker', Icon: Docker, delay: '-11.9s' },
+  { name: 'Prisma', Icon: Prisma, delay: '-15.3s' },
+  { name: 'Jira', Icon: Jira, delay: '-18.7s' },
+  { name: 'Confluence', Icon: Confluence, delay: '-22.1s' },
+  { name: 'Jest', Icon: Jest, delay: '-25.5s' },
+  { name: 'Keycloak', Icon: Keycloak, delay: '-28.9s' },
+  { name: 'NestJS', Icon: NestJS, delay: '-32.3s' },
+];
+
+function OrbitLogoToken({ logo }: { logo: OrbitLogo }) {
+  const { Icon } = logo;
+  const style = {
+    '--logo-delay': logo.delay,
+  } as CSSProperties;
+
+  return (
+    <span className='profile-logo-token' style={style} title={logo.name}>
+      <span className='profile-logo-token__inner'>
+        <Icon className='profile-logo-token__icon' />
+      </span>
+    </span>
+  );
+}
+
+function ProfileCoverLogoOrbit() {
+  return (
+    <div className='profile-logo-field' aria-hidden='true'>
+      <div className='profile-logo-orbit profile-logo-orbit--outer'>
+        {outerOrbitLogos.map(logo => (
+          <OrbitLogoToken key={logo.name} logo={logo} />
+        ))}
+      </div>
+      <div className='profile-logo-orbit profile-logo-orbit--middle'>
+        {middleOrbitLogos.map(logo => (
+          <OrbitLogoToken key={logo.name} logo={logo} />
+        ))}
+      </div>
+      <div className='profile-logo-orbit profile-logo-orbit--inner'>
+        {innerOrbitLogos.map(logo => (
+          <OrbitLogoToken key={logo.name} logo={logo} />
+        ))}
+      </div>
+      <div className='profile-logo-rail profile-logo-rail--outer' />
+      <div className='profile-logo-rail profile-logo-rail--middle' />
+      <div className='profile-logo-rail profile-logo-rail--inner' />
+    </div>
+  );
+}
 
 export function ProfileHeader() {
   const proofChips = [
@@ -35,14 +152,15 @@ export function ProfileHeader() {
     <Panel className='overflow-hidden'>
       <div
         id='profile-cover'
-        className='profile-cover border-line relative min-h-[300px] border-b sm:min-h-[390px]'
+        className='profile-cover border-line relative isolate min-h-[300px] overflow-hidden border-b sm:min-h-[390px]'
       >
-        <div className='absolute inset-0 grid place-items-center opacity-80'>
+        <ProfileCoverLogoOrbit />
+        <div className='absolute inset-0 z-10 grid place-items-center opacity-80'>
           <div className='wire-mark' aria-hidden='true'>
             JO
           </div>
         </div>
-        <div className='absolute top-4 right-4 left-4 sm:right-6 sm:left-6'>
+        <div className='absolute top-4 right-4 left-4 z-20 sm:right-6 sm:left-6'>
           <div className='border-line bg-background/80 text-muted-text inline-flex max-w-full rounded-full border px-3 py-1 font-mono text-xs backdrop-blur'>
             <span className='truncate'>
               Nairobi, Kenya / Available for full-time and contract work
