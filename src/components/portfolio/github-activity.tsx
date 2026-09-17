@@ -3,9 +3,14 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import { Panel, PanelContent } from '@/components/ui/panel';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { USER } from '@/data/user';
 import { cn } from '@/lib/utils';
+import { metrics } from '@/data/metrics';
 
 type Activity = {
   date: string;
@@ -21,12 +26,27 @@ const API_BASE =
   process.env.NEXT_PUBLIC_GITHUB_CONTRIBUTIONS_API_URL ??
   'https://github-contributions-api.jogruber.de';
 
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const MONTHS = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
 const SKELETON_END_DATE = '2026-12-31';
 
 export function GitHubActivity() {
   const [activity, setActivity] = useState<Activity[]>([]);
-  const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
+  const [status, setStatus] = useState<'loading' | 'ready' | 'error'>(
+    'loading'
+  );
 
   useEffect(() => {
     const controller = new AbortController();
@@ -39,7 +59,9 @@ export function GitHubActivity() {
         });
 
         if (!response.ok) {
-          throw new Error(`GitHub activity request failed with ${response.status}`);
+          throw new Error(
+            `GitHub activity request failed with ${response.status}`
+          );
         }
 
         const data = (await response.json()) as ContributionsResponse;
@@ -62,48 +84,90 @@ export function GitHubActivity() {
   const yearLabel = graph.yearLabel;
 
   return (
-    <Panel id="github-activity">
-      <PanelContent className="space-y-5">
-        <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
-          <div>
-            <p className="font-mono text-xs uppercase text-muted-text">GitHub activity</p>
-            <h2 className="mt-2 text-2xl font-semibold text-balance">
-              Recent engineering activity across public GitHub work.
-            </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-text">
-              A live view of public contribution activity from my GitHub account, showing the consistency behind my frontend, product, and AI-assisted development practice.
-            </p>
-          </div>
-          <div className="rounded-md border border-line bg-surface p-4">
-            <p className="font-mono text-xs uppercase text-muted-text">Last year</p>
-            <p className="mt-2 text-3xl font-semibold">
-              {status === 'ready' ? total.toLocaleString('en') : 'Loading'}
-            </p>
-            <p className="mt-2 text-sm leading-6 text-muted-text">
-              Contributions in {yearLabel} on{' '}
-              <a className="font-semibold text-brand hover:underline" href={USER.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-
-        <div className="rounded-md border border-line bg-surface p-4">
-          {status === 'error' ? (
-            <div className="text-sm leading-7 text-muted-text">
-              GitHub activity could not be loaded right now. Visit{' '}
-              <a className="font-semibold text-brand hover:underline" href={USER.github} target="_blank" rel="noreferrer">
-                my GitHub profile
-              </a>{' '}
-              for the live contribution graph.
+    <div>
+      {' '}
+      <Panel id='github-activity'>
+        <PanelContent className='space-y-5'>
+          <div className='grid gap-4 lg:grid-cols-[1fr_280px]'>
+            <div>
+              <p className='text-muted-text font-mono text-xs uppercase'>
+                GitHub activity
+              </p>
+              <h2 className='mt-2 text-2xl font-semibold text-balance'>
+                Recent engineering activity across public GitHub work.
+              </h2>
+              <p className='text-muted-text mt-3 max-w-2xl text-sm leading-7'>
+                A live view of public contribution activity from my GitHub
+                account, showing the consistency behind my frontend, product,
+                and AI-assisted development practice.
+              </p>
             </div>
-          ) : (
-            <ContributionGraphView graph={graph} isLoading={status === 'loading'} />
-          )}
-        </div>
-      </PanelContent>
-    </Panel>
+            <div className='border-line bg-surface rounded-md border p-4'>
+              <p className='text-muted-text font-mono text-xs uppercase'>
+                Last year
+              </p>
+              <p className='mt-2 text-3xl font-semibold'>
+                {status === 'ready' ? total.toLocaleString('en') : 'Loading'}
+              </p>
+              <p className='text-muted-text mt-2 text-sm leading-6'>
+                Contributions in {yearLabel} on{' '}
+                <a
+                  className='text-brand font-semibold hover:underline'
+                  href={USER.github}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  GitHub
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+          <div className='border-line bg-surface rounded-md border p-4'>
+            {status === 'error' ? (
+              <div className='text-muted-text text-sm leading-7'>
+                GitHub activity could not be loaded right now. Visit{' '}
+                <a
+                  className='text-brand font-semibold hover:underline'
+                  href={USER.github}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  my GitHub profile
+                </a>{' '}
+                for the live contribution graph.
+              </div>
+            ) : (
+              <ContributionGraphView
+                graph={graph}
+                isLoading={status === 'loading'}
+              />
+            )}
+          </div>
+        </PanelContent>
+        <PanelContent>
+          <p className='text-muted-text font-mono text-xs uppercase'>
+            Contributions
+          </p>
+          <h2 className='mt-2 text-2xl font-semibold text-balance'>
+            Contributions to previous projects.
+          </h2>
+          <div className='grid gap-3 pt-4 sm:grid-cols-2 lg:grid-cols-4'>
+            {metrics.map(metric => (
+              <div
+                key={metric.label}
+                className='border-line bg-surface rounded-md border p-4'
+              >
+                <div className='text-3xl font-semibold'>{metric.value}</div>
+                <p className='text-muted-text mt-2 text-sm leading-6'>
+                  {metric.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </PanelContent>
+      </Panel>
+    </div>
   );
 }
 
@@ -120,25 +184,28 @@ function ContributionGraphView({
   const graphGap = `${gap}px`;
 
   return (
-    <div className="space-y-4">
-      <div className="overflow-x-auto pb-2">
+    <div className='space-y-4'>
+      <div className='overflow-x-auto pb-2'>
         <div
-          className={cn('min-w-[760px]', isLoading && 'animate-pulse opacity-70')}
-          role="img"
-          aria-label="GitHub contribution activity for the last year"
+          className={cn(
+            'min-w-[760px]',
+            isLoading && 'animate-pulse opacity-70'
+          )}
+          role='img'
+          aria-label='GitHub contribution activity for the last year'
         >
           <div
-            className="mb-2 ml-10 grid text-xs text-muted-text"
+            className='text-muted-text mb-2 ml-10 grid text-xs'
             style={{
               gridTemplateColumns: `repeat(${graph.weeks.length}, ${cellTrack})`,
               gap: graphGap,
             }}
-            aria-hidden="true"
+            aria-hidden='true'
           >
             {graph.monthLabels.map(label => (
               <span
                 key={`${label.month}-${label.weekIndex}`}
-                className="whitespace-nowrap"
+                className='whitespace-nowrap'
                 style={{ gridColumnStart: label.weekIndex + 1 }}
               >
                 {label.month}
@@ -146,14 +213,14 @@ function ContributionGraphView({
             ))}
           </div>
 
-          <div className="grid grid-cols-[32px_1fr] gap-2">
+          <div className='grid grid-cols-[32px_1fr] gap-2'>
             <div
-              className="grid text-xs text-muted-text"
+              className='text-muted-text grid text-xs'
               style={{
                 gridTemplateRows: `repeat(7, ${cellTrack})`,
                 gap: graphGap,
               }}
-              aria-hidden="true"
+              aria-hidden='true'
             >
               <span />
               <span>Mon</span>
@@ -165,7 +232,7 @@ function ContributionGraphView({
             </div>
 
             <div
-              className="grid"
+              className='grid'
               style={{
                 gridTemplateColumns: `repeat(${graph.weeks.length}, ${cellTrack})`,
                 gridTemplateRows: `repeat(7, ${cellTrack})`,
@@ -178,24 +245,28 @@ function ContributionGraphView({
                   const key = day?.date ?? `empty-${weekIndex}-${dayIndex}`;
 
                   if (!day) {
-                    return <span key={key} className="size-[11px]" aria-hidden="true" />;
+                    return (
+                      <span
+                        key={key}
+                        className='size-[11px]'
+                        aria-hidden='true'
+                      />
+                    );
                   }
 
                   return (
                     <Tooltip key={day.date}>
                       <TooltipTrigger asChild>
                         <button
-                          type="button"
+                          type='button'
                           className={cn(
-                            'size-[11px] rounded-[2px] border border-transparent outline-none transition-transform hover:scale-125 focus-visible:scale-125 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+                            'focus-visible:ring-ring focus-visible:ring-offset-background size-[11px] rounded-[2px] border border-transparent transition-transform outline-none hover:scale-125 focus-visible:scale-125 focus-visible:ring-2 focus-visible:ring-offset-2',
                             levelClassName(day.level)
                           )}
                           aria-label={contributionLabel(day)}
                         />
                       </TooltipTrigger>
-                      <TooltipContent>
-                        {contributionLabel(day)}
-                      </TooltipContent>
+                      <TooltipContent>{contributionLabel(day)}</TooltipContent>
                     </Tooltip>
                   );
                 })
@@ -205,12 +276,17 @@ function ContributionGraphView({
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 text-xs text-muted-text">
-        <span>{graph.total.toLocaleString('en')} contributions in {graph.yearLabel}</span>
-        <span className="inline-flex items-center gap-2">
+      <div className='border-line text-muted-text flex flex-wrap items-center justify-between gap-3 border-t pt-4 text-xs'>
+        <span>
+          {graph.total.toLocaleString('en')} contributions in {graph.yearLabel}
+        </span>
+        <span className='inline-flex items-center gap-2'>
           Less
           {[0, 1, 2, 3, 4].map(level => (
-            <span key={level} className={cn('size-3 rounded-[2px]', levelClassName(level))} />
+            <span
+              key={level}
+              className={cn('size-3 rounded-[2px]', levelClassName(level))}
+            />
           ))}
           More
         </span>
@@ -231,9 +307,14 @@ function buildContributionGraph(activity: Activity[]): ContributionGraphData {
   const sorted = [...normalized].sort((a, b) => a.date.localeCompare(b.date));
   const weeks: Array<Array<Activity | undefined>> = [];
   const firstDate = parseDateAsUtc(sorted[0]?.date);
-  const firstDay = Number.isNaN(firstDate.getTime()) ? 0 : firstDate.getUTCDay();
+  const firstDay = Number.isNaN(firstDate.getTime())
+    ? 0
+    : firstDate.getUTCDay();
   const mondayOffset = firstDay === 0 ? 6 : firstDay - 1;
-  let currentWeek: Array<Activity | undefined> = Array.from({ length: mondayOffset }, () => undefined);
+  let currentWeek: Array<Activity | undefined> = Array.from(
+    { length: mondayOffset },
+    () => undefined
+  );
 
   for (const item of sorted) {
     currentWeek.push(item);
@@ -244,7 +325,10 @@ function buildContributionGraph(activity: Activity[]): ContributionGraphData {
   }
 
   if (currentWeek.length > 0) {
-    weeks.push([...currentWeek, ...Array.from({ length: 7 - currentWeek.length }, () => undefined)]);
+    weeks.push([
+      ...currentWeek,
+      ...Array.from({ length: 7 - currentWeek.length }, () => undefined),
+    ]);
   }
 
   const monthLabels: Array<{ month: string; weekIndex: number }> = [];
@@ -252,14 +336,16 @@ function buildContributionGraph(activity: Activity[]): ContributionGraphData {
   weeks.forEach((week, weekIndex) => {
     const firstActivity = week.find(Boolean);
     if (!firstActivity) return;
-    const month = MONTHS[parseDateAsUtc(firstActivity.date).getUTCMonth()] ?? '';
+    const month =
+      MONTHS[parseDateAsUtc(firstActivity.date).getUTCMonth()] ?? '';
     if (month && month !== previousMonth) {
       monthLabels.push({ month, weekIndex });
       previousMonth = month;
     }
   });
 
-  const yearLabel = sorted.at(-1)?.date.slice(0, 4) ?? SKELETON_END_DATE.slice(0, 4);
+  const yearLabel =
+    sorted.at(-1)?.date.slice(0, 4) ?? SKELETON_END_DATE.slice(0, 4);
 
   return {
     weeks,

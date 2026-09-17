@@ -455,9 +455,6 @@ export function ProfileHeader() {
               <h1 className='text-4xl font-semibold text-balance sm:text-5xl'>
                 {USER.displayName}
               </h1>
-              <span className='border-brand/30 bg-brand-soft text-brand rounded-full border px-2 py-1 text-xs font-semibold'>
-                Verified profile
-              </span>
             </div>
             <RoleFlip roles={USER.roles} />
             <p className='text-muted-text max-w-2xl text-lg leading-8'>
@@ -482,7 +479,7 @@ export function ProfileHeader() {
             </ButtonLink>
             <ContactDialog />
             <ButtonLink href='/work' variant='secondary'>
-              View work
+              View sample work
             </ButtonLink>
             <ButtonLink
               href={USER.resume}
@@ -506,14 +503,6 @@ export function ProfileHeader() {
 }
 
 export function Overview() {
-  const jobItems = [
-    ['<>', 'Lead Product Designer', 'PixeSci', '/experience'],
-    ['FE', 'Lead Frontend Developer', 'PixeSci', '/experience'],
-    ['FS', 'Full-Stack Portal Developer', 'PixeSci', '/experience'],
-    ['PM', 'Previous Product Manager', 'Ticet EDU', '/experience'],
-    ['UX', 'Previous Lead Product Designer', 'Ticet EDU', '/experience'],
-  ];
-
   const introItems = [
     [
       'LC',
@@ -532,24 +521,6 @@ export function Overview() {
     <Panel id='about'>
       <h2 className='sr-only'>Overview</h2>
       <PanelContent className='space-y-3'>
-        <div className='grid gap-2'>
-          {jobItems.map(([icon, title, company, href]) => (
-            <a
-              key={`${title}-${company}`}
-              href={href}
-              className='group border-line bg-surface hover:border-foreground/30 grid grid-cols-[36px_1fr] items-center gap-3 rounded-md border p-2'
-            >
-              <span className='border-line bg-background text-muted-text group-hover:text-foreground grid size-9 place-items-center rounded-md border font-mono text-xs'>
-                {icon}
-              </span>
-              <span className='text-sm leading-6'>
-                <span className='font-semibold'>{title}</span>
-                <span className='text-muted-text'> @ {company}</span>
-              </span>
-            </a>
-          ))}
-        </div>
-
         <div className='grid gap-2 md:grid-cols-2'>
           {introItems.map(([icon, label, value, href]) => (
             <div
@@ -559,20 +530,23 @@ export function Overview() {
               <span className='border-line bg-background text-muted-text grid size-9 place-items-center rounded-md border font-mono text-xs'>
                 {icon}
               </span>
-              <span className='min-w-0 text-sm leading-6'>
-                <span className='text-muted-text mr-2 font-mono text-xs uppercase'>
-                  {label}
+              <span className='flex min-w-0 items-center justify-between gap-2 text-sm leading-6'>
+                <span>
+                  <span className='text-muted-text mr-2 font-mono text-xs uppercase'>
+                    {label}
+                  </span>
+                  {href ? (
+                    <a
+                      href={String(href)}
+                      className='font-semibold hover:underline'
+                    >
+                      {value}
+                    </a>
+                  ) : (
+                    <span className='font-semibold'>{value}</span>
+                  )}
                 </span>
-                {href ? (
-                  <a
-                    href={String(href)}
-                    className='font-semibold hover:underline'
-                  >
-                    {value}
-                  </a>
-                ) : (
-                  <span className='font-semibold'>{value}</span>
-                )}
+                {label === 'Email' && <CopyButton value={USER.email} icon />}
               </span>
             </div>
           ))}
@@ -590,7 +564,6 @@ export function Overview() {
               {link.label}
             </a>
           ))}
-          <CopyButton value={USER.email} label='Copy email' />
         </div>
       </PanelContent>
     </Panel>

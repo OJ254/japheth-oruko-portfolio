@@ -27,11 +27,11 @@ export function AboutSection() {
       <PanelContent className='grid gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
         <div className='text-muted-text space-y-4 text-sm leading-7'>
           <p>
-            I am a Nairobi-based Product Designer and Full-Stack Product
-            Builder with 8+ years of experience creating digital products. My
-            strongest work sits at the intersection of product definition,
-            user-centric UI/UX, interface systems, React/Next.js
-            implementation, and practical backend workflows.
+            I am a Nairobi-based Product Designer and Full-Stack Product Builder
+            with 8+ years of experience creating digital products. My strongest
+            work sits at the intersection of product definition, user-centric
+            UI/UX, interface systems, React/Next.js implementation, and
+            practical backend workflows.
           </p>
           <p>
             I am especially useful in zero-to-one and startup environments where
@@ -67,42 +67,6 @@ export function AboutSection() {
             >
               <h3 className='font-semibold'>{title}</h3>
               <p className='text-muted-text mt-2 text-sm leading-6'>{body}</p>
-            </div>
-          ))}
-        </div>
-      </PanelContent>
-    </Panel>
-  );
-}
-
-export function MetricsSection() {
-  return (
-    <Panel id='proof'>
-      <PanelHeader>
-        <SectionKicker>Proof</SectionKicker>
-        <PanelTitle>
-          Current PixeSci product leadership, plus measured proof from detailed
-          Ticet EDU portfolio material.
-        </PanelTitle>
-      </PanelHeader>
-      <PanelContent>
-        <div className='border-line bg-surface text-muted-text mb-4 rounded-md border p-4 text-sm leading-6'>
-          At PixeSci, current proof includes the new public website, PixeSci
-          Design System, application redesign, frontend direction, full-stack
-          organization portal work, product visuals, and AI-assisted
-          design-to-code workflow. The numeric metrics below are selected
-          outcomes from previous Ticet EDU portfolio material.
-        </div>
-        <div className='grid gap-3 sm:grid-cols-2 lg:grid-cols-4'>
-          {metrics.map(metric => (
-            <div
-              key={metric.label}
-              className='border-line bg-surface rounded-md border p-4'
-            >
-              <div className='text-3xl font-semibold'>{metric.value}</div>
-              <p className='text-muted-text mt-2 text-sm leading-6'>
-                {metric.label}
-              </p>
             </div>
           ))}
         </div>

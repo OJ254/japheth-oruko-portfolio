@@ -7,7 +7,6 @@ import {
   ContactSection,
   EducationSection,
   ExperienceSection,
-  MetricsSection,
   TechStackSection,
 } from '@/components/portfolio/sections';
 import { GitHubActivity } from '@/components/portfolio/github-activity';
@@ -19,7 +18,7 @@ export default function Home() {
     <>
       <JsonLd data={profilePageJsonLd()} />
       <JsonLd data={websiteJsonLd()} />
-      <div className="mx-auto max-w-5xl px-2 *:scroll-mt-20">
+      <div className='mx-auto max-w-5xl px-2 *:scroll-mt-20'>
         <ProfileHeader />
         <Separator />
         <Overview />
@@ -28,19 +27,11 @@ export default function Home() {
         <Separator />
         <AboutSection />
         <Separator />
-        <MetricsSection />
+        <TechStackSection />
         <Separator />
         <CapabilitiesSection />
         <Separator />
-        <ExperienceSection />
-        <Separator />
-        <ProductProcessSection />
-        <Separator />
-        <TechStackSection />
-        <Separator />
         <EducationSection />
-        <Separator />
-        <ProjectArchiveSection />
         <Separator />
         <ContactSection />
       </div>
@@ -49,5 +40,7 @@ export default function Home() {
 }
 
 function Separator() {
-  return <div className="h-8 border-x border-line bg-[repeating-linear-gradient(135deg,var(--portfolio-line)_0,var(--portfolio-line)_1px,transparent_1px,transparent_12px)]" />;
+  return (
+    <div className='border-line h-8 border-x bg-[repeating-linear-gradient(135deg,var(--portfolio-line)_0,var(--portfolio-line)_1px,transparent_1px,transparent_12px)]' />
+  );
 }
