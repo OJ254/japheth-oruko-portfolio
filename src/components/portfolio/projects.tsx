@@ -1,14 +1,23 @@
-import { Panel, PanelContent, PanelHeader, PanelTitle, SectionKicker } from '@/components/ui/panel';
+import {
+  Panel,
+  PanelContent,
+  PanelHeader,
+  PanelTitle,
+  SectionKicker,
+} from '@/components/ui/panel';
 import { projects } from '@/data/projects';
 
 import { ProjectArchive } from './project-archive';
 
 export function ProjectArchiveSection() {
   return (
-    <Panel id="work">
+    <Panel id='work'>
       <PanelHeader>
         <SectionKicker>Work</SectionKicker>
-        <PanelTitle>Filtered case-study material across design systems, full-stack product development, frontend implementation, UI design, UX logic, and product management.</PanelTitle>
+        <PanelTitle>
+          Selected work spanning design systems, product design, frontend
+          development, and product management.
+        </PanelTitle>
       </PanelHeader>
       <PanelContent>
         <ProjectArchive projects={projects} />

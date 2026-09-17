@@ -27,11 +27,11 @@ export default function WorkPage() {
         ])}
       />
       <JsonLd data={projectItemListJsonLd(projects)} />
-      <div className="mx-auto max-w-5xl px-2 *:scroll-mt-20">
+      <div className='mx-auto max-w-5xl px-2 *:scroll-mt-20'>
         <PageIntro
-          kicker="Work"
-          title="Case-study material across product design, product management, full-stack portal work, and frontend delivery."
-          body="PixeSci appears first as current work across the website and portal, application experience, and design system, followed by detailed Ticet EDU proof and selected UI/UX, documentation, and implementation samples."
+          kicker='Work'
+          title='Selected work across product design, product management, full-stack development, and frontend delivery.'
+          body='A curated collection of product experiences, interfaces, design systems, and implementation work, showing how ideas move from product thinking and UX through design and frontend development.'
         />
         <Separator />
         <ProjectArchiveSection />
@@ -41,5 +41,7 @@ export default function WorkPage() {
 }
 
 function Separator() {
-  return <div className="h-8 border-x border-line bg-[repeating-linear-gradient(135deg,var(--portfolio-line)_0,var(--portfolio-line)_1px,transparent_1px,transparent_12px)]" />;
+  return (
+    <div className='border-line h-8 border-x bg-[repeating-linear-gradient(135deg,var(--portfolio-line)_0,var(--portfolio-line)_1px,transparent_1px,transparent_12px)]' />
+  );
 }

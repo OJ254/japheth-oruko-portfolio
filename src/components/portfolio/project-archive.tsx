@@ -55,14 +55,7 @@ export function ProjectArchive({ projects }: { projects: Project[] }) {
       <div className="grid gap-4 md:grid-cols-2">
         {visibleProjects.map(project => (
           <div key={project.id} id={`project-${project.id}`}>
-            <ProjectCard
-              project={project}
-              action={
-                <button type="button" className={buttonClass('secondary')} onClick={() => setSelected(project)}>
-                  View details
-                </button>
-              }
-            />
+            <ProjectCard project={project} onSelect={() => setSelected(project)} />
           </div>
         ))}
       </div>
@@ -219,39 +212,41 @@ function ProjectDialog({ project, onClose }: { project: Project; onClose: () => 
                 </div>
               </div>
 
-              <div className="min-h-0 min-w-0 overflow-y-auto p-4 sm:p-6">
-                <div className="space-y-5">
-                  {project.note && <p className="rounded-md border border-amber-300/60 bg-amber-100/50 p-3 text-sm leading-6 text-amber-950 dark:bg-amber-300/10 dark:text-amber-100">{project.note}</p>}
-                  <p className="text-sm leading-7 text-muted-text">{project.summary}</p>
-                  {[
-                    ['Context', project.context],
-                    ['Problem', project.problem],
-                    ['Approach', project.approach],
-                    ['Outcome', project.outcome],
-                  ].map(([label, body]) => body && (
-                    <section key={label}>
-                      <h3 className="font-mono text-xs uppercase text-muted-text">{label}</h3>
-                      <p className="mt-2 text-sm leading-7 text-muted-text">{body}</p>
-                    </section>
-                  ))}
-                  <section>
-                    <h3 className="font-mono text-xs uppercase text-muted-text">Tools and skills</h3>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {[...project.tools, ...project.skills].map(item => <Badge key={item}>{item}</Badge>)}
-                    </div>
-                  </section>
-                  {project.links.length > 0 && (
+              <div className="min-h-0 min-w-0 lg:relative">
+                <div className="overflow-y-auto p-4 sm:p-6 lg:absolute lg:inset-0">
+                  <div className="space-y-5">
+                    {project.note && <p className="rounded-md border border-amber-300/60 bg-amber-100/50 p-3 text-sm leading-6 text-amber-950 dark:bg-amber-300/10 dark:text-amber-100">{project.note}</p>}
+                    <p className="text-sm leading-7 text-muted-text">{project.summary}</p>
+                    {[
+                      ['Context', project.context],
+                      ['Problem', project.problem],
+                      ['Approach', project.approach],
+                      ['Outcome', project.outcome],
+                    ].map(([label, body]) => body && (
+                      <section key={label}>
+                        <h3 className="font-mono text-xs uppercase text-muted-text">{label}</h3>
+                        <p className="mt-2 text-sm leading-7 text-muted-text">{body}</p>
+                      </section>
+                    ))}
                     <section>
-                      <h3 className="font-mono text-xs uppercase text-muted-text">Links</h3>
+                      <h3 className="font-mono text-xs uppercase text-muted-text">Tools and skills</h3>
                       <div className="mt-2 flex flex-wrap gap-2">
-                        {project.links.map(link => (
-                          <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className={buttonClass('secondary')}>
-                            {link.label}
-                          </a>
-                        ))}
+                        {[...project.tools, ...project.skills].map(item => <Badge key={item}>{item}</Badge>)}
                       </div>
                     </section>
-                  )}
+                    {project.links.length > 0 && (
+                      <section>
+                        <h3 className="font-mono text-xs uppercase text-muted-text">Links</h3>
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          {project.links.map(link => (
+                            <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className={buttonClass('secondary')}>
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      </section>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
