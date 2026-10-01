@@ -81,7 +81,7 @@ export function ContactDialog({
     } catch {
       toast.error('Message not sent', {
         description:
-          'Please try again or email japhethoruko@gmail.com directly.',
+          'Please try again or email orukojapheth@gmail.com directly.',
       });
     } finally {
       setLoading(false);

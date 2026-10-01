@@ -45,7 +45,7 @@ export const experience: ExperienceCompany[] = [
     roles: [
       {
         title: 'Lead Product Designer',
-        duration: 'February 2021 - December 2025',
+        duration: 'July 2018 - December 2025',
         summary:
           'Lead Product Designer for a zero-to-one educational platform focused on personalized and social learning. Owned end-to-end design of web and mobile experiences from product discovery and UX strategy to high-fidelity UI, design systems, and developer handoff.',
         responsibilities: [
@@ -65,7 +65,7 @@ export const experience: ExperienceCompany[] = [
       },
       {
         title: 'Frontend Developer',
-        duration: 'January 2021 - December 2025',
+        duration: 'March 2020 - December 2025',
         summary:
           'Frontend Developer building a zero-to-one EdTech web platform using React, Next.js, TypeScript, Material UI, Tailwind CSS, and Redux Toolkit.',
         responsibilities: [

@@ -89,7 +89,7 @@ Known identity details:
 - Name: Japheth Oruko
 - Location: Nairobi, Kenya
 - Phone: `+254 758 750674`
-- Email: `japhethoruko@gmail.com`
+- Email: `orukojapheth@gmail.com`
 - GitHub: `https://github.com/OJ254`
 - LinkedIn: `https://www.linkedin.com/in/japheth-oruko-b5b9a4301/`
 - Behance: `https://www.behance.net/japhethoruko`
@@ -570,7 +570,7 @@ Create a typed `USER` data object or equivalent with:
 - currentRole: `Lead Product Designer and Frontend Lead`
 - currentRoleNote: `PixeSci achievements are placeholder/dummy content until the user supplies final details.`
 - location: `Nairobi, Kenya`
-- email: `japhethoruko@gmail.com`
+- email: `orukojapheth@gmail.com`
 - phone: `+254 758 750674`
 - calendly: `https://calendly.com/japhethoruko`
 - github: `https://github.com/OJ254`
@@ -887,7 +887,7 @@ Company:
 Roles:
 
 1. `Lead Product Designer`
-   - Duration: `February 2021 - December 2025`
+   - Duration: `July 2018 - December 2025`
    - Summary: Lead Product Designer for a zero-to-one educational platform focused on personalized and social learning. Owned end-to-end design of web and mobile experiences, from product discovery and UX strategy to high-fidelity UI, design systems, and developer handoff.
 
 2. `Product Manager`
@@ -895,7 +895,7 @@ Roles:
    - Summary: Product Manager leading end-to-end product lifecycle of a zero-to-one digital learning platform serving learners, educators, and content creators. Owned roadmap strategy, backlog prioritization, MVP delivery, and alignment between business objectives, user needs, and engineering capacity.
 
 3. `Frontend Developer`
-   - Duration: `January 2021 - December 2025`
+   - Duration: `March 2020 - December 2025`
    - Summary: Frontend Developer building a zero-to-one EdTech web platform using React, Next.js, TypeScript, Material UI, Tailwind CSS, and Redux Toolkit. Translates complex UX designs into scalable, accessible, performant frontend features.
 
 Include responsibilities and achievements, but make them collapsible or summarized. Do not dump long bullet walls by default.

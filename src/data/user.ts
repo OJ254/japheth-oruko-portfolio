@@ -16,7 +16,7 @@ export const USER = {
   currentRoleNote:
     'Current work spans the PixeSci website, organization portal, application redesign, design system, frontend direction, backend workflows, and AI-assisted design-to-code delivery.',
   location: 'Nairobi, Kenya',
-  email: 'japhethoruko@gmail.com',
+  email: 'orukojapheth@gmail.com',
   phone: '+254 758 750674',
   calendly: 'https://calendly.com/japhethoruko',
   github: 'https://github.com/OJ254',

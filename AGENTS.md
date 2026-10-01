@@ -56,7 +56,7 @@ Known identity details:
 - Name: Japheth Oruko
 - Location: Nairobi, Kenya
 - Phone: `+254 758 750674`
-- Email: `japhethoruko@gmail.com`
+- Email: `orukojapheth@gmail.com`
 - GitHub: `https://github.com/OJ254`
 - LinkedIn: `https://www.linkedin.com/in/japheth-oruko-b5b9a4301/`
 - Behance: `https://www.behance.net/japhethoruko`
